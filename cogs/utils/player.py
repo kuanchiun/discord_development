@@ -114,39 +114,16 @@ class PlayerAttribute:
     def to_dict(self) -> dict:
         return asdict(self)
     
-    def check_transfer_job(self) -> Union[str, List[Job]]:
-        job_list = get_job_list()
-    
-        current_job = job_list[self.job]
-        
-        if not current_job.next_job:
-            return f"❌ `{self.job}` 該職業無法轉職！"
-        
-        return [job_list[next_job] for next_job in current_job.next_job]
-    
-    def check_transfer_job_embed(self):
-        job_options = self.check_transfer_job()
-        
-        if isinstance(job_options, str):
-            return Embed(title = "轉職失敗", description = job_options, color = 0xFF5555), ""
-        
-        embed = Embed(title="可轉職職業選項", color=0x00BFFF)
-        
-        for job in job_options:
-            skill_text = ", ".join(job.skills)
-            embed.add_field(
-                name = job.name,
-                value = f"{job.description}\n 技能：`{skill_text}`",
-                inline = False
-            )
-        
-        return embed, [job.name for job in job_options]
-    
     def promote_job(self, job_name, user_id) -> str:
-        self.job = job_name
-        self.save(user_id)
+        job_list = get_job_list()
+        next_job = job_list[job_name]
         
-        return f"✅ 你已成功轉職為 `{job_name}`！"
+        if self.level >= next_job.required_level:
+            self.job = job_name
+            self.save(user_id)
+            return True
+        else:
+            return False
 
 def get_player_embed(user: Member) -> Embed:
     player = PlayerAttribute.load(user.id)

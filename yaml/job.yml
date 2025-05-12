@@ -1,0 +1,40 @@
+jobs:
+    starter:
+        # 見習生
+        - name: "見習生"
+          description: "初出茅廬的冒險者，尚未專精任何職業"
+          skills:  ["直拳", "掃腿", "肩撞", "基礎治療"]
+          next_job: ["劍術師", "弓箭手", "法師", "盜賊"]
+          required_level: 1
+    
+    sword:
+        # 劍術師
+        - name: "劍術師"
+          description: "訓練有素的劍士，攻防兼備，為近戰戰鬥打下基礎"
+          skills:  []
+          next_job: ["騎士", "戰士", "雙劍師"]
+          required_level: 5
+    
+    bow:
+        # 弓箭手
+        - name: "弓箭手"
+          description: "擅長遠距離精準射擊，能快速壓制敵人"
+          skills:  []
+          next_job: ["雙槍士", "遊俠", "火砲兵"]
+          required_level: 5
+    
+    mage:
+        # 法師
+        - name: "法師"
+          description: "通曉魔法基礎理論，能施展初階元素法術"
+          skills:  []
+          next_job: ["火靈使", "冰靈使", "雷靈使"]
+          required_level: 5
+    
+    thief:
+        # 盜賊
+        - name: "盜賊"
+          description: "擅長潛行與出奇制勝，可使用多樣戰法"
+          skills:  []
+          next_job: ["賭徒", "暗殺者", "忍者"]
+          required_level: 5

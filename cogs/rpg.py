@@ -6,7 +6,7 @@ import os
 from discord.ext import commands
 from discord import app_commands, Interaction, Embed, Member
 
-from .utils.job import Job, get_job_list
+from .utils.job import Job, get_job_list, TransferJobView, get_job_embed
 from .utils.player import *
 
 class Game(commands.Cog):
@@ -38,6 +38,30 @@ class Game(commands.Cog):
             player = PlayerAttribute.load(user_id)
             view = AssignAttributeView(player, user)
             await interaction.response.send_message(embed = get_player_embed_for_point(user), view = view, ephemeral = True)
+        else:
+            await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
+    
+    @app_commands.command(name = "轉職職業查詢")
+    async def check_transfer_job(self, interaction: Interaction):
+        user_id = interaction.user.id
+        user = interaction.user
+        
+        if PlayerAttribute.exists(user_id):
+            embed = get_job_embed(user)
+            await interaction.response.send_message(embed = embed, ephemeral = True)
+        else:
+            await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
+    
+    @app_commands.command(name = "轉職")
+    async def transfer_job(self, interaction: Interaction):
+        user_id = interaction.user.id
+        user = interaction.user
+        
+        if PlayerAttribute.exists(user_id):
+            embed = get_job_embed(user)
+            player = PlayerAttribute.load(user_id)
+            view = TransferJobView(player, user)
+            await interaction.response.send_message(embed = embed, view = view, ephemeral = True)
         else:
             await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
         
