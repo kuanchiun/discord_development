@@ -1,15 +1,15 @@
-dexterity: 56
+DEX: 44
+INT: 49
+LUK: 48
+MND: 43
+STR: 46
+VIT: 40
 experience: 30000
-intelligence: 39
 job: 吟風遊神
 level: 50
-luck: 45
-mind: 41
 remind_point: 0
 skills:
 - 直拳
 - 掃腿
 - 肩撞
 - 基礎治療
-strength: 36
-vitality: 53
