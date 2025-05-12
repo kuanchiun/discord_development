@@ -12,7 +12,7 @@ from .utils.player import *
 class Game(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-    
+        self.job_list = get_job_list()
     
     @app_commands.command(name = "角色初始化", description = "初始化你的角色")
     async def initialize_character(self, interaction = Interaction):
@@ -60,13 +60,16 @@ class Game(commands.Cog):
         if PlayerAttribute.exists(user_id):
             embed = get_job_embed(user)
             player = PlayerAttribute.load(user_id)
+            current_job = self.job_list[player.job]
+            if not current_job.next_job:
+                await interaction.response.send_message(embed = embed, ephemeral = True)
+                return
             view = TransferJobView(player, user)
             await interaction.response.send_message(embed = embed, view = view, ephemeral = True)
         else:
             await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
-        
     
-    @commands.command(name = "角色狀態")
+    @commands.command(name = "角色資訊")
     async def show_character(self, ctx, user: discord.Member | str = ""):
         if user:
             user = user

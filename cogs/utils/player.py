@@ -23,21 +23,13 @@ INITIAL_POINT = 25
 PLAYER_SAVEPATH = Path("players_attribute")
 EQUIPMENT_SAVEPATH = Path("player_equipment")
 ATTRIBUTE = [
-    "vitality",
-    "strength",
-    "intelligence",
-    "dexterity",
-    "mind",
-    "luck"
+    "VIT",
+    "STR",
+    "INT",
+    "DEX",
+    "MND",
+    "LUK"
 ]
-ATTRIBUTE_MAP = {
-    "VIT": "vitality",
-    "STR": "strength",
-    "INT": "intelligence",
-    "DEX": "dexterity",
-    "MND": "mind",
-    "LUK": "luck"
-}
 
 @dataclass
 class PlayerAttribute:
@@ -50,12 +42,12 @@ class PlayerAttribute:
     level: int = 1
     experience: int = 0
     
-    vitality: int = 0
-    strength: int = 0
-    intelligence: int = 0
-    dexterity: int = 0
-    mind: int = 0
-    luck: int = 0
+    VIT: int = 0
+    STR: int = 0
+    INT: int = 0
+    DEX: int = 0
+    MND: int = 0
+    LUK: int = 0
     
     remind_point: int = INITIAL_POINT
     
@@ -136,16 +128,17 @@ def get_player_embed(user: Member) -> Embed:
         color = 0x00BFFF
     )
     
-    embed.add_field(name = "VIT", value = f"`{player.vitality}`", inline = True)
-    embed.add_field(name = "STR", value = f"`{player.strength}`", inline = True)
-    
-    embed.add_field(name = "INT", value = f"`{player.intelligence}`", inline = True)
-    embed.add_field(name = "DEX", value = f"`{player.dexterity}`", inline = True)
-    
-    embed.add_field(name = "MND", value = f"`{player.mind}`", inline = True)
-    embed.add_field(name = "LUK", value = f"`{player.luck}`", inline = True)
-    
-    embed.add_field(name = "技能", value = f"`{','.join(player.skills)}`", inline = True)
+    embed.add_field(
+        name = "【玩家屬性】",
+        value = (
+            "```" +
+            f"VIT: {player.VIT:>4}  STR: {player.STR:>4}\n" + 
+            f"INT: {player.INT:>4}  DEX: {player.DEX:>4}\n" + 
+            f"MND: {player.MND:>4}  LUK: {player.LUK:>4}" + 
+            "```"
+        ),
+        inline = False
+    )
     
     embed.set_thumbnail(url = user.display_avatar.url)
     
@@ -165,14 +158,14 @@ def get_player_embed_for_point(user: Member) -> Embed:
         color = 0x00BFFF
     )
     
-    embed.add_field(name = "VIT", value = f"`{player.vitality}`", inline = True)
-    embed.add_field(name = "STR", value = f"`{player.strength}`", inline = True)
+    embed.add_field(name = "VIT", value = f"`{player.VIT}`", inline = True)
+    embed.add_field(name = "STR", value = f"`{player.STR}`", inline = True)
     
-    embed.add_field(name = "INT", value = f"`{player.intelligence}`", inline = True)
-    embed.add_field(name = "DEX", value = f"`{player.dexterity}`", inline = True)
+    embed.add_field(name = "INT", value = f"`{player.INT}`", inline = True)
+    embed.add_field(name = "DEX", value = f"`{player.DEX}`", inline = True)
     
-    embed.add_field(name = "MND", value = f"`{player.mind}`", inline = True)
-    embed.add_field(name = "LUK", value = f"`{player.luck}`", inline = True)
+    embed.add_field(name = "MND", value = f"`{player.MND}`", inline = True)
+    embed.add_field(name = "LUK", value = f"`{player.LUK}`", inline = True)
     
     embed.add_field(name = "尚餘可用點數", value = f"`{player.remind_point}`", inline = True)
     
@@ -184,17 +177,18 @@ class AssignAttributeView(View):
         self.player = player
         self.user = user
         
-        for i, attribute in enumerate(ATTRIBUTE_MAP):
+        for i, attribute in enumerate(ATTRIBUTE):
             self.add_item(AssignButton(label = attribute, 
-                                       attribute = ATTRIBUTE_MAP[attribute], 
+                                       attribute = attribute, 
                                        row = i // 2)
                           )
             self.add_item(AssignButtonFiveX(label = attribute, 
-                                       attribute = ATTRIBUTE_MAP[attribute], 
+                                       attribute = attribute, 
                                        row = i // 2)
                           )
         
         self.add_item(RandomAssignButton(row = 4))
+        self.add_item(ConfirmAssignButton(row = 4))
     
     async def update_embed(self, interaction: Interaction):
         embed = get_player_embed_for_point(self.user)
@@ -251,6 +245,18 @@ class RandomAssignButton(Button):
             await view.update_embed(interaction)
         except:
             await interaction.response.send_message("⚠️ 出現異常錯誤，請重試", ephemeral = True)
+            
+class ConfirmAssignButton(Button):
+    def __init__(self, row: int):
+        super().__init__(label = "✅ 結束分配", style = discord.ButtonStyle.primary, row = row)
+    
+    async def callback(self, interaction: Interaction):
+        view: AssignAttributeView = self.view
+        if interaction.user != view.user:
+            await interaction.response.send_message("⚠️ 這不是你的介面喔", ephemeral = True)
+            return
+        
+        await interaction.response.edit_message(content = "配點完成，關閉介面", view = None)
 
 class ConfirmResetView(View):
     def __init__(self, user_id: int, user):

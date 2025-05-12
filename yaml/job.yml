@@ -14,6 +14,69 @@ jobs:
           skills:  []
           next_job: ["騎士", "戰士", "雙劍師"]
           required_level: 5
+        
+        # 騎士
+        - name: "騎士"
+          description: "堅守榮譽的前線戰士，擅長以盾劍作戰"
+          skills: []
+          next_job: ["聖徽騎士"]
+          required_level: 15
+
+        # 戰士
+        - name: "戰士"
+          description: "勇猛無畏的近戰鬥士，強調力量與正面突破"
+          skills: []
+          next_job: ["絕槍戰士"]
+          required_level: 15
+
+        # 雙劍師
+        - name: "雙劍師"
+          description: "精通雙手劍術，擁有高速連擊與靈巧身法"
+          skills: []
+          next_job: ["影刃武士"]
+          required_level: 15
+        
+        # 聖徽騎士
+        - name: "聖徽騎士"
+          description: "背負神聖徽章的高階守護者，具有極高的韌性"
+          skills: []
+          next_job: ["銀衛聖騎"]
+          required_level: 25
+
+        # 絕槍戰士
+        - name: "絕槍戰士"
+          description: "衝鋒陷陣，貫穿敵陣的破陣專家"
+          skills: []
+          next_job: ["重槍戰將"]
+          required_level: 25
+
+        # 影刃武士
+        - name: "影刃武士"
+          description: "出劍如影，殺意無聲的雙刃技巧達人"
+          skills: []
+          next_job: ["月輪劍豪"]
+          required_level: 25
+        
+        # 銀衛聖騎
+        - name: "銀衛聖騎"
+          description: "銀甲無懼，信念不動如山的終極聖騎"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 重槍戰將
+        - name: "重槍戰將"
+          description: "揮槍如雷，將力量與經驗發揮至極限的最強戰士"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 月輪劍豪
+        - name: "月輪劍豪"
+          description: "劍法如月輪優雅致命，追求雙劍技極境的劍豪"
+          skills: []
+          next_job: null
+          required_level: 35
     
     bow:
         # 弓箭手
@@ -22,6 +85,69 @@ jobs:
           skills:  []
           next_job: ["雙槍士", "遊俠", "火砲兵"]
           required_level: 5
+        
+        # 雙槍士
+        - name: "雙槍士"
+          description: "專精雙手火力連射的戰鬥者，兼具速度與準度"
+          skills: []
+          next_job: ["連彈俠客"]
+          required_level: 15
+
+        # 遊俠
+        - name: "遊俠"
+          description: "精通弓術的漂泊者，身法靈活、百步穿楊"
+          skills: []
+          next_job: ["風吟者"]
+          required_level: 15
+
+        # 火砲兵
+        - name: "火砲兵"
+          description: "操作重型火器與爆炸裝置的遠程技師"
+          skills: []
+          next_job: ["銃槍專家"]
+          required_level: 15
+
+        # 連彈俠客
+        - name: "連彈俠客"
+          description: "槍速如風、身影難捉的速射俠客"
+          skills: []
+          next_job: ["狂速槍神"]
+          required_level: 25
+
+        # 風吟者
+        - name: "風吟者"
+          description: "穿梭戰場的旋律詩人，所到之處皆是樂聲"
+          skills: []
+          next_job: ["吟風遊神"]
+          required_level: 25
+
+        # 銃槍專家
+        - name: "銃槍專家"
+          description: "操控火砲與機關術，擅長爆擊與重創輸出"
+          skills: []
+          next_job: ["機鋼導師"]
+          required_level: 25
+        
+        # 狂速槍神
+        - name: "狂速槍神"
+          description: "以狂暴射速主宰戰場的槍術大師"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 吟風遊神
+        - name: "吟風遊神"
+          description: "以風為引，音與箭交織出戰鬥的詩篇"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 機鋼導師
+        - name: "機鋼導師"
+          description: "融合技術與武裝的火力專家，擅長精準壓制"
+          skills: []
+          next_job: null
+          required_level: 35
     
     mage:
         # 法師
@@ -30,7 +156,70 @@ jobs:
           skills:  []
           next_job: ["火靈使", "冰靈使", "雷靈使"]
           required_level: 5
-    
+
+        # 火靈使
+        - name: "火靈使"
+          description: "操控火焰靈魂，以燃燒與爆發壓制敵人"
+          skills: []
+          next_job: ["灼魂使者"]
+          required_level: 15
+
+        # 冰靈使
+        - name: "冰靈使"
+          description: "引導冰霜之靈，擅長控場與緩速敵人行動"
+          skills: []
+          next_job: ["冰凝使者"]
+          required_level: 15
+
+        # 雷靈使  
+        - name: "雷靈使"
+          description: "操控雷電靈氣，擅長高速貫穿與連鎖閃擊"
+          skills: []
+          next_job: ["閃靈使者"]
+          required_level: 15
+        
+        # 灼魂使者
+        - name: "灼魂使者"
+          description: "火焰已與靈魂融合，技能極具爆發與持續灼燒力"
+          skills: []
+          next_job: ["熾焰魂師"]
+          required_level: 25
+
+        # 冰凝使者
+        - name: "冰凝使者"
+          description: "掌握極寒之術，凍結空間與敵人的意志"
+          skills: []
+          next_job: ["凜雪導師"]
+          required_level: 25
+
+        # 閃靈使者
+        - name: "閃靈使者"
+          description: "如雷霆降世，攻勢迅捷，可造成連續閃電打擊"
+          skills: []
+          next_job: ["雷皇術師"]
+          required_level: 25
+        
+        # 熾焰魂師
+        - name: "熾焰魂師"
+          description: "精通焚盡萬物的熾焰之術，是烈火的化身"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 凜雪導師
+        - name: "凜雪導師"
+          description: "寒霜的宗師，能以一念封鎖戰場、凍結戰局"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 雷皇術師
+        - name: "雷皇術師"
+          description: "雷之帝者，精通暴雷與震懾術的終極術師"
+          skills: []
+          next_job: null
+          required_level: 35
+
     thief:
         # 盜賊
         - name: "盜賊"
@@ -38,3 +227,66 @@ jobs:
           skills:  []
           next_job: ["賭徒", "暗殺者", "忍者"]
           required_level: 5
+
+        # 賭徒
+        - name: "賭徒"
+          description: "以運氣與膽識搏命，技能效果隨機但致命"
+          skills: []
+          next_job: ["狂骰客"]
+          required_level: 15
+
+        # 暗殺者
+        - name: "暗殺者"
+          description: "擅長從暗處一擊斃命，快速致死的潛行者"
+          skills: []
+          next_job: ["夜刃刺客"]
+          required_level: 15
+
+        # 忍者
+        - name: "忍者"
+          description: "兼具潛行與忍術的戰鬥者，身法靈巧變化多端"
+          skills: []
+          next_job: ["鬼影忍"]
+          required_level: 15
+        
+        # 狂骰客
+        - name: "狂骰客"
+          description: "每次出手都是豪賭，操縱骰運決定戰局走向"
+          skills: []
+          next_job: ["命運使徒"]
+          required_level: 25
+
+        # 夜刃刺客
+        - name: "夜刃刺客"
+          description: "劍如月影，行如鬼魅，善於瞬間擊殺敵人"
+          skills: []
+          next_job: ["幽影鬼刃"]
+          required_level: 25
+
+        # 鬼影忍
+        - name: "鬼影忍"
+          description: "行蹤難測的影之使者，精通幻術與分身術"
+          skills: []
+          next_job: ["闇忍宗師"]
+          required_level: 25
+        
+        # 命運使徒
+        - name: "命運使徒"
+          description: "能左右勝負之神祕者，支配幸運與命運之力"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 幽影鬼刃
+        - name: "幽影鬼刃"
+          description: "已臻暗殺極境，如鬼如影，是黑暗中的死神"
+          skills: []
+          next_job: null
+          required_level: 35
+
+        # 闇忍宗師
+        - name: "闇忍宗師"
+          description: "掌握禁術與黑影之力，足以顛覆戰局的宗師"
+          skills: []
+          next_job: null
+          required_level: 35

@@ -39,7 +39,7 @@ def get_job_embed(user: Member) -> Embed:
     current_job = job_list[player.job]
     
     if not current_job.next_job:
-        return Embed(title = "轉職失敗", description = f"❌ `{current_job}` 該職業無法轉職！", color = 0xFF5555)
+        return Embed(title = "系統資訊", description = f"❌ `{current_job.name}` 該職業已是最高級職業！", color = 0xFF5555)
     
     job_options = [job_list[next_job] for next_job in current_job.next_job]
     embed = Embed(title="可轉職職業選項", color=0x00BFFF)
