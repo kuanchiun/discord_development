@@ -85,3 +85,10 @@ class Effect(ABC):
     duration: int # 持續時間
     level: int # Buff等級
 
+
+@dataclass
+class JobAttribute(ABC):
+    hp: int
+    attack: int
+    defense: int
+    

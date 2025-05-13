@@ -20,6 +20,17 @@ MAX_LEVEL = 50
 POINT_PER_LEVEL = 5
 INITIAL_POINT = 25
 
+BASIC_HEALTH = 100
+BASIC_PHYSICAL_ATTACK = (10, 15)
+BASIC_MAGIC_ATTACK = (10, 15)
+BASIC_DEFENSE = 5
+BASIC_CRITICAL_RATE = 0.10
+BASIC_HIT = 10
+BASIC_SIDESTEP = 10
+BASIC_SPEED = 100
+
+
+
 PLAYER_SAVEPATH = Path("players_attribute")
 EQUIPMENT_SAVEPATH = Path("player_equipment")
 ATTRIBUTE = [
@@ -119,6 +130,18 @@ class PlayerAttribute:
 
 def get_player_embed(user: Member) -> Embed:
     player = PlayerAttribute.load(user.id)
+    hp = round(BASIC_HEALTH * (1 + player.VIT * 0.02))
+    defense = round(BASIC_DEFENSE * (1 + player.VIT * 0.1))
+    physical_attack_min = round(BASIC_PHYSICAL_ATTACK[0] * (1 + player.STR * 0.1))
+    physical_attack_max = round(BASIC_PHYSICAL_ATTACK[1] * (1 + player.STR * 0.1))
+    magic_attack_min = round(BASIC_MAGIC_ATTACK[0] * (1 + player.INT * 0.1))
+    magic_attack_max = round(BASIC_MAGIC_ATTACK[1] * (1 + player.INT * 0.1))
+    critical_rate = round(BASIC_CRITICAL_RATE * (1 + player.LUK * 0.03) * 100)
+    hit = round(BASIC_HIT * (1 + player.MND * 0.1))
+    sidestep = round(BASIC_SIDESTEP * (1 + player.DEX * 0.1))
+    speed = round(BASIC_SPEED * (1 + min(player.DEX, 150) * 0.01 + max(0, player.DEX - 150) * 0.002))
+    
+    
     
     embed = Embed(
         title = f"{user.display_name} 的角色資訊",
@@ -135,6 +158,19 @@ def get_player_embed(user: Member) -> Embed:
             f"VIT: {player.VIT:>4}  STR: {player.STR:>4}\n" + 
             f"INT: {player.INT:>4}  DEX: {player.DEX:>4}\n" + 
             f"MND: {player.MND:>4}  LUK: {player.LUK:>4}" + 
+            "```"
+        ),
+        inline = False
+    )
+    
+    embed.add_field(
+        name = "【角色能力值】",
+        value = (
+            "```" +
+            f"💖血量: {hp:>4}  ⚔物攻: {physical_attack_min} - {physical_attack_max}\n" + 
+            f"🛡防禦: {defense:>4}  🔮魔攻: {magic_attack_min} - {magic_attack_max}\n" + 
+            f"🎯命中: {hit:>4}  🎲爆擊機率: {critical_rate:>3}%\n" +
+            f"🌀迴避: {sidestep:>4}  💨行動速度: {speed:>3}" +
             "```"
         ),
         inline = False

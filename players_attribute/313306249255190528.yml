@@ -1,11 +1,11 @@
-DEX: 44
-INT: 49
-LUK: 48
-MND: 43
-STR: 46
-VIT: 40
-experience: 30000
-job: 吟風遊神
+DEX: 0
+INT: 0
+LUK: 0
+MND: 0
+STR: 0
+VIT: 270
+experience: 50000
+job: 見習生
 level: 50
 remind_point: 0
 skills:
