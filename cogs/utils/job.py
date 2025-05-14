@@ -13,6 +13,7 @@ FILE_PATH = "yaml/job.yml"
 class Job:
     name: str
     description: str
+    job_type: str
     
     skills: List[str]
     

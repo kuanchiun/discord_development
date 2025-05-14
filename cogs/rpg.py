@@ -8,6 +8,7 @@ from discord import app_commands, Interaction, Embed, Member
 
 from .utils.job import Job, get_job_list, TransferJobView, get_job_embed
 from .utils.player import *
+from .utils.playerviews import *
 
 class Game(commands.Cog):
     def __init__(self, bot):

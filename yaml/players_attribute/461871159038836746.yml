@@ -1,0 +1,16 @@
+DEX: 100
+INT: 20
+LUK: 30
+MND: 45
+STR: 30
+VIT: 45
+experience: 2000000
+job: 弓箭手
+job_type: "shooter"
+level: 50
+remind_point: 0
+skills:
+- 直拳
+- 掃腿
+- 肩撞
+- 基礎治療
