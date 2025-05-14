@@ -1,0 +1,20 @@
+UR:
+  - name: "滅世之刃"
+    image: "https://example.com/ur1.png"
+    rare: UR
+SSR:
+  - name: "聖盾之誓"
+    image: "https://example.com/ssr1.png"
+    rare: SSR
+SR:
+  - name: "精靈戒指"
+    image: "https://example.com/sr1.png"
+    rare: SR
+R:
+  - name: "鋼鐵手套"
+    image: "https://example.com/r1.png"
+    rare: R
+N:
+  - name: "破布盔甲"
+    image: "https://example.com/n1.png"
+    rare: N
