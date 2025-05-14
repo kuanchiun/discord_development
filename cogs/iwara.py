@@ -8,6 +8,7 @@ class IwaraEmbed(commands.Cog):
         self.bot = bot
         self.url_pattern = re.compile(r"(https?://(?:www\.)?iwara\.tv/video/\w+)")
 
+    """
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
         if message.author.bot:
@@ -21,7 +22,6 @@ class IwaraEmbed(commands.Cog):
         video_id = re.search(r"iwara\.tv/video/([^/?#]+)", video_url).group(1)
         api_url = f"https://api.iwara.tv/video/{video_id}"
 
-        #try:
         res = requests.get(api_url, timeout=10)
         data = res.json()
 
@@ -53,9 +53,7 @@ class IwaraEmbed(commands.Cog):
         
         await message.channel.send(embed=embed)
         await message.delete()
-
-        #except Exception as e:
-         #   await message.channel.send(f"⚠️ 無法擷取影片資訊：{str(e)}")
+    """
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(IwaraEmbed(bot))
