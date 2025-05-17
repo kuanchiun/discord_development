@@ -30,13 +30,14 @@ class Lottery(commands.Cog):
         else:
             await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
     
-    @commands.command(name = "圖片測試")
+    @commands.command(name = "裝備一覽")
     async def show_all_equipments(self, ctx):
         embed = Embed(
             title = f"📦 所有裝備一覽",
             color = discord.Color.gold()
         )
         embed.set_image(url = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/all_equipments.png")
+        embed.set_footer(text=f"總計：36 件裝備\n最後更新：2025-05-18")
         await ctx.send(embed = embed)
 
 async def setup(bot):
