@@ -30,14 +30,34 @@ class Lottery(commands.Cog):
         else:
             await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
     
-    @commands.command(name = "裝備一覽")
-    async def show_all_equipments(self, ctx):
+    @commands.command(name = "獎池裝備一覽")
+    async def show_all_equipments_in_pool(self, ctx):
         embed = Embed(
             title = f"📦 所有裝備一覽",
             color = discord.Color.gold()
         )
         embed.set_image(url = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/all_equipments.png")
         embed.set_footer(text=f"總計：36 件裝備\n最後更新：2025-05-18")
+        await ctx.send(embed = embed)
+    
+    @commands.command(name = "武器一覽")
+    async def show_all_equipments_in_pool(self, ctx, career: str):
+        career_map = {
+            "劍術師": "sword",
+            "弓箭手": "bow",
+            "法師": "mage",
+            "盜賊": "thief"
+        }
+        if career not in ["劍術師", "弓箭手", "法師", "盜賊"]:
+            await ctx.send("沒有這個職業喔！")
+            return
+        
+        embed = Embed(
+            title = f"📦 {career}武器一覽",
+            color = discord.Color.gold()
+        )
+        embed.set_image(url = f"https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{career_map[career]}_weapons.png")
+        embed.set_footer(text=f"最後更新：2025-05-18")
         await ctx.send(embed = embed)
 
 async def setup(bot):
