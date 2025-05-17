@@ -9,6 +9,7 @@ from discord import app_commands, Interaction, Embed, Member
 from .utils.job import Job, get_job_list, TransferJobView, get_job_embed
 from .utils.player import *
 from .utils.playerviews import *
+from .utils.lottery import *
 
 class Game(commands.Cog):
     def __init__(self, bot):
@@ -69,7 +70,7 @@ class Game(commands.Cog):
             await interaction.response.send_message(embed = embed, view = view, ephemeral = True)
         else:
             await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
-    
+        
     @commands.command(name = "角色資訊")
     async def show_character(self, ctx, user: discord.Member | str = ""):
         if user:
