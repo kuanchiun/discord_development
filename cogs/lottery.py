@@ -5,7 +5,7 @@ from discord.ui import View, Button, button
 import random
 import yaml
 
-POOL_PATH = "yaml/lottery_pool.yaml"
+POOL_PATH = "yaml/equipment_pool.yaml"
 
 RARITY_WEIGHTS = {
     "UR": 1,
@@ -54,18 +54,19 @@ class Lottery(commands.Cog):
             return {"name": f"[{chosen_rarity}] 目前尚無獎品", "image": None, "rarity": chosen_rarity}
         
         loot = random.choice(candidates)
-        loot["rarity"] = chosen_rarity
 
         return loot
     
     def create_embed(self, user: discord.User, item: dict):
-        embed = discord.Embed(title=f"{user.display_name} 的抽獎結果",
-                              description=f"🎁 你抽到了：**{item['name']}**",
-                              color=discord.Color.gold())
+        embed = discord.Embed(title = f"{user.display_name} 的抽獎結果",
+                              description = f"🎁 你抽到了：**{item['name']}**",
+                              color = discord.Color.gold())
         embed.set_footer(text=f"稀有度：{item['rarity']}")
+        if item["image"]:
+            embed.set_thumbnail(url = item["image"])
         return embed
     
-    @app_commands.command(name="抽獎", description="抽一次獎")
+    @app_commands.command(name = "抽獎", description = "抽一次獎")
     async def draw(self, interaction: discord.Interaction):
         loot = self.draw_item()
         
