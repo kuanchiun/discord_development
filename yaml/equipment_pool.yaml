@@ -29,10 +29,10 @@ N:
     rarity: N
     image: "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figure/N/粗製耳環.png"
 
-  - name: 粗製魂鏈
+  - name: 粗製項鍊
     part: necklace
     rarity: N
-    image: "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figure/N/粗製魂鏈.png"
+    image: "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figure/N/粗製項鍊.png"
   
   - name: 粗製手鐲
     part: bracelet

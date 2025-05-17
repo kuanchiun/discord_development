@@ -8,11 +8,11 @@ import yaml
 POOL_PATH = "yaml/equipment_pool.yaml"
 
 RARITY_WEIGHTS = {
-    "UR": 1,
-    "SR": 4,
-    "R": 15,
-    "N": 40,
-    "miss": 40,
+    "UR": 5,
+    "SR": 15,
+    "R": 25,
+    "N": 50,
+    "miss": 5,
 }
 
 class LotteryView(View):
@@ -28,8 +28,9 @@ class LotteryView(View):
             return
         await interaction.response.defer()
         await interaction.followup.send(embed=self.embed)
+
         self.stop()
-    
+            
 
 class Lottery(commands.Cog):
     def __init__(self, bot):
