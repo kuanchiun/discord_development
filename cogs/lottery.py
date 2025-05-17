@@ -29,6 +29,15 @@ class Lottery(commands.Cog):
             await interaction.response.send_message(embed = embed, view = view, ephemeral = True)
         else:
             await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
+    
+    @commands.command(name = "圖片測試")
+    async def show_all_equipments(self, ctx):
+        embed = Embed(
+            title = f"📦 所有裝備一覽",
+            color = discord.Color.gold()
+        )
+        embed.set_image(url = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/test_figure.png")
+        await ctx.send(embed = embed)
 
 async def setup(bot):
     await bot.add_cog(Lottery(bot))
