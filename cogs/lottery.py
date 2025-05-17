@@ -36,7 +36,7 @@ class Lottery(commands.Cog):
             title = f"📦 所有裝備一覽",
             color = discord.Color.gold()
         )
-        embed.set_image(url = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/test_figure.png")
+        embed.set_image(url = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/all_equipments.png")
         await ctx.send(embed = embed)
 
 async def setup(bot):
