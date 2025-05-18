@@ -1,0 +1,208 @@
+items:
+  - name: "陳舊獎牌"
+    figure_name: "陳舊獎牌"
+    description: "舊日世界具有榮耀的獎牌，可用於兌換陳舊系列武器"
+    part: pre-weapon
+    rarity: UR
+    probability: null
+    effect: null
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通VIT卷軸100％"
+    figure_name: "scroll_1"
+    description: "成功率100％，VIT＋1"
+    part: scroll
+    rarity: N
+    probability: 1
+    effect:
+      VIT: 1
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通STR卷軸100％"
+    figure_name: "scroll_1"
+    description: "成功率100％，STR＋1"
+    part: scroll
+    rarity: N
+    probability: 1
+    effect:
+      STR: 1
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通INT卷軸100％"
+    figure_name: "scroll_1"
+    description: "成功率100％，INT＋1"
+    part: scroll
+    rarity: N
+    probability: 1
+    effect:
+      INT: 1
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通DEX卷軸100％"
+    figure_name: "scroll_1"
+    description: "成功率100％，DEX＋1"
+    part: scroll
+    rarity: N
+    probability: 1
+    effect:
+      DEX: 1
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通MND卷軸100％"
+    figure_name: "scroll_1"
+    description: "成功率100％，MND＋1"
+    part: scroll
+    rarity: N
+    probability: 1
+    effect:
+      MND: 1
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通LUK卷軸100％"
+    figure_name: "scroll_1"
+    description: "成功率100％，LUK＋1"
+    part: scroll
+    rarity: N
+    probability: 1
+    effect:
+      LUK: 1
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通VIT卷軸60％"
+    figure_name: "scroll_2"
+    description: "成功率60％，VIT＋2"
+    part: scroll
+    rarity: N
+    probability: 0.6
+    effect:
+      VIT: 2
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通STR卷軸60％"
+    figure_name: "scroll_2"
+    description: "成功率60％，STR＋2"
+    part: scroll
+    rarity: N
+    probability: 0.6
+    effect:
+      STR: 2
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通INT卷軸60％"
+    figure_name: "scroll_2"
+    description: "成功率60％，INT＋2"
+    part: scroll
+    rarity: N
+    probability: 0.6
+    effect:
+      INT: 2
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通DEX卷軸60％"
+    figure_name: "scroll_2"
+    description: "成功率60％，DEX＋2"
+    part: scroll
+    rarity: N
+    probability: 0.6
+    effect:
+      DEX: 2
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通MND卷軸60％"
+    figure_name: "scroll_2"
+    description: "成功率60％，MND＋2"
+    part: scroll
+    rarity: N
+    probability: 0.6
+    effect:
+      MND: 2
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通LUK卷軸60％"
+    figure_name: "scroll_2"
+    description: "成功率60％，LUK＋2"
+    part: scroll
+    rarity: N
+    probability: 0.6
+    effect:
+      LUK: 2
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通VIT卷軸10％"
+    figure_name: "scroll_3"
+    description: "成功率10％，VIT＋3"
+    part: scroll
+    rarity: N
+    probability: 0.1
+    effect:
+      VIT: 3
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通STR卷軸10％"
+    figure_name: "scroll_3"
+    description: "成功率10％，STR＋3"
+    part: scroll
+    rarity: N
+    probability: 0.1
+    effect:
+      STR: 3
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通INT卷軸10％"
+    figure_name: "scroll_3"
+    description: "成功率10％，INT＋3"
+    part: scroll
+    rarity: N
+    probability: 0.1
+    effect:
+      INT: 3
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通DEX卷軸10％"
+    figure_name: "scroll_3"
+    description: "成功率10％，DEX＋3"
+    part: scroll
+    rarity: N
+    probability: 0.1
+    effect:
+      DEX: 3
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通MND卷軸10％"
+    figure_name: "scroll_3"
+    description: "成功率10％，MND＋3"
+    part: scroll
+    rarity: N
+    probability: 0.1
+    effect:
+      MND: 3
+    sell_money: 50
+    is_breakable: false
+
+  - name: "普通LUK卷軸10％"
+    figure_name: "scroll_3"
+    description: "成功率10％，LUK＋3"
+    part: scroll
+    rarity: N
+    probability: 0.1
+    effect:
+      LUK: 3
+    sell_money: 50
+    is_breakable: false

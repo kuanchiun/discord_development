@@ -1,0 +1,11 @@
+items:
+  - name: 命紋能量核心
+    figure_name: "命紋能量核心"
+    description: "啟動命紋裝備的核心，可用於兌換命紋系列武器"
+    part: pre-weapon
+    rarity: R
+    probability: null
+    effect: null
+    sell_money: 50
+    is_breakable: false
+  

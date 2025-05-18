@@ -1,0 +1,129 @@
+items:
+  - name: 草布兜帽
+    type: equipment
+    part: head
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    
+  - name: 草布輕甲
+    type: equipment
+    part: chest
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    
+  - name: 草布棉褲
+    type: equipment
+    part: legs
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    
+  - name: 草布輕鞋
+    type: equipment
+    part: feet
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    
+  - name: 粗製耳環
+    type: equipment
+    part: earring
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    
+  - name: 粗製項鍊
+    type: equipment
+    part: necklace
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    
+  - name: 粗製手鐲
+    type: equipment
+    part: bracelet
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    
+  - name: 粗製戒指
+    type: equipment
+    part: ring
+    rarity: N
+    VIT: 5
+    STR: 5
+    INT: 5
+    DEX: 5
+    MND: 5
+    LUK: 5
+    upgrade_time: 3
+    socket1: null
+    socket2: null
+    socket3: null
+    sell_money: 50
+    

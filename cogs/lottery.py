@@ -8,8 +8,9 @@ from discord import app_commands, Interaction, Embed, Member
 
 from .utils.job import Job, get_job_list, TransferJobView, get_job_embed
 from .utils.player import *
-from .utils.playerviews import *
 from .utils.lottery import *
+
+LOTTERT_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}/{name}.png"
 
 class Lottery(commands.Cog):
     def __init__(self, bot):
@@ -30,6 +31,7 @@ class Lottery(commands.Cog):
         else:
             await interaction.response.send_message("⚠️ 你尚未創建角色喔！", ephemeral = True)
     
+    # 暫時的
     @commands.command(name = "獎池裝備一覽")
     async def show_all_equipments_in_pool(self, ctx):
         embed = Embed(
@@ -40,6 +42,7 @@ class Lottery(commands.Cog):
         embed.set_footer(text=f"總計：36 件裝備\n最後更新：2025-05-18")
         await ctx.send(embed = embed)
     
+    # 暫時的
     @commands.command(name = "武器一覽")
     async def show_all_equipments_in_pool(self, ctx, career: str):
         career_map = {

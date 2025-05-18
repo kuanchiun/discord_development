@@ -1,0 +1,8 @@
+items:
+  - name: 聖痕能量核心
+    figure_name: "聖痕能量核心"
+    description: "啟動聖痕裝備的核心，可用於兌換聖痕系列武器"
+    part: pre-weapon
+    rarity: SR
+    probability: null
+    effect: null

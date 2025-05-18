@@ -1,0 +1,128 @@
+items:
+  - name: 神域遺物-天目啟冕
+    type: equipment
+    part: head
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900
+  
+  - name: 神域遺物-星宿神鎧
+    type: equipment
+    part: chest
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900
+
+  - name: 神域遺物-命脈虛核
+    type: equipment
+    part: legs
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900
+  
+  - name: 神域遺物-寂滅行靴
+    type: equipment
+    part: feet
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900
+
+  - name: 天殞-天聲墜環
+    type: equipment
+    part: earring
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900
+
+  - name: 天殞-原初綴鏈
+    type: equipment
+    part: necklace
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900
+  
+  - name: 天殞-審理脈印
+    type: equipment
+    part: bracelet
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900
+  
+  - name: 天殞-諸界終環
+    type: equipment
+    part: ring
+    rarity: UR
+    VIT: 30
+    STR: 30
+    INT: 30
+    DEX: 30
+    MND: 30
+    LUK: 30
+    upgrade_time: 10
+    socket1: true
+    socket2: true
+    socket3: true
+    sell_money: 900

@@ -1,0 +1,25 @@
+items:
+  - name: "原律-界鑿能量核心"
+    figure_name: "原律-界鑿能量核心"
+    description: "古老文明留下的物品，散發著極強的能量，可用於兌換原律-界鑿系列武器"
+    part: pre-weapon
+    rarity: UR
+    probability: null
+    effect: null
+  
+  - name: "命運VIT卷軸100％"
+    figure_name: "scroll"
+    description: "成功率100％，VIT＋2"
+    part: scroll
+    rarity: UR
+    probability: 1
+    effect:
+        VIT: 2
+  
+
+  
+
+
+  
+  
+
