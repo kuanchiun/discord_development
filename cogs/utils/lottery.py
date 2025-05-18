@@ -16,10 +16,10 @@ RARITY_WEIGHTS = {
 PART_MAPPING = {
     "pre-weapon": "原型武器",
     "head": "頭部",
-    "chest": "上身",
+    "chest": "身體",
     "legs": "腿部",
     "feet": "腳部",
-    "earring": "耳環",
+    "earring": "耳飾",
     "necklace": "項鍊",
     "bracelet": "手鐲",
     "ring": "戒指"

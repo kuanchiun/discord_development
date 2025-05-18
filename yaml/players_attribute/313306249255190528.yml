@@ -1,9 +1,9 @@
 DEX: 0
-INT: 270
-LUK: 270
+INT: 0
+LUK: 0
 MND: 0
-STR: 270
-VIT: 270
+STR: 0
+VIT: 0
 experience: 50000
 job: 弓箭手
 job_type: shooter

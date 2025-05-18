@@ -1,0 +1,67 @@
+items:
+  # 商城
+  - name: "普通VIT卷軸100％"
+    description: "成功率100％，VIT＋2"
+    hold_item: 0
+
+  - name: "普通STR卷軸100％"
+    description: "成功率100％，STE＋2"
+    hold_item: 0
+
+  - name: "普通INT卷軸100％"
+    description: "成功率100％，INT＋2"
+    hold_item: 0
+  
+  - name: "普通DEX卷軸100％"
+    description: "成功率100％，DEX＋2"
+    hold_item: 0
+  
+  - name: "普通MND卷軸100％"
+    description: "成功率100％，MND＋2"
+    hold_item: 0
+  
+  - name: "普通LUK卷軸100％"
+    description: "成功率100％，LUK＋2"
+    hold_item: 0
+  
+  - name: "普通VIT卷軸60％"
+    description: "成功率100％，VIR＋4"
+    hold_item: 0
+  
+  - name: "普通STR卷軸60％"
+    description: "成功率100％，STR＋4"
+    hold_item: 0
+    
+  - name: "普通INT卷軸60％"
+    description: "成功率100％，INT＋4"
+    hold_item: 0
+    
+  - name: "普通DEX卷軸60％"
+    description: "成功率100％，DEX＋4"
+    hold_item: 0
+    
+  - name: "普通MND卷軸60％"
+    description: "成功率100％，MND＋4"
+    hold_item: 0
+    
+  - name: "普通LUK卷軸60％"
+    description: "成功率100％，LUK＋4"
+    hold_item: 0
+  
+  # 每日獎勵
+
+
+
+
+  # 卡池
+
+
+
+  # 戰鬥獎勵
+        
+
+        
+
+
+
+

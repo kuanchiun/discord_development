@@ -1,0 +1,79 @@
+items:
+    shop:
+        - name: "普通VIT卷軸100％"
+          description: "成功率100％，VIT＋2"
+          attribute: "VIT"
+          effect: [1, 2]
+          hold_item: 0
+    
+        - name: "普通STR卷軸100％"
+          description: "成功率100％，STR＋2"
+          attribute: "STR"
+          effect: [1, 2]
+          hold_item: 0
+    
+        - name: "普通INT卷軸100％"
+          description: "成功率100％，INT＋2"
+          attribute: "INT"
+          effect: [1, 2]
+          hold_item: 0
+        
+        - name: "普通DEX卷軸100％"
+          description: "成功率100％，DEX＋2"
+          attribute: "DEX"
+          effect: [1, 2]
+          hold_item: 0
+        
+        - name: "普通MND卷軸100％"
+          description: "成功率100％，MND＋2"
+          attribute: "MND"
+          effect: [1, 2]
+          hold_item: 0
+        
+        - name: "普通LUK卷軸100％"
+          description: "成功率100％，LUK＋2"
+          attribute: "LUK"
+          effect: [1, 2]
+          hold_item: 0
+        
+        - name: "普通VIT卷軸60％"
+          description: "成功率60％，VIT＋4"
+          attribute: "VIT"
+          effect: [0.6, 4]
+          hold_item: 0
+        
+        - name: "普通STR卷軸60％"
+          description: "成功率60％，STR＋4"
+          attribute: "STR"
+          effect: [0.6, 4]
+          hold_item: 0
+          
+        - name: "普通INT卷軸60％"
+          description: "成功率60％，INT＋4"
+          attribute: "INT"
+          effect: [0.6, 4]
+          hold_item: 0
+          
+        - name: "普通DEX卷軸60％"
+          description: "成功率60％，DEX＋4"
+          attribute: "DEX"
+          effect: [0.6, 4]
+          hold_item: 0
+          
+        - name: "普通MND卷軸60％"
+          description: "成功率60％，MND＋4"
+          attribute: "MND"
+          effect: [0.6, 4]
+          hold_item: 0
+          
+        - name: "普通LUK卷軸60％"
+          description: "成功率60％，LUK＋4"
+          attribute: "LUK"
+          effect: [0.6, 4]
+          hold_item: 0
+        
+        
+
+
+
+

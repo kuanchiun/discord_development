@@ -36,7 +36,7 @@ ATTRIBUTE = [
 class PlayerAttribute:
     job: str = "見習生"
     job_type: str = "starter"
-    skills: list = field(default_factory = lambda: ["直拳", 
+    skills: List = field(default_factory = lambda: ["直拳", 
                                                     "掃腿", 
                                                     "肩撞",
                                                     "基礎治療"])
