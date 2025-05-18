@@ -68,3 +68,57 @@ def draw_item(lottery_pool: Dict) -> Dict:
 def get_lottery_embed(loot: Dict, user: Member) -> Embed:
     ...
 
+"""
+def get_lottery_embed(loot: Dict, user: Member) -> Embed:
+    embed = Embed(
+        title = f"{user.display_name} 的抽獎結果",
+        description = f"🎁 你抽到了：**{loot['name']}**",
+        color = discord.Color.gold()
+    )
+    
+    info_lines = []
+    info_lines.append(f"💎 稀有度： {loot["rarity"]}")
+    if loot.get("part"):
+        info_lines.append(f"👕 裝備分類： {PART_MAPPING[loot["part"]]}")
+    if loot.get("maxlevel"):
+        info_lines.append(f"🧬 最大等級： {loot["maxlevel"]}")
+    if loot.get("sockets"):
+        info_lines.append(f"🔘 可鑲嵌孔洞： {loot["sockets"]}")
+        
+    embed.add_field(
+        name="【物品資訊】",
+        value="```" + "\n".join(info_lines) + "```",
+        inline=False
+    )
+    
+    if loot["image"]:
+        embed.set_thumbnail(url = loot["image"])
+    
+    return embed
+
+class LotteryView(View):
+    def __init__(self, embed: Embed, user: Member):
+        super().__init__(timeout = 30)
+        self.embed = embed
+        self.user = user
+        
+        self.add_item(LotteryPublicButton(embed))
+
+class LotteryPublicButton(Button):
+    def __init__(self, embed: Embed):
+        super().__init__(label = "📢 公開顯示", 
+                         style = discord.ButtonStyle.primary)
+        self.embed = embed
+    
+    async def callback(self, interaction: Interaction):
+        view: LotteryView = self.view
+        if interaction.user != view.user:
+            await interaction.response.send_message("❌ 這不是你的抽獎結果喔！", ephemeral = True)
+            return
+        
+        await interaction.response.defer()
+        await interaction.followup.send(embed = self.embed)
+        
+        self.disabled = True 
+        self.view.stop()      
+"""
