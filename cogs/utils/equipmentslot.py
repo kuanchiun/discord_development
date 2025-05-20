@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional, Dict, List, Tuple
 
 from .equipment import Equipment
+from .equipinventory import EquipInventory
 
 @dataclass
 class EquipmentSlot:
@@ -23,7 +24,17 @@ class EquipmentSlot:
         
         return getattr(self, slot) is not None
         
-    def equip(self, ):
-        ...
+    def equip(self, 
+              slot: str, 
+              equipment: "Equipment", 
+              equipinventory: "EquipInventory"):
+        
+        if getattr(self, slot):
+            old_equipment = getattr(self, slot)
+            setattr(equipinventory, 
+                    slot, 
+                    getattr(equipinventory, slot).append(equipment))
+            
+        setattr(self, slot, equipment)
     
     
