@@ -1,0 +1,129 @@
+items:
+  - name: 暗影守衛頭盔
+    type: equipment
+    part: head
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    
+  - name: 暗影守衛胸甲
+    type: equipment
+    part: chest
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    
+  - name: 暗影守衛長褲
+    type: equipment
+    part: legs
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    
+  - name: 暗影守衛戰靴
+    type: equipment
+    part: feet
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    
+  - name: 赤鐵耳環
+    type: equipment
+    part: earring
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    
+  - name: 赤鐵項鍊
+    type: equipment
+    part: necklace
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    
+  - name: 赤鐵手鐲
+    type: equipment
+    part: bracelet
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    
+  - name: 赤鐵戒指
+    type: equipment
+    part: ring
+    rarity: R
+    VIT: 10
+    STR: 10
+    INT: 10
+    DEX: 10
+    MND: 10
+    LUK: 10
+    upgrade_time: 5
+    socket1: true
+    socket2: null
+    socket3: null
+    sell_money: 125
+    

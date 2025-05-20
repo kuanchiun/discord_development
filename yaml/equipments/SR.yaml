@@ -1,128 +1,168 @@
 items:
-  - name: 方舟遺產戰冠
-    type: equipment
-    part: head
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: ark_head
+      display_name: 方舟遺產戰冠
+      rarity: "SR"
+      figure_id: ark_head
+      part: head
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
     
-  - name: 方舟遺產心鎧
-    type: equipment
-    part: chest
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: ark_chest
+      display_name: 方舟遺產心鎧
+      rarity: "SR"
+      figure_id: ark_chest
+      part: chest
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
     
-  - name: 方舟遺產戰褲
-    type: equipment
-    part: legs
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: ark_leggings
+      display_name: 方舟遺產腿鎧
+      rarity: "SR"
+      figure_id: ark_leggings
+      part: leggings
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
     
-  - name: 方舟遺產行靴
-    type: equipment
-    part: feet
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: ark_feet
+      display_name: 方舟遺產行靴
+      rarity: "SR"
+      figure_id: ark_feet
+      part: feet
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
     
-  - name: 星霜耳環
-    type: equipment
-    part: earring
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: star_earring
+      display_name: 星霜耳墜
+      rarity: "SR"
+      figure_id: star_earring
+      part: earring
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
     
-  - name: 星霜項鍊
-    type: equipment
-    part: necklace
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: star_necklace
+      display_name: 星霜吊墜
+      rarity: "SR"
+      figure_id: star_necklace
+      part: necklace
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
     
-  - name: 星霜手鐲
-    type: equipment
-    part: bracelet
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: star_bracelet
+      display_name: 星霜手鐲
+      rarity: "SR"
+      figure_id: star_bracelet
+      part: bracelet
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
     
-  - name: 星霜戒指
-    type: equipment
-    part: ring
-    rarity: SR
-    VIT: 20
-    STR: 20
-    INT: 20
-    DEX: 20
-    MND: 20
-    LUK: 20
-    upgrade_time: 7
-    socket1: true
-    socket2: true
-    socket3: null
-    sell_money: 375
+    - item_id: star_ring
+      display_name: 星霜指環
+      rarity: "SR"
+      figure_id: star_ring
+      part: ring
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450

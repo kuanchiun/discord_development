@@ -1,128 +1,168 @@
 items:
-  - name: 神域遺物-天目啟冕
-    type: equipment
-    part: head
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
-  
-  - name: 神域遺物-星宿神鎧
-    type: equipment
-    part: chest
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
-
-  - name: 神域遺物-命脈虛核
-    type: equipment
-    part: legs
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
-  
-  - name: 神域遺物-寂滅行靴
-    type: equipment
-    part: feet
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
-
-  - name: 天殞-天聲墜環
-    type: equipment
-    part: earring
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
-
-  - name: 天殞-原初綴鏈
-    type: equipment
-    part: necklace
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
-  
-  - name: 天殞-審理脈印
-    type: equipment
-    part: bracelet
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
-  
-  - name: 天殞-諸界終環
-    type: equipment
-    part: ring
-    rarity: UR
-    VIT: 30
-    STR: 30
-    INT: 30
-    DEX: 30
-    MND: 30
-    LUK: 30
-    upgrade_time: 10
-    socket1: true
-    socket2: true
-    socket3: true
-    sell_money: 900
+    - item_id: godfield_head
+      display_name: 神域遺物-天目啟冕
+      rarity: "UR"
+      figure_id: godfield_head
+      part: head
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: godfield_chest
+      display_name: 神域遺物-星宿神鎧
+      rarity: "UR"
+      figure_id: godfield_chest
+      part: chest
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: godfield_leggings
+      display_name: 神域遺物-天羽履痕
+      rarity: "UR"
+      figure_id: godfield_leggings
+      part: leggings
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: godfield_feet
+      display_name: 神域遺物-寂滅行靴
+      rarity: "UR"
+      figure_id: godfield_feet
+      part: feet
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: fallen_earring
+      display_name: 天殞-天聲墜環
+      rarity: "UR"
+      figure_id: fallen_earring
+      part: earring
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: fallen_necklace
+      display_name: 天殞-斷界靈鍊
+      rarity: "UR"
+      figure_id: fallen_necklace
+      part: necklace
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: fallen_bracelet
+      display_name: 天殞-災痕鐲印
+      rarity: "UR"
+      figure_id: fallen_bracelet
+      part: bracelet
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: fallen_ring
+      display_name: 天殞-諸界終環
+      rarity: "UR"
+      figure_id: fallen_ring
+      part: ring
+      perference_job: null
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900

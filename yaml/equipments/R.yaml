@@ -1,129 +1,168 @@
 items:
-  - name: 暗影守衛頭盔
-    type: equipment
-    part: head
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
+    - item_id: shadow_head
+      display_name: 暗影守衛頭盔
+      rarity: "R"
+      figure_id: shadow_head
+      part: head
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
     
-  - name: 暗影守衛胸甲
-    type: equipment
-    part: chest
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
+    - item_id: shadow_chest
+      display_name: 暗影守衛胸甲
+      rarity: "R"
+      figure_id: shadow_chest
+      part: chest
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
     
-  - name: 暗影守衛長褲
-    type: equipment
-    part: legs
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
+    - item_id: shadow_leggings
+      display_name: 暗影守衛長褲
+      rarity: "R"
+      figure_id: shadow_leggings
+      part: leggings
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
     
-  - name: 暗影守衛戰靴
-    type: equipment
-    part: feet
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
+    - item_id: shadow_feet
+      display_name: 暗影守衛戰靴
+      rarity: "R"
+      figure_id: shadow_feet
+      part: feet
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
     
-  - name: 赤鐵耳環
-    type: equipment
-    part: earring
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
+    - item_id: iron_earring
+      display_name: 赤鐵耳環
+      rarity: "R"
+      figure_id: iron_earring
+      part: earring
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
     
-  - name: 赤鐵項鍊
-    type: equipment
-    part: necklace
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
+    - item_id: iron_necklace
+      display_name: 赤鐵項鍊
+      rarity: "R"
+      figure_id: iron_necklace
+      part: necklace
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
     
-  - name: 赤鐵手鐲
-    type: equipment
-    part: bracelet
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
+    - item_id: iron_bracelet
+      display_name: 赤鐵手鐲
+      rarity: "R"
+      figure_id: iron_bracelet
+      part: bracelet
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
     
-  - name: 赤鐵戒指
-    type: equipment
-    part: ring
-    rarity: R
-    VIT: 10
-    STR: 10
-    INT: 10
-    DEX: 10
-    MND: 10
-    LUK: 10
-    upgrade_time: 5
-    socket1: true
-    socket2: null
-    socket3: null
-    sell_money: 125
-    
+    - item_id: iron_ring
+      display_name: 赤鐵戒指
+      rarity: "R"
+      figure_id: iron_ring
+      part: ring
+      perference_job: null
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125

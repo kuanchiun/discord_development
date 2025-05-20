@@ -4,25 +4,30 @@ from random import choice, choices
 from enum import Enum
 
 from .scroll import Scroll
+from .base_item import BaseItem
 
 ######################
 # EnhanceResult class
 ######################
 class EnhanceResult(Enum):
-    SUCCESS = "強化成功！"
-    FAIL = "強化失敗！"
-    BROKEN = "強化失敗！裝備化為一到光消失了！"
+    SUCCESS = "✅ 強化成功！"
+    FAIL = "❌ 強化失敗！"
+    BROKEN = "❌ 強化失敗！裝備化為一道光消失了！"
 
 ##################
 # Equipment class
 ##################
 @dataclass
-class Equipment:
-    item_id: str      # 查表ID
-    figure_name: str   # 圖片ID
-    name: str          # 展示給玩家看的
-    part: str          # 裝備部位
+class Equipment(BaseItem):
+    # 共有屬性
+    item_id: str        # 查表ID
+    display_name: str   # 展示名稱
     rarity: str        # 稀有度
+    figure_id: str      # 圖片ID
+    sell_money: int     # 商店販售價格
+    # 獨特屬性
+    part: str          # 裝備部位
+    perference_job: Optional[str] = None  # 偏好職業
     
     attribute_bonus: Dict[str, int] = field(
         default_factory = dict) # 裝備屬性加成
@@ -33,22 +38,82 @@ class Equipment:
     sockets: List[Optional[Dict[str, int]]] = field(
         default_factory = [None, None, None]) # 裝備插槽
     
-    sell_money: int   # 商店販賣價格
+    def get_item_id(self) -> str:
+        """取得物品的唯一ID
+
+        Returns
+        -------
+        str
+            物品ID
+        """
+        
+        return self.item_id
+    
+    def get_display_name(self) -> str:
+        """取得物品的顯示名稱
+
+        Returns
+        -------
+        str
+            物品顯示名稱
+        """
+        
+        return self.display_name
+    
+    def get_rarity(self) -> str:
+        """取得物品的稀有度
+
+        Returns
+        -------
+        str
+            物品稀有度
+        """
+        
+        return self.rarity
+    
+    def get_figure_id(self) -> str:
+        """取得物品的圖片ID
+
+        Returns
+        -------
+        str
+            物品圖片ID
+        """
+        
+        return self.figure_id
+    
+    def get_sell_money(self) -> int:
+        """取得物品的售價
+
+        Returns
+        -------
+        str
+            物品售價
+        """
+        
+        return self.sell_money
     
     def attempt_enhance(self, 
                         scroll: "Scroll", 
                         protect_equipment: bool = False,
                         ) -> Tuple["EnhanceResult", Optional["Equipment"]]:
-        
         """強化裝備
-        
-        Args:
-            scroll (Scroll): 所使用強化卷軸
-            protect_equipment (bool): 是否應用防爆捲
-        
-        Returns:
-            Equipment, None: 裝備, 破壞
+
+        Parameters
+        ----------
+        scroll : Scroll
+            所使用的卷軸
+        protect_equipment : bool, optional
+            是否使用防爆卷, by default False
+            
+        Returns
+        -------
+        EnhanceResult
+            強化結果
+        Equipment or None
+            成功即回傳強化後的裝備, 失敗則回傳None
         """
+        
         # 消耗一次卷軸使用次數
         self.scroll_number -= 1
         
@@ -72,14 +137,19 @@ class Equipment:
         return EnhanceResult.FAIL, self
             
     def _apply_scroll_effect(self, scroll: "Scroll") -> "Equipment":
-        """執行卷軸效果
-        
-        Args:
-            scroll (Scroll): 卷軸
+        """強化裝備
+
+        Parameters
+        ----------
+        scroll : Scroll
+            所使用的卷軸
             
-        Return:
-            Equipment: 新裝備
+        Returns
+        -------
+        Equipment 
+            強化後的裝備
         """
+        
         # 產生一份新的bouns
         new_bonus = self.attribute_bonus.copy()
         
@@ -96,7 +166,23 @@ class Equipment:
         
         return self
         
+    def is_perference(self, job_type) -> bool:
+        """裝備是否有職業偏好
+
+        Parameters
+        ----------
+        job_type : str
+            職業名稱
+
+        Returns
+        -------
+        bool
+            是否偏好
+        """
         
+        if job_type == self.perference_job:
+            return True
+        return False
         
     
     

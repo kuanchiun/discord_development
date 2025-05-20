@@ -1,0 +1,1095 @@
+older:
+    - item_id: older_sword_shield
+      display_name: 陳舊劍盾
+      rarity: "N"
+      figure_id: older_sword_shield
+      part: weapon
+      perference_job: sworder
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_swear
+      display_name: 陳舊長槍
+      rarity: "N"
+      figure_id: older_swear
+      part: weapon
+      perference_job: sworder
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_katana
+      display_name: 陳舊武士刀
+      rarity: "N"
+      figure_id: older_katana
+      part: weapon
+      perference_job: sworder
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_twin_blades
+      display_name: 陳舊雙劍
+      rarity: "N"
+      figure_id: older_twin_blades
+      part: weapon
+      perference_job: sworder
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_dual_pistols
+      display_name: 陳舊雙槍
+      rarity: "N"
+      figure_id: older_dual_pistols
+      part: weapon
+      perference_job: shooter
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_bow
+      display_name: 陳舊長弓
+      rarity: "N"
+      figure_id: older_bow
+      part: weapon
+      perference_job: shooter
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_rifle
+      display_name: 陳舊步槍
+      rarity: "N"
+      figure_id: older_rifle
+      part: weapon
+      perference_job: shooter
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_fire_staff
+      display_name: 陳舊火焰法杖
+      rarity: "N"
+      figure_id: older_fire_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_ice_staff
+      display_name: 陳舊寒霜法杖
+      rarity: "N"
+      figure_id: older_ice_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_thunder_staff
+      display_name: 陳舊雷電法杖
+      rarity: "N"
+      figure_id: older_thunder_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_dagger
+      display_name: 陳舊匕首
+      rarity: "N"
+      figure_id: older_dagger
+      part: weapon
+      perference_job: thief
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_kunai
+      display_name: 陳舊苦無
+      rarity: "N"
+      figure_id: older_kunai
+      part: weapon
+      perference_job: thief
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+    
+    - item_id: older_playing_cards
+      display_name: 陳舊撲克牌
+      rarity: "N"
+      figure_id: older_playing_cards
+      part: weapon
+      perference_job: thief
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
+
+fate:
+    - item_id: fate_sword_shield
+      display_name: 命紋劍盾
+      rarity: "R"
+      figure_id: fate_sword_shield
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_swear
+      display_name: 命紋長槍
+      rarity: "R"
+      figure_id: fate_swear
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_katana
+      display_name: 命紋武士刀
+      rarity: "R"
+      figure_id: fate_katana
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_twin_blades
+      display_name: 命紋雙劍
+      rarity: "R"
+      figure_id: fate_twin_blades
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_dual_pistols
+      display_name: 命紋雙槍
+      rarity: "R"
+      figure_id: fate_dual_pistols
+      part: weapon
+      perference_job: shooter
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_bow
+      display_name: 命紋長弓
+      rarity: "R"
+      figure_id: fate_bow
+      part: weapon
+      perference_job: shooter
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_rifle
+      display_name: 命紋步槍
+      rarity: "R"
+      figure_id: fate_rifle
+      part: weapon
+      perference_job: shooter
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_fire_staff
+      display_name: 命紋火焰法杖
+      rarity: "R"
+      figure_id: fate_fire_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_ice_staff
+      display_name: 命紋寒霜法杖
+      rarity: "R"
+      figure_id: fate_ice_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_thunder_staff
+      display_name: 命紋雷電法杖
+      rarity: "R"
+      figure_id: fate_thunder_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_dagger
+      display_name: 命紋匕首
+      rarity: "R"
+      figure_id: fate_dagger
+      part: weapon
+      perference_job: thief
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_kunai
+      display_name: 命紋苦無
+      rarity: "R"
+      figure_id: fate_kunai
+      part: weapon
+      perference_job: thief
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+    
+    - item_id: fate_playing_cards
+      display_name: 命紋撲克牌
+      rarity: "R"
+      figure_id: fate_playing_cards
+      part: weapon
+      perference_job: thief
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 10
+          STR: 10
+          INT: 10
+          DEX: 10
+          MND: 10
+          LUK: 10
+      sockets: 
+          - true
+          - null
+          - null
+      sell_money: 125
+
+fairy:
+    - item_id: fairy_sword_shield
+      display_name: 聖痕劍盾
+      rarity: "SR"
+      figure_id: fairy_sword_shield
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_swear
+      display_name: 聖痕長槍
+      rarity: "SR"
+      figure_id: fairy_swear
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_katana
+      display_name: 聖痕武士刀
+      rarity: "SR"
+      figure_id: fairy_katana
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_twin_blades
+      display_name: 聖痕雙劍
+      rarity: "SR"
+      figure_id: fairy_twin_blades
+      part: weapon
+      perference_job: sworder
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_dual_pistols
+      display_name: 聖痕雙槍
+      rarity: "SR"
+      figure_id: fairy_dual_pistols
+      part: weapon
+      perference_job: shooter
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_bow
+      display_name: 聖痕長弓
+      rarity: "SR"
+      figure_id: fairy_bow
+      part: weapon
+      perference_job: shooter
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_rifle
+      display_name: 聖痕步槍
+      rarity: "SR"
+      figure_id: fairy_rifle
+      part: weapon
+      perference_job: shooter
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_fire_staff
+      display_name: 聖痕火焰法杖
+      rarity: "SR"
+      figure_id: fairy_fire_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_ice_staff
+      display_name: 聖痕寒霜法杖
+      rarity: "SR"
+      figure_id: fairy_ice_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_thunder_staff
+      display_name: 聖痕雷電法杖
+      rarity: "SR"
+      figure_id: fairy_thunder_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_dagger
+      display_name: 聖痕匕首
+      rarity: "SR"
+      figure_id: fairy_dagger
+      part: weapon
+      perference_job: thief
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_kunai
+      display_name: 聖痕苦無
+      rarity: "SR"
+      figure_id: fairy_kunai
+      part: weapon
+      perference_job: thief
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+    
+    - item_id: fairy_playing_cards
+      display_name: 聖痕撲克牌
+      rarity: "SR"
+      figure_id: fairy_playing_cards
+      part: weapon
+      perference_job: thief
+      scroll_number: 5
+      success_level: 0
+      attribute_bonus:
+          VIT: 20
+          STR: 20
+          INT: 20
+          DEX: 20
+          MND: 20
+          LUK: 20
+      sockets: 
+          - true
+          - true
+          - null
+      sell_money: 450
+
+origin:
+    - item_id: origin_sword_shield
+      display_name: 原律-界鑿劍盾
+      rarity: "UR"
+      figure_id: origin_sword_shield
+      part: weapon
+      perference_job: sworder
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_swear
+      display_name: 原律-界鑿長槍
+      rarity: "UR"
+      figure_id: origin_swear
+      part: weapon
+      perference_job: sworder
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_katana
+      display_name: 原律-界鑿武士刀
+      rarity: "UR"
+      figure_id: origin_katana
+      part: weapon
+      perference_job: sworder
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_twin_blades
+      display_name: 原律-界鑿雙劍
+      rarity: "UR"
+      figure_id: origin_twin_blades
+      part: weapon
+      perference_job: sworder
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_dual_pistols
+      display_name: 原律-界鑿雙槍
+      rarity: "UR"
+      figure_id: origin_dual_pistols
+      part: weapon
+      perference_job: shooter
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_bow
+      display_name: 原律-界鑿長弓
+      rarity: "UR"
+      figure_id: origin_bow
+      part: weapon
+      perference_job: shooter
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_rifle
+      display_name: 原律-界鑿步槍
+      rarity: "UR"
+      figure_id: origin_rifle
+      part: weapon
+      perference_job: shooter
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_fire_staff
+      display_name: 原律-界鑿火焰法杖
+      rarity: "UR"
+      figure_id: origin_fire_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_ice_staff
+      display_name: 原律-界鑿寒霜法杖
+      rarity: "UR"
+      figure_id: origin_ice_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_thunder_staff
+      display_name: 原律-界鑿雷電法杖
+      rarity: "UR"
+      figure_id: origin_thunder_staff
+      part: weapon
+      perference_job: mage
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_dagger
+      display_name: 原律-界鑿匕首
+      rarity: "UR"
+      figure_id: origin_dagger
+      part: weapon
+      perference_job: thief
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_kunai
+      display_name: 原律-界鑿苦無
+      rarity: "UR"
+      figure_id: origin_kunai
+      part: weapon
+      perference_job: thief
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900
+    
+    - item_id: origin_playing_cards
+      display_name: 原律-界鑿撲克牌
+      rarity: "UR"
+      figure_id: origin_playing_cards
+      part: weapon
+      perference_job: thief
+      scroll_number: 7
+      success_level: 0
+      attribute_bonus:
+          VIT: 30
+          STR: 30
+          INT: 30
+          DEX: 30
+          MND: 30
+          LUK: 30
+      sockets: 
+          - true
+          - true
+          - true
+      sell_money: 900

@@ -8,11 +8,11 @@ jobs:
           next_job: ["劍術師", "弓箭手", "法師", "盜賊"]
           required_level: 1
     
-    sword:
+    sworder:
         # 劍術師
         - name: "劍術師"
           description: "訓練有素的劍士，攻防兼備，為近戰戰鬥打下基礎"
-          job_type: "sword"
+          job_type: "sworder"
           skills:  []
           next_job: ["騎士", "戰士", "雙劍師"]
           required_level: 5
@@ -20,7 +20,7 @@ jobs:
         # 騎士
         - name: "騎士"
           description: "堅守榮譽的前線戰士，擅長以盾劍作戰"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: ["聖徽騎士"]
           required_level: 15
@@ -28,7 +28,7 @@ jobs:
         # 戰士
         - name: "戰士"
           description: "勇猛無畏的近戰鬥士，強調力量與正面突破"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: ["絕槍戰士"]
           required_level: 15
@@ -36,7 +36,7 @@ jobs:
         # 雙劍師
         - name: "雙劍師"
           description: "精通雙手劍術，擁有高速連擊與靈巧身法"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: ["影刃武士"]
           required_level: 15
@@ -44,7 +44,7 @@ jobs:
         # 聖徽騎士
         - name: "聖徽騎士"
           description: "背負神聖徽章的高階守護者，具有極高的韌性"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: ["銀衛聖騎"]
           required_level: 25
@@ -52,7 +52,7 @@ jobs:
         # 絕槍戰士
         - name: "絕槍戰士"
           description: "衝鋒陷陣，貫穿敵陣的破陣專家"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: ["重槍戰將"]
           required_level: 25
@@ -60,7 +60,7 @@ jobs:
         # 影刃武士
         - name: "影刃武士"
           description: "出劍如影，殺意無聲的雙刃技巧達人"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: ["月輪劍豪"]
           required_level: 25
@@ -68,7 +68,7 @@ jobs:
         # 銀衛聖騎
         - name: "銀衛聖騎"
           description: "銀甲無懼，信念不動如山的終極聖騎"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: null
           required_level: 35
@@ -76,7 +76,7 @@ jobs:
         # 重槍戰將
         - name: "重槍戰將"
           description: "揮槍如雷，將力量與經驗發揮至極限的最強戰士"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: null
           required_level: 35
@@ -84,12 +84,12 @@ jobs:
         # 月輪劍豪
         - name: "月輪劍豪"
           description: "劍法如月輪優雅致命，追求雙劍技極境的劍豪"
-          job_type: "sword"
+          job_type: "sworder"
           skills: []
           next_job: null
           required_level: 35
     
-    bow:
+    shooter:
         # 弓箭手
         - name: "弓箭手"
           description: "擅長遠距離精準射擊，能快速壓制敵人"

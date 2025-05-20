@@ -1,28 +1,115 @@
 from dataclasses import dataclass, field
 from typing import Optional, Dict, List
+import yaml
 
 from .equipment import Equipment
 from .base_item import BaseItem
+
+
+WEAPON_MAP: Dict = {
+    "劍盾": "sword_shield",
+    "長槍": "swear",
+    "武士刀": "katana",
+    "雙劍": "twin_blades",
+    "雙槍": "dual_pistols",
+    "弓": "bow",
+    "步槍": "rifle",
+    "火焰法杖": "fire_staff",
+    "寒霜法杖": "ice_staff",
+    "雷電法杖": "thunder_staff",
+    "匕首": "dagger",
+    "苦無": "kunai",
+    "撲克牌": "playing_cards"
+}
 
 ##################
 # Prototype class
 ##################
 @dataclass
 class Prototype(BaseItem):
+    # 共有屬性
     item_id: str        # 查表ID
-    name: str           # 展示給玩家看的
-    sell_money: int  # 商店販售價格
-    
-    system: str
+    display_name: str   # 展示名稱
+    rarity: str         # 稀有度
+    figure_id: str      # 圖片ID
+    sell_money: int     # 商店販售價格
+    # 獨特屬性
+    system: str         # 武器套裝名稱
     
     def get_item_id(self) -> str:
+        """取得物品的唯一ID
+
+        Returns
+        -------
+        str
+            物品ID
+        """
+        
         return self.item_id
     
-    def get_name(self) -> str:
-        return self.name
+    def get_display_name(self) -> str:
+        """取得物品的顯示名稱
 
+        Returns
+        -------
+        str
+            物品顯示名稱
+        """
+        
+        return self.display_name
+    
+    def get_rarity(self) -> str:
+        """取得物品的稀有度
+
+        Returns
+        -------
+        str
+            物品稀有度
+        """
+        
+        return self.rarity
+    
+    def get_figure_id(self) -> str:
+        """取得物品的圖片ID
+
+        Returns
+        -------
+        str
+            物品圖片ID
+        """
+        
+        return self.figure_id
+    
     def get_sell_money(self) -> int:
+        """取得物品的售價
+
+        Returns
+        -------
+        str
+            物品售價
+        """
+        
         return self.sell_money
     
-    def change_weapon(self, weapon: str):
-        pass
+    def exchange_weapon(self, weapon_type: str) -> Optional["Equipment"]:
+        """使用貨幣兌換系列武器
+
+        Parameters
+        ----------
+        weapon_type : str
+           兌換武器類型
+
+        Returns
+        -------
+        Equipment
+            兌換武器
+        """
+        
+        with open("yaml/equipments/exchange_weapons.yaml", "r", encoding = "utf-8") as f:
+            data = yaml.safe_load(f)
+        
+        for weapon in data[self.get_item_id()]:
+            if weapon["item_id"] == f"{self.get_item_id()}_{weapon_type}":
+                return Equipment(**weapon)
+        
+        return "❌ 沒有這個武器類型！"

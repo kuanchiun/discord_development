@@ -1,129 +1,168 @@
 items:
-  - name: 草布兜帽
-    type: equipment
-    part: head
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
+    - item_id: fabric_head
+      display_name: 草布兜帽
+      rarity: "N"
+      figure_id: fabric_head
+      part: head
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
     
-  - name: 草布輕甲
-    type: equipment
-    part: chest
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
+    - item_id: fabric_chest
+      display_name: 草布輕甲
+      rarity: "N"
+      figure_id: fabric_chest
+      part: chest
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
     
-  - name: 草布棉褲
-    type: equipment
-    part: legs
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
+    - item_id: fabric_leggings
+      display_name: 草布棉褲
+      rarity: "N"
+      figure_id: fabric_leggings
+      part: leggings
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
     
-  - name: 草布輕鞋
-    type: equipment
-    part: feet
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
+    - item_id: fabric_feet
+      display_name: 草布輕鞋
+      rarity: "N"
+      figure_id: fabric_feet
+      part: feet
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
     
-  - name: 粗製耳環
-    type: equipment
-    part: earring
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
+    - item_id: curde_earring
+      display_name: 粗製耳環
+      rarity: "N"
+      figure_id: curde_earring
+      part: earring
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
     
-  - name: 粗製項鍊
-    type: equipment
-    part: necklace
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
+    - item_id: curde_necklace
+      display_name: 粗製項鍊
+      rarity: "N"
+      figure_id: curde_necklace
+      part: necklace
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
     
-  - name: 粗製手鐲
-    type: equipment
-    part: bracelet
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
+    - item_id: curde_bracelet
+      display_name: 粗製手鐲
+      rarity: "N"
+      figure_id: curde_bracelet
+      part: bracelet
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50
     
-  - name: 粗製戒指
-    type: equipment
-    part: ring
-    rarity: N
-    VIT: 5
-    STR: 5
-    INT: 5
-    DEX: 5
-    MND: 5
-    LUK: 5
-    upgrade_time: 3
-    socket1: null
-    socket2: null
-    socket3: null
-    sell_money: 50
-    
+    - item_id: curde_ring
+      display_name: 粗製戒指
+      rarity: "N"
+      figure_id: curde_ring
+      part: ring
+      perference_job: null
+      scroll_number: 3
+      success_level: 0
+      attribute_bonus:
+          VIT: 5
+          STR: 5
+          INT: 5
+          DEX: 5
+          MND: 5
+          LUK: 5
+      sockets: 
+          - null
+          - null
+          - null
+      sell_money: 50

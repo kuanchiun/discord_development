@@ -1,0 +1,128 @@
+items:
+  - name: 方舟遺產戰冠
+    type: equipment
+    part: head
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
+    
+  - name: 方舟遺產心鎧
+    type: equipment
+    part: chest
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
+    
+  - name: 方舟遺產戰褲
+    type: equipment
+    part: legs
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
+    
+  - name: 方舟遺產行靴
+    type: equipment
+    part: feet
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
+    
+  - name: 星霜耳環
+    type: equipment
+    part: earring
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
+    
+  - name: 星霜項鍊
+    type: equipment
+    part: necklace
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
+    
+  - name: 星霜手鐲
+    type: equipment
+    part: bracelet
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
+    
+  - name: 星霜戒指
+    type: equipment
+    part: ring
+    rarity: SR
+    VIT: 20
+    STR: 20
+    INT: 20
+    DEX: 20
+    MND: 20
+    LUK: 20
+    upgrade_time: 7
+    socket1: true
+    socket2: true
+    socket3: null
+    sell_money: 375
