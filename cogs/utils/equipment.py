@@ -20,6 +20,7 @@ class EnhanceResult(Enum):
 @dataclass
 class Equipment(BaseItem):
     # 共有屬性
+    item_type: str = "equipment" 
     item_id: str        # 查表ID
     display_name: str   # 展示名稱
     rarity: str        # 稀有度
@@ -36,7 +37,38 @@ class Equipment(BaseItem):
     success_level: int   # 卷軸使用成功次數
     
     sockets: List[Optional[Dict[str, int]]] = field(
-        default_factory = [None, None, None]) # 裝備插槽
+        default_factory = lambda: [None, None, None]) # 裝備插槽
+    
+    def to_dict(self):
+        return {
+            "item_id": self.item_id,
+            "display_name": self.display_name,
+            "rarity":    self.rarity,
+            "figure_id": self.figure_id,
+            "sell_money": self.sell_money,
+            "part":  self.part,
+            "perference_job": self.perference_job,
+            "attribute_bonus": self.attribute_bonus,
+            "scroll_number": self.scroll_number,
+            "success_level": self.success_level,
+            "sockets": self.sockets
+        }
+        
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            item_id = data.get("item_id", ""),
+            display_name = data.get("display_name", ""),
+            rarity = data.get("rarity", ""),
+            figure_id = data.get("figure_id", ""),
+            sell_money = data.get("sell_money", 0),
+            part = data.get("part", ""),
+            perference_job = data.get("perference_job", None),
+            attribute_bonus = data.get("attribute_bonus", {}),
+            scroll_number = data.get("scroll_number", ""),
+            success_level = data.get("success_level", ""),
+            sockets = data.get("sockets", [None, None, None])
+        )
     
     def get_item_id(self) -> str:
         """取得物品的唯一ID

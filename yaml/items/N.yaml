@@ -1,0 +1,241 @@
+items:
+    - item_id: older
+      item_type: prototype
+      display_name: 陳舊獎牌
+      rarity: N
+      figure_id: prototype_1
+      sell_money: 50
+    
+    - item_id: N_scroll_VIT_1
+      item_type: scroll
+      display_name: "普通VIT強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，VIT＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          VIT: 1
+    
+    - item_id: N_scroll_STR_1
+      item_type: scroll
+      display_name: "普通STR強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，STR＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          STR: 1
+
+    - item_id: N_scroll_INT_1
+      item_type: scroll
+      display_name: "普通INT強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，INT＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        INT: 1
+    
+    - item_id: N_scroll_DEX_1
+      item_type: scroll
+      display_name: "普通DEX強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，DEX＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        DEX: 1
+    
+    - item_id: N_scroll_MND_1
+      item_type: scroll
+      display_name: "普通MND強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，MND＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        MND: 1
+    
+    - item_id: N_scroll_LUK_1
+      item_type: scroll
+      display_name: "普通LUK強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，LUK＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        LUK: 1
+    
+    - item_id: N_scroll_VIT_2
+      item_type: scroll
+      display_name: "普通VIT強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，VIT＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        VIT: 2
+    
+    - item_id: N_scroll_STR_2
+      item_type: scroll
+      display_name: "普通STR強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，STR＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        STR: 2
+    
+    - item_id: N_scroll_INT_2
+      item_type: scroll
+      display_name: "普通INT強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，INT＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        INT: 2
+    
+    - item_id: N_scroll_DEX_2
+      item_type: scroll
+      display_name: "普通DEX強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，DEX＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        DEX: 2
+    
+    - item_id: N_scroll_MND_2
+      item_type: scroll
+      display_name: "普通MND強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，MND＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        MND: 2
+    
+    - item_id: N_scroll_LUK_2
+      item_type: scroll
+      display_name: "普通LUK強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，LUK＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        LUK: 2
+    
+    - item_id: N_scroll_VIT_3
+      item_type: scroll
+      display_name: "普通VIT強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，VIT＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        VIT: 3
+    
+    - item_id: N_scroll_STR_3
+      item_type: scroll
+      display_name: "普通STR強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，STR＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        STR: 3
+    
+    - item_id: N_scroll_INT_3
+      item_type: scroll
+      display_name: "普通INT強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，INT＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        INT: 3
+    
+    - item_id: N_scroll_DEX_3
+      item_type: scroll
+      display_name: "普通DEX強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，DEX＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        DEX: 3
+    
+    - item_id: N_scroll_MND_3
+      item_type: scroll
+      display_name: "普通MND強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，MND＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        MND: 3
+    
+    - item_id: N_scroll_LUK_3
+      item_type: scroll
+      display_name: "普通LUK強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，LUK＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        LUK: 3

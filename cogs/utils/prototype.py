@@ -28,13 +28,32 @@ WEAPON_MAP: Dict = {
 @dataclass
 class Prototype(BaseItem):
     # 共有屬性
+    item_type: str = "prototype" 
     item_id: str        # 查表ID
     display_name: str   # 展示名稱
     rarity: str         # 稀有度
     figure_id: str      # 圖片ID
     sell_money: int     # 商店販售價格
-    # 獨特屬性
-    system: str         # 武器套裝名稱
+
+    
+    def to_dict(self):
+        return {
+            "item_id": self.item_id,
+            "display_name": self.display_name,
+            "rarity":    self.rarity,
+            "figure_id": self.figure_id,
+            "sell_money": self.sell_money
+        }
+        
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            item_id = data.get("item_id", ""),
+            display_name = data.get("display_name", ""),
+            rarity = data.get("rarity", ""),
+            figure_id = data.get("figure_id", ""),
+            sell_money = data.get("sell_money", 0)
+        )
     
     def get_item_id(self) -> str:
         """取得物品的唯一ID

@@ -1,0 +1,24 @@
+inventory:
+  scroll_001:
+    item:
+      type: scroll
+      name: "普通STR卷軸"
+      rarity: "N"
+      figure_name: "scroll_1"
+      effect:
+        STR: 1
+      probability: 1.0
+      sell_money: 50
+    quantity: 3
+
+  proto_001:
+    item:
+      type: prototype
+      name: "原律-界鑿能量核心"
+      rarity: "UR"
+      figure_name: "proto_core"
+      description: "能量核心，可兌換系列武器"
+      sell_money: 999
+    quantity: 1
+
+money: 1500

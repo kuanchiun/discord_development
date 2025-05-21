@@ -1,3 +1,98 @@
+from dataclasses import dataclass, field, asdict
+from typing import Optional, Dict, List, Tuple
+from random import choice, choices
+from enum import Enum
+from pathlib import Path
+
+import yaml
+
+from .equipinventory import EquipInventory
+from .iteminventory import ItemInventory
+from .equipmentslot import EquipmentSlot
+
+PLAYER_SAVEPATH = Path("yaml/players")
+
+
+@dataclass
+class Player:
+    baseattribute: "BaseAttribute" = None
+    equipinventory: "EquipInventory" = None
+    equipmentslot: "EquipmentSlot" = None
+    iteminventory: "ItemInventory" = None
+    
+    def __post_init__(self):
+        if self.baseattribute is None:
+            self.baseattribute = BaseAttribute()
+        if self.equipinventory is None:
+            self.equipinventory = EquipInventory()
+        if self.equipmentslot is None:
+            self.equipmentslot = EquipmentSlot()
+        if self.iteminventory is None:
+            self.iteminventory = ItemInventory()
+    
+    def to_dict(self) -> dict:
+        return {
+            "baseattribute": self.baseattribute.to_dict(),
+            "equipinventory": self.equipinventory.to_dict(),
+            "equipmentslot": self.equipmentslot.to_dict(),
+            "iteminventory": self.iteminventory.to_dict()
+        }
+    
+    @classmethod
+    def exists(cls, user_id: int) -> bool:
+        file_path = PLAYER_SAVEPATH / f"{user_id}.yaml"
+        return file_path.exists()
+    
+    @classmethod
+    def load(cls, user_id: int) -> "Player":
+        PLAYER_SAVEPATH.mkdir(exist_ok = True)
+        file_path = PLAYER_SAVEPATH / f"{user_id}.yaml"
+        
+        if file_path.exists():
+            with open(file_path, "r", encoding="utf-8") as file:
+                data = yaml.safe_load(file)
+            return cls(
+                baseattribute = BaseAttribute.from_dict(data["baseattribute"]),
+                equipinventory = EquipInventory.from_dict(data["equipinventory"]),
+                equipmentslot = EquipmentSlot.from_dict(data["equipmentslot"]),
+                iteminventory = ItemInventory.from_dict(data["iteminventory"])
+            )
+        else:
+            return cls(
+                baseattribute = BaseAttribute(),
+                equipinventory = EquipInventory(),
+                equipmentslot = EquipmentSlot(),
+                iteminventory = ItemInventory()
+            )
+    
+    def save(self, user_id: int) -> None:
+        PLAYER_SAVEPATH.mkdir(exist_ok = True)
+        file_path = PLAYER_SAVEPATH / f"{user_id}.yaml"
+        
+        with open(file_path, "w", encoding = "utf-8") as file:
+            yaml.safe_dump(self.to_dict(), file, allow_unicode = True)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 def enhance_equipped_item(self, slot_name, scroll_id, protect_scroll_id=None):
     # 1. 取得裝備
     slot = self.equipment_slot.get(slot_name)
@@ -39,3 +134,4 @@ def enhance_equipped_item(self, slot_name, scroll_id, protect_scroll_id=None):
     self.player_attribute.recalculate()
 
     return result
+"""

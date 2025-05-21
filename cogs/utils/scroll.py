@@ -10,6 +10,7 @@ from .base_item import BaseItem
 @dataclass
 class Scroll(BaseItem):
     # 共有屬性
+    item_type: str = "scroll" 
     item_id: str        # 查表ID
     display_name: str   # 展示名稱
     rarity: str         # 稀有度
@@ -18,11 +19,39 @@ class Scroll(BaseItem):
     
     # 獨特屬性
     description: str    # 卷軸說明
-    rarity: str         # 稀有度
     probability: float     # 強化成功機率
     destroy_on_fail: bool  # 裝備是否會損壞
     destroy_rate: Optional[float] = None  # 裝備損壞機率
     effect: Dict[str, int]  # 卷軸強化數值
+    
+    def to_dict(self):
+        return {
+            "item_id": self.item_id,
+            "display_name": self.display_name,
+            "rarity":    self.rarity,
+            "figure_id": self.figure_id,
+            "sell_money": self.sell_money,
+            "description": self.description,
+            "probability": self.probability,
+            "destroy_on_fail": self.destroy_on_fail,
+            "destroy_rate": self.destroy_rate,
+            "effect": self.effect,
+        }
+        
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            item_id = data.get("item_id", ""),
+            display_name = data.get("display_name", ""),
+            rarity = data.get("rarity", ""),
+            figure_id = data.get("figure_id", ""),
+            sell_money = data.get("sell_money", 0),
+            description = data.get("description", ""),
+            probability = data.get("probability", 1),
+            destroy_on_fail = data.get("destroy_on_fail", False),
+            destroy_rate = data.get("destroy_rate", 0),
+            effect = data.get("effect", {})
+        )
 
     def get_item_id(self) -> str:
         """取得物品的唯一ID

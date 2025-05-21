@@ -9,11 +9,46 @@ from .prototype import Prototype
 class InventoryEntry:
     item: BaseItem
     quantity: int
+    
+    def to_dict(self):
+        return {
+            "item": self.item.to_dict(),
+            "quantity": self.quantity
+        }
+    
+    @classmethod
+    def from_dict(cls, data):
+        item_type = data["item"]["item_type"]
+        if item_type == "scroll":
+            item = Scroll.from_dict(data["item"])
+        elif item_type == "prototype":
+            item = Prototype.from_dict(data["item"])
+        else:
+            raise ValueError(f"未知的 item type: {item_type}")
+        
+        return cls(item = item, quantity = data["quantity"])
 
 @dataclass
 class ItemInventory:
-    inventory: Dict[str, "InventoryEntry"] = {}
+    inventory: Dict[str, "InventoryEntry"] = field(default_factory=dict)
     money: int = 0
+
+    def to_dict(self):
+        return {
+            "inventory": {key: value.to_dict() for key, value in self.inventory.items()},
+            "money": self.money
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        inventory_data = {
+            key: InventoryEntry.from_dict(entry)
+            for key, entry in data.get("inventory", {}).items()
+        }
+        return cls(
+            inventory = inventory_data,
+            money = data.get("money", 0)
+        )
     
     def add(self, item: BaseItem, amount: int = 1) -> None:
         """增加物品數量
@@ -111,7 +146,7 @@ class ItemInventory:
         # 如果數量為零，直接刪除
         if entry.quantity == 0:
             del self.inventory[item_id]
-        return f"⚠️ 系統提示：你出售了**{amount}**個**{entry.item.get_name()}**，獲得{gain_money}元！"
+        return f"⚠️ 系統提示：你出售了**{amount}**個**{entry.item.get_display_name()}**，獲得{gain_money}元！"
     
     def get(self, item_id: str) -> Optional[BaseItem]:
         """取得物品資訊
