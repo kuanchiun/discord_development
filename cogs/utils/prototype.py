@@ -28,8 +28,8 @@ WEAPON_MAP: Dict = {
 @dataclass
 class Prototype(BaseItem):
     # 共有屬性
-    item_type: str = "prototype" 
     item_id: str        # 查表ID
+    item_type: str = "prototype" 
     display_name: str   # 展示名稱
     rarity: str         # 稀有度
     figure_id: str      # 圖片ID
@@ -39,6 +39,7 @@ class Prototype(BaseItem):
     def to_dict(self):
         return {
             "item_id": self.item_id,
+            "item_type": self.item_type,
             "display_name": self.display_name,
             "rarity":    self.rarity,
             "figure_id": self.figure_id,
@@ -49,6 +50,7 @@ class Prototype(BaseItem):
     def from_dict(cls, data):
         return cls(
             item_id = data.get("item_id", ""),
+            item_type = data.get("item_type", ""),
             display_name = data.get("display_name", ""),
             rarity = data.get("rarity", ""),
             figure_id = data.get("figure_id", ""),
