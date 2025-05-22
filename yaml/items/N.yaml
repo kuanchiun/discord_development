@@ -19,6 +19,19 @@ items:
       effect: 
           VIT: 1
     
+    - item_id: N_scroll_WIS_1
+      item_type: scroll
+      display_name: "普通WIS強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，WIS＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          WIS: 1
+    
     - item_id: N_scroll_STR_1
       item_type: scroll
       display_name: "普通STR強化卷軸100%"
@@ -58,6 +71,19 @@ items:
       effect: 
         DEX: 1
     
+    - item_id: N_scroll_AGI_1
+      item_type: scroll
+      display_name: "普通AGI強化卷軸100%"
+      rarity: N
+      figure_id: N_scroll_1
+      sell_money: 50
+      description: "成功率100％，AGI＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        AGI: 1
+    
     - item_id: N_scroll_MND_1
       item_type: scroll
       display_name: "普通MND強化卷軸100%"
@@ -96,6 +122,19 @@ items:
       destroy_rate: null
       effect: 
         VIT: 2
+
+    - item_id: N_scroll_WIS_2
+      item_type: scroll
+      display_name: "普通WIS強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，WIS＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        WIS: 2
     
     - item_id: N_scroll_STR_2
       item_type: scroll
@@ -136,6 +175,19 @@ items:
       effect: 
         DEX: 2
     
+    - item_id: N_scroll_AGI_2
+      item_type: scroll
+      display_name: "普通AGI強化卷軸60%"
+      rarity: N
+      figure_id: N_scroll_2
+      sell_money: 50
+      description: "成功率60％，AGI＋2"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        AGI: 2
+    
     - item_id: N_scroll_MND_2
       item_type: scroll
       display_name: "普通MND強化卷軸60%"
@@ -175,6 +227,19 @@ items:
       effect: 
         VIT: 3
     
+    - item_id: N_scroll_WIS_3
+      item_type: scroll
+      display_name: "普通WIS強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，WIS＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        WIS: 3
+    
     - item_id: N_scroll_STR_3
       item_type: scroll
       display_name: "普通STR強化卷軸10%"
@@ -213,6 +278,19 @@ items:
       destroy_rate: null
       effect: 
         DEX: 3
+    
+    - item_id: N_scroll_AGI_3
+      item_type: scroll
+      display_name: "普通AGI強化卷軸10%"
+      rarity: N
+      figure_id: N_scroll_3
+      sell_money: 50
+      description: "成功率10％，AGI＋3"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        AGI: 3
     
     - item_id: N_scroll_MND_3
       item_type: scroll

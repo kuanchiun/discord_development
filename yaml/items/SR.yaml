@@ -1,251 +1,251 @@
 items:
-    - item_id: fate
+    - item_id: fairy
       item_type: prototype
-      display_name: 命紋能量核心
-      rarity: R
-      figure_id: "prototype_2"
-      sell_money: 125
+      display_name: 聖痕能量核心
+      rarity: SR
+      figure_id: "prototype_3"
+      sell_money: 500
     
-    - item_id: R_scroll_VIT_1
+    - item_id: SR_scroll_VIT_1
       item_type: scroll
-      display_name: "高級VIT強化卷軸100%"
-      rarity: R
-      figure_id: R_scroll_1
-      sell_money: 125
-      description: "成功率100％，VIT＋2"
-      probability: 1.0
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-          VIT: 2
-
-    - item_id: R_scroll_STR_1
-      item_type: scroll
-      display_name: "高級STR強化卷軸100%"
-      rarity: R
-      figure_id: R_scroll_1
-      sell_money: 125
-      description: "成功率100％，STR＋2"
-      probability: 1.0
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        STR: 2
-    
-    - item_id: R_scroll_INT_1
-      item_type: scroll
-      display_name: "高級INT強化卷軸100%"
-      rarity: R
-      figure_id: R_scroll_1
-      sell_money: 125
-      description: "成功率100％，INT＋2"
-      probability: 1.0
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        INT: 2
-    
-    - item_id: R_scroll_DEX_1
-      item_type: scroll
-      display_name: "高級DEX強化卷軸100%"
-      rarity: R
-      figure_id: R_scroll_1
-      sell_money: 125
-      description: "成功率100％，DEX＋2"
-      probability: 1.0
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        DEX: 2
-    
-    - item_id: R_scroll_MND_1
-      item_type: scroll
-      display_name: "高級MND強化卷軸100%"
-      rarity: R
-      figure_id: R_scroll_1
-      sell_money: 125
-      description: "成功率100％，MND＋2"
-      probability: 1.0
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        MND: 2
-    
-    - item_id: R_scroll_LUK_1
-      item_type: scroll
-      display_name: "高級LUK強化卷軸100%"
-      rarity: R
-      figure_id: R_scroll_1
-      sell_money: 125
-      description: "成功率100％，LUK＋2"
-      probability: 1.0
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        LUK: 2
-
-    - item_id: R_scroll_VIT_2
-      item_type: scroll
-      display_name: "高級VIT強化卷軸60%"
-      rarity: R
-      figure_id: R_scroll_2
-      sell_money: 125
-      description: "成功率100％，VIT＋3"
-      probability: 0.6
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-          VIT: 3
-    
-    - item_id: R_scroll_STR_2
-      item_type: scroll
-      display_name: "高級STR強化卷軸60%"
-      rarity: R
-      figure_id: R_scroll_2
-      sell_money: 125
-      description: "成功率100％，STR＋3"
-      probability: 0.6
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        STR: 3
-    
-    - item_id: R_scroll_INT_2
-      item_type: scroll
-      display_name: "高級INT強化卷軸60%"
-      rarity: R
-      figure_id: R_scroll_2
-      sell_money: 125
-      description: "成功率100％，INT＋3"
-      probability: 0.6
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        INT: 3
-    
-    - item_id: R_scroll_DEX_2
-      item_type: scroll
-      display_name: "高級DEX強化卷軸60%"
-      rarity: R
-      figure_id: R_scroll_2
-      sell_money: 125
-      description: "成功率100％，DEX＋3"
-      probability: 0.6
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        DEX: 3
-    
-    - item_id: R_scroll_MND_2
-      item_type: scroll
-      display_name: "高級MND強化卷軸60%"
-      rarity: R
-      figure_id: R_scroll_2
-      sell_money: 125
-      description: "成功率100％，MND＋3"
-      probability: 0.6
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        MND: 3
-    
-    - item_id: R_scroll_LUK_2
-      item_type: scroll
-      display_name: "高級LUK強化卷軸60%"
-      rarity: R
-      figure_id: R_scroll_2
-      sell_money: 125
-      description: "成功率100％，LUK＋3"
-      probability: 0.6
-      destroy_on_fail: false
-      destroy_rate: null
-      effect: 
-        LUK: 3
-
-    - item_id: R_scroll_VIT_3
-      item_type: scroll
-      display_name: "高級VIT強化卷軸10%"
-      rarity: R
-      figure_id: R_scroll_3
-      sell_money: 125
+      display_name: "傳說VIT強化卷軸100%"
+      rarity: SR
+      figure_id: SR_scroll_1
+      sell_money: 500
       description: "成功率100％，VIT＋4"
-      probability: 0.1
+      probability: 1.0
       destroy_on_fail: false
       destroy_rate: null
       effect: 
           VIT: 4
-    
-    - item_id: R_scroll_STR_3
+
+    - item_id: SR_scroll_STR_1
       item_type: scroll
-      display_name: "高級STR強化卷軸10%"
-      rarity: R
-      figure_id: R_scroll_3
-      sell_money: 125
-      description: "成功率10％，STR＋4"
-      probability: 0.1
+      display_name: "傳說STR強化卷軸100%"
+      rarity: SR
+      figure_id: SR_scroll_1
+      sell_money: 500
+      description: "成功率100％，STR＋4"
+      probability: 1.0
       destroy_on_fail: false
       destroy_rate: null
       effect: 
         STR: 4
     
-    - item_id: R_scroll_INT_3
+    - item_id: SR_scroll_INT_1
       item_type: scroll
-      display_name: "高級INT強化卷軸10%"
-      rarity: R
-      figure_id: R_scroll_3
-      sell_money: 125
-      description: "成功率10％，INT＋4"
-      probability: 0.1
+      display_name: "傳說INT強化卷軸100%"
+      rarity: SR
+      figure_id: SR_scroll_1
+      sell_money: 500
+      description: "成功率100％，INT＋4"
+      probability: 1.0
       destroy_on_fail: false
       destroy_rate: null
       effect: 
         INT: 4
     
-    - item_id: R_scroll_DEX_3
+    - item_id: SR_scroll_DEX_1
       item_type: scroll
-      display_name: "高級DEX強化卷軸10%"
-      rarity: R
-      figure_id: R_scroll_3
-      sell_money: 125
-      description: "成功率10％，DEX＋4"
-      probability: 0.1
+      display_name: "傳說DEX強化卷軸100%"
+      rarity: SR
+      figure_id: SR_scroll_1
+      sell_money: 500
+      description: "成功率100％，DEX＋4"
+      probability: 1.0
       destroy_on_fail: false
       destroy_rate: null
       effect: 
         DEX: 4
     
-    - item_id: R_scroll_MND_3
+    - item_id: SR_scroll_MND_1
       item_type: scroll
-      display_name: "高級MND強化卷軸10%"
-      rarity: R
-      figure_id: R_scroll_3
-      sell_money: 125
-      description: "成功率10％，MND＋4"
-      probability: 0.1
+      display_name: "傳說MND強化卷軸100%"
+      rarity: SR
+      figure_id: SR_scroll_1
+      sell_money: 500
+      description: "成功率100％，MND＋4"
+      probability: 1.0
       destroy_on_fail: false
       destroy_rate: null
       effect: 
         MND: 4
     
-    - item_id: R_scroll_LUK_3
+    - item_id: SR_scroll_LUK_1
       item_type: scroll
-      display_name: "高級LUK強化卷軸10%"
-      rarity: R
-      figure_id: R_scroll_3
-      sell_money: 125
-      description: "成功率10％，LUK＋4"
-      probability: 0.1
+      display_name: "傳說LUK強化卷軸100%"
+      rarity: SR
+      figure_id: SR_scroll_1
+      sell_money: 500
+      description: "成功率100％，LUK＋4"
+      probability: 1.0
       destroy_on_fail: false
       destroy_rate: null
       effect: 
         LUK: 4
 
-    - item_id: R_scroll_guard
+    - item_id: SR_scroll_VIT_2
+      item_type: scroll
+      display_name: "傳說VIT強化卷軸60%"
+      rarity: SR
+      figure_id: SR_scroll_2
+      sell_money: 500
+      description: "成功率100％，VIT＋5"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          VIT: 5
+    
+    - item_id: SR_scroll_STR_2
+      item_type: scroll
+      display_name: "傳說STR強化卷軸60%"
+      rarity: SR
+      figure_id: SR_scroll_2
+      sell_money: 500
+      description: "成功率100％，STR＋5"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        STR: 5
+    
+    - item_id: SR_scroll_INT_2
+      item_type: scroll
+      display_name: "傳說INT強化卷軸60%"
+      rarity: SR
+      figure_id: SR_scroll_2
+      sell_money: 500
+      description: "成功率100％，INT＋5"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        INT: 5
+    
+    - item_id: SR_scroll_DEX_2
+      item_type: scroll
+      display_name: "傳說DEX強化卷軸60%"
+      rarity: SR
+      figure_id: SR_scroll_2
+      sell_money: 500
+      description: "成功率100％，DEX＋5"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        DEX: 5
+    
+    - item_id: SR_scroll_MND_2
+      item_type: scroll
+      display_name: "傳說MND強化卷軸60%"
+      rarity: SR
+      figure_id: SR_scroll_2
+      sell_money: 500
+      description: "成功率100％，MND＋5"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        MND: 5
+    
+    - item_id: SR_scroll_LUK_2
+      item_type: scroll
+      display_name: "傳說LUK強化卷軸60%"
+      rarity: SR
+      figure_id: SR_scroll_2
+      sell_money: 500
+      description: "成功率100％，LUK＋5"
+      probability: 0.6
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        LUK: 5
+    
+    - item_id: SR_scroll_VIT_3
+      item_type: scroll
+      display_name: "傳說VIT強化卷軸10%"
+      rarity: SR
+      figure_id: SR_scroll_3
+      sell_money: 500
+      description: "成功率100％，VIT＋6"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          VIT: 6
+    
+    - item_id: SR_scroll_STR_3
+      item_type: scroll
+      display_name: "傳說STR強化卷軸10%"
+      rarity: SR
+      figure_id: SR_scroll_3
+      sell_money: 500
+      description: "成功率10％，STR＋6"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        STR: 6
+    
+    - item_id: SR_scroll_INT_3
+      item_type: scroll
+      display_name: "傳說INT強化卷軸10%"
+      rarity: SR
+      figure_id: SR_scroll_3
+      sell_money: 500
+      description: "成功率10％，INT＋6"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        INT: 6
+    
+    - item_id: SR_scroll_DEX_3
+      item_type: scroll
+      display_name: "傳說DEX強化卷軸10%"
+      rarity: SR
+      figure_id: SR_scroll_3
+      sell_money: 500
+      description: "成功率10％，DEX＋6"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        DEX: 6
+    
+    - item_id: SR_scroll_MND_3
+      item_type: scroll
+      display_name: "傳說MND強化卷軸10%"
+      rarity: SR
+      figure_id: SR_scroll_3
+      sell_money: 500
+      description: "成功率10％，MND＋6"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        MND: 6
+    
+    - item_id: SR_scroll_LUK_3
+      item_type: scroll
+      display_name: "傳說LUK強化卷軸10%"
+      rarity: SR
+      figure_id: SR_scroll_3
+      sell_money: 500
+      description: "成功率10％，LUK＋6"
+      probability: 0.1
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+        LUK: 6
+    
+    - item_id: SR_scroll_guard
       item_type: scroll
       display_name: "普通堅韌詛咒卷軸60%"
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: "成功率60％，VIT＋6，STR＋6，失敗時有50%機率裝備消失"
       probability: 0.6
       destroy_on_fail: true
@@ -254,12 +254,12 @@ items:
         VIT: 6
         STR: 6
     
-    - item_id: R_scroll_magic
+    - item_id: SR_scroll_magic
       item_type: scroll
       display_name: "普通秘術詛咒卷軸60%"
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: "成功率60％，WIS＋6，INT＋6，失敗時有50%機率裝備消失"
       probability: 0.6
       destroy_on_fail: true
@@ -268,12 +268,12 @@ items:
         WIS: 6
         INT: 6
 
-    - item_id: R_scroll_swift
+    - item_id: SR_scroll_swift
       item_type: scroll
       display_name: "普通迅捷詛咒卷軸60%"
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: "成功率60％，DEX＋6，AGI＋6，失敗時有50%機率裝備消失"
       probability: 0.6
       destroy_on_fail: true
@@ -282,12 +282,12 @@ items:
         DEX: 6
         AGI: 6
     
-    - item_id: R_scroll_fatal
+    - item_id: SR_scroll_fatal
       item_type: scroll
       display_name: "普通致命詛咒卷軸60%"
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: "成功率60％，STR＋6，LUK＋6，失敗時有50%機率裝備消失"
       probability: 0.6
       destroy_on_fail: true
@@ -296,12 +296,12 @@ items:
         STR: 6
         LUK: 6
     
-    - item_id: R_scroll_dominate
+    - item_id: SR_scroll_dominate
       item_type: scroll
       display_name: "普通支配詛咒卷軸60%"
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: "成功率60％，INT＋6，MND＋6，失敗時有50%機率裝備消失"
       probability: 0.6
       destroy_on_fail: true
@@ -310,12 +310,12 @@ items:
         INT: 6
         MND: 6
     
-    - item_id: R_scroll_cunning
+    - item_id: SR_scroll_cunning
       item_type: scroll
       display_name: "普通狡詐詛咒卷軸60%"
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: "成功率60％，AGI＋6，LUK＋6，失敗時有50%機率裝備消失"
       probability: 0.6
       destroy_on_fail: true
@@ -324,12 +324,12 @@ items:
         AGI: 6
         LUK: 6
     
-    - item_id: R_scroll_spirit
+    - item_id: SR_scroll_spirit
       item_type: scroll
       display_name: 普通戰意詛咒卷軸60%
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: 成功率60％，VIT＋3，STR＋3，AGI＋3，LUK＋3失敗時有50%機率裝備消失
       probability: 0.6
       destroy_on_fail: true
@@ -340,12 +340,12 @@ items:
         AGI: 3
         LUK: 3
     
-    - item_id: R_scroll_arcana
+    - item_id: SR_scroll_arcana
       item_type: scroll
       display_name: 普通秘能詛咒卷軸60%
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: 成功率60％，INT＋3，WIS＋3，DEX＋3，MND＋3失敗時有50%機率裝備消失
       probability: 0.6
       destroy_on_fail: true
@@ -356,12 +356,12 @@ items:
         DEX: 3
         MND: 3
     
-    - item_id: R_scroll_assault
+    - item_id: SR_scroll_assault
       item_type: scroll
       display_name: 普通奇襲詛咒卷軸60%
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: 成功率60％，STR＋3，DEX＋3，AGI＋3，LUK＋3失敗時有50%機率裝備消失
       probability: 0.6
       destroy_on_fail: true
@@ -372,12 +372,12 @@ items:
         AGI: 3
         LUK: 3
     
-    - item_id: R_scroll_balance
+    - item_id: SR_scroll_balance
       item_type: scroll
       display_name: 普通均衡詛咒卷軸60%
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: 成功率60％，VIT＋3，INT＋3，MND＋3，LUK＋3失敗時有50%機率裝備消失
       probability: 0.6
       destroy_on_fail: true
@@ -388,12 +388,12 @@ items:
         MND: 3
         LUK: 3
 
-    - item_id: R_scroll_all
+    - item_id: SR_scroll_all
       item_type: scroll
       display_name: "普通全屬性詛咒卷軸60%"
-      rarity: R
-      figure_id: R_scroll_curse
-      sell_money: 125
+      rarity: SR
+      figure_id: SR_scroll_curse
+      sell_money: 500
       description: "成功率60％，全屬性＋2，失敗時有50%機率裝備消失"
       probability: 0.6
       destroy_on_fail: true
