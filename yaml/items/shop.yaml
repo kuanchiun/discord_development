@@ -1,0 +1,122 @@
+items:
+    - item_id: prevent_scroll
+      item_type: prevent_scroll
+      display_name: 防爆卷軸
+      rarity: SR
+      figure_id: prevent_scroll
+      sell_money: 150
+      description: "強化時使用可避免裝備消失"
+      purchase_money: 300
+    
+    - item_id: shop_scroll_VIT_1
+      item_type: scroll
+      display_name: "新手VIT強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，VIT＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          VIT: 1
+      purchase_money: 100
+    
+    - item_id: shop_scroll_WIS_1
+      item_type: scroll
+      display_name: "新手WIS強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，WIS＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          WIS: 1
+      purchase_money: 100
+    
+    - item_id: shop_scroll_STR_1
+      item_type: scroll
+      display_name: "新手STR強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，STR＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          STR: 1
+      purchase_money: 100
+
+    - item_id: shop_scroll_INT_1
+      item_type: scroll
+      display_name: "新手INT強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，INT＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          INT: 1
+      purchase_money: 100
+    
+    - item_id: shop_scroll_DEX_1
+      item_type: scroll
+      display_name: "新手DEX強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，DEX＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          DEX: 1
+      purchase_money: 100
+    
+    - item_id: shop_scroll_AGI_1
+      item_type: scroll
+      display_name: "新手AGI強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，AGI＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          AGI: 1
+      purchase_money: 100
+    
+    - item_id: shop_scroll_MND_1
+      item_type: scroll
+      display_name: "新手MND強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，MND＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          MND: 1
+      purchase_money: 100
+    
+    - item_id: shop_scroll_LUK_1
+      item_type: scroll
+      display_name: "新手LUK強化卷軸100％"
+      rarity: N
+      figure_id: shop_scroll_1
+      sell_money: 50
+      description: "成功率100％，LUK＋1"
+      probability: 1.0
+      destroy_on_fail: false
+      destroy_rate: null
+      effect: 
+          LUK: 1
+      purchase_money: 100
+

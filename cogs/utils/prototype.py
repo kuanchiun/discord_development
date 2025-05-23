@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Dict, List
+from typing import Optional, Dict
 import yaml
 
 from .equipment import Equipment
@@ -36,7 +36,15 @@ class Prototype(BaseItem):
     sell_money: int     # 商店販售價格
 
     
-    def to_dict(self):
+    def to_dict(self) -> Dict:
+        """轉換成字典
+
+        Returns
+        -------
+        Dict:
+            原型武器字典
+        """
+        
         return {
             "item_id": self.item_id,
             "item_type": self.item_type,
@@ -47,7 +55,20 @@ class Prototype(BaseItem):
         }
         
     @classmethod
-    def from_dict(cls, data):
+    def from_dict(cls, data) -> "Prototype":
+        """將字典轉換為原型武器物件
+
+        Parameters
+        ----------
+        data : dict
+            原型武器字典
+
+        Returns
+        -------
+        ItemInventory
+            原型武器物件
+        """
+        
         return cls(
             item_id = data.get("item_id", ""),
             item_type = data.get("item_type", ""),
@@ -122,6 +143,10 @@ class Prototype(BaseItem):
         """
         
         return self.sell_money
+    
+    def get_purchase_money(self):
+        """取得物品商店購買價格"""
+        return super().get_purchase_money()
     
     def exchange_weapon(self, weapon_type: str) -> Optional["Equipment"]:
         """使用貨幣兌換系列武器

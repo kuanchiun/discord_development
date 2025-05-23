@@ -30,7 +30,15 @@ class Player:
         if self.iteminventory is None:
             self.iteminventory = ItemInventory()
     
-    def to_dict(self) -> dict:
+    def to_dict(self) -> Dict:
+        """轉換成字典
+
+        Returns
+        -------
+        Dict:
+           玩家字典
+        """
+        
         return {
             "baseattribute": self.baseattribute.to_dict(),
             "equipinventory": self.equipinventory.to_dict(),
@@ -40,11 +48,37 @@ class Player:
     
     @classmethod
     def exists(cls, user_id: int) -> bool:
+        """檢查用戶資料是否存在
+
+        Parameters
+        ----------
+        user_id : int
+            用戶ID
+
+        Returns
+        -------
+        bool
+            資料是否存在
+        """
+        
         file_path = PLAYER_SAVEPATH / f"{user_id}.yaml"
         return file_path.exists()
     
     @classmethod
     def load(cls, user_id: int) -> "Player":
+        """載入用戶資料或初始化玩家資料
+
+        Parameters
+        ----------
+        user_id : int
+            用戶ID
+
+        Returns
+        -------
+        Player
+            玩家物件
+        """
+        
         PLAYER_SAVEPATH.mkdir(exist_ok = True)
         file_path = PLAYER_SAVEPATH / f"{user_id}.yaml"
         
@@ -66,6 +100,14 @@ class Player:
             )
     
     def save(self, user_id: int) -> None:
+        """儲存用戶資料
+        
+        Parameters
+        ----------
+        user_id : int
+            用戶ID
+        """
+        
         PLAYER_SAVEPATH.mkdir(exist_ok = True)
         file_path = PLAYER_SAVEPATH / f"{user_id}.yaml"
         

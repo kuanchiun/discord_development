@@ -6,13 +6,13 @@ items:
       figure_id: "prototype_4"
       sell_money: 900
     
-    - item_id: SR_scroll_guard
+    - item_id: UR_scroll_guard
       item_type: scroll
       display_name: "不滅的詛咒堅韌強化卷軸60％"
       rarity: UR
-      figure_id: SR_scroll_1
+      figure_id: UR_scroll_1
       sell_money: 900
-      description: "成功率60％，VIT＋5，STR＋5"
+      description: "成功率60％，VIT＋5，STR＋5，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -20,13 +20,13 @@ items:
           VIT: 5
           STR: 5
     
-    - item_id: SR_scroll_magic
+    - item_id: UR_scroll_magic
       item_type: scroll
       display_name: "不滅的詛咒秘術強化卷軸60％"
       rarity: UR
-      figure_id: SR_scroll_1
+      figure_id: UR_scroll_1
       sell_money: 900
-      description: "成功率60％，WIS＋5，INT＋5"
+      description: "成功率60％，WIS＋5，INT＋5，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -34,13 +34,13 @@ items:
           WIS: 5
           INT: 5
     
-    - item_id: SR_scroll_swift
+    - item_id: UR_scroll_swift
       item_type: scroll
       display_name: "不滅的詛咒迅捷強化卷軸60％"
       rarity: UR
-      figure_id: SR_scroll_1
+      figure_id: UR_scroll_1
       sell_money: 900
-      description: "成功率60％，DEX＋5，AGI＋5"
+      description: "成功率60％，DEX＋5，AGI＋5，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -48,13 +48,13 @@ items:
           DEX: 5
           AGI: 5
     
-    - item_id: SR_scroll_fatal
+    - item_id: UR_scroll_fatal
       item_type: scroll
       display_name: "不滅的詛咒致命強化卷軸60％"
       rarity: UR
-      figure_id: SR_scroll_1
+      figure_id: UR_scroll_1
       sell_money: 900
-      description: "成功率60％，STR＋5，LUK＋5"
+      description: "成功率60％，STR＋5，LUK＋5，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -62,13 +62,13 @@ items:
           STR: 5
           LUK: 5
     
-    - item_id: SR_scroll_dominate
+    - item_id: UR_scroll_dominate
       item_type: scroll
       display_name: "不滅的詛咒狡詐強化卷軸60％"
       rarity: UR
-      figure_id: SR_scroll_1
+      figure_id: UR_scroll_1
       sell_money: 900
-      description: "成功率60％，INT＋5，MND＋5"
+      description: "成功率60％，INT＋5，MND＋5，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -76,11 +76,11 @@ items:
           INT: 5
           MND: 5
     
-    - item_id: SR_scroll_dominate
+    - item_id: UR_scroll_dominate
       item_type: scroll
-      display_name: "不滅的詛咒狡詐強化卷軸60％"
+      display_name: "不滅的詛咒狡詐強化卷軸60％，失敗時50%使裝備消失"
       rarity: UR
-      figure_id: SR_scroll_1
+      figure_id: UR_scroll_1
       sell_money: 900
       description: "成功率60％，AGI＋5，LUK＋5"
       probability: 0.6
@@ -90,13 +90,13 @@ items:
           AGI: 5
           LUK: 5
     
-    - item_id: SR_scroll_spirit
+    - item_id: UR_scroll_spirit
       item_type: scroll
       display_name: 不滅的詛咒戰意卷軸60%
       rarity: UR
-      figure_id: SR_scroll_3
+      figure_id: UR_scroll_2
       sell_money: 900
-      description: 成功率60％，VIT＋4，STR＋4，AGI＋4，LUK＋4
+      description: "成功率60％，VIT＋4，STR＋4，AGI＋4，LUK＋4，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -106,13 +106,13 @@ items:
           AGI: 4
           LUK: 4
     
-    - item_id: SR_scroll_arcana
+    - item_id: UR_scroll_arcana
       item_type: scroll
       display_name: 不滅的詛咒秘能卷軸60%
       rarity: UR
-      figure_id: SR_scroll_3
+      figure_id: UR_scroll_2
       sell_money: 900
-      description: 成功率60％，INT＋4，WIS＋4，DEX＋4，MND＋4
+      description: "成功率60％，INT＋4，WIS＋4，DEX＋4，MND＋4，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -122,13 +122,13 @@ items:
           DEX: 4
           MND: 4
       
-    - item_id: SR_scroll_arcana
+    - item_id: UR_scroll_arcana
       item_type: scroll
       display_name: 不滅的詛咒奇襲卷軸60%
       rarity: UR
-      figure_id: SR_scroll_3
+      figure_id: UR_scroll_2
       sell_money: 900
-      description: 成功率60％，STR＋4，DEX＋4，AGI＋4，LUK＋4
+      description: "成功率60％，STR＋4，DEX＋4，AGI＋4，LUK＋4，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -138,13 +138,13 @@ items:
           AGI: 4
           LUK: 4
     
-    - item_id: SR_scroll_arcana
+    - item_id: UR_scroll_arcana
       item_type: scroll
       display_name: 不滅的詛咒均衡卷軸60%
       rarity: UR
-      figure_id: SR_scroll_3
+      figure_id: UR_scroll_2
       sell_money: 900
-      description: 成功率60％，VIT＋4，INT＋4，MND＋4，LUK＋4
+      description: "成功率60％，VIT＋4，INT＋4，MND＋4，LUK＋4，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
@@ -154,13 +154,13 @@ items:
           MND: 4
           LUK: 4
     
-    - item_id: SR_scroll_all
+    - item_id: UR_scroll_all
       item_type: scroll
       display_name: 不滅的詛咒全屬性卷軸60%
       rarity: UR
-      figure_id: SR_scroll_4
+      figure_id: UR_scroll_3
       sell_money: 900
-      description: 成功率60％，全屬性+3
+      description: "成功率60％，全屬性+3，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5

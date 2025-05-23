@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional, Dict, List, Union
+from typing import Optional, Dict
 
 from .base_item import BaseItem
-from .scroll import Scroll
+from .scroll import Scroll, PreventScroll
 from .prototype import Prototype
 
 @dataclass
@@ -10,19 +10,42 @@ class InventoryEntry:
     item: BaseItem
     quantity: int
     
-    def to_dict(self):
+    def to_dict(self) -> Dict:
+        """轉換成字典
+
+        Returns
+        -------
+        Dict:
+            物品資訊字典
+        """
+        
         return {
             "item": self.item.to_dict(),
             "quantity": self.quantity
         }
     
     @classmethod
-    def from_dict(cls, data):
+    def from_dict(cls, data) -> "InventoryEntry":
+        """將字典轉換為物品資訊物件
+
+        Parameters
+        ----------
+        data : dict
+            物品資訊字典
+
+        Returns
+        -------
+        ItemInventory
+            物品資訊物件
+        """
+        
         item_type = data["item"]["item_type"]
         if item_type == "scroll":
             item = Scroll.from_dict(data["item"])
         elif item_type == "prototype":
             item = Prototype.from_dict(data["item"])
+        elif item_type == "prevent_scroll":
+            item = PreventScroll.from_dict(data["item"])
         else:
             raise ValueError(f"未知的 item type: {item_type}")
         
@@ -30,7 +53,7 @@ class InventoryEntry:
 
 @dataclass
 class ItemInventory:
-    inventory: Dict[str, "InventoryEntry"] = field(default_factory=dict)
+    inventory: Dict[str, "InventoryEntry"] = field(default_factory = dict)
     money: int = 0
 
     def to_dict(self) -> Dict:

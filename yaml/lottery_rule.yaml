@@ -13,4 +13,5 @@ RARITY_PROBABILITY:
 ITEM_PROBABILITY:
     equipments: 33.33333
     items: 66.66667
-    
+
+COST: 100
