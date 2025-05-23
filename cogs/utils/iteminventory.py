@@ -33,14 +33,35 @@ class ItemInventory:
     inventory: Dict[str, "InventoryEntry"] = field(default_factory=dict)
     money: int = 0
 
-    def to_dict(self):
+    def to_dict(self) -> Dict:
+        """轉換成字典
+
+        Returns
+        -------
+        Dict:
+            物品背包字典
+        """
+        
         return {
             "inventory": {key: value.to_dict() for key, value in self.inventory.items()},
             "money": self.money
         }
 
     @classmethod
-    def from_dict(cls, data):
+    def from_dict(cls, data) -> "ItemInventory":
+        """將字典轉換為物品背包物件
+
+        Parameters
+        ----------
+        data : dict
+            物品背包字典
+
+        Returns
+        -------
+        ItemInventory
+            物品背包物件
+        """
+        
         inventory_data = {
             key: InventoryEntry.from_dict(entry)
             for key, entry in data.get("inventory", {}).items()
@@ -59,16 +80,6 @@ class ItemInventory:
             物品物件
         amount : int, optional
             數量, by default 1
-        """
-        
-        """增加物品數量
-        
-        Args:
-            item (BaseItem): 物品
-            amount (int): 數量
-        
-        Returns:
-            None
         """
         
         # 檢查是否持有物品

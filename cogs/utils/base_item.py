@@ -7,6 +7,11 @@ class BaseItem(ABC):
         pass
     
     @abstractmethod
+    def get_item_type(self) -> str:
+        """取得 item 的物品類型"""
+        pass
+    
+    @abstractmethod
     def get_display_name(self) -> str:
         """取得 item 的展示名稱"""
         pass

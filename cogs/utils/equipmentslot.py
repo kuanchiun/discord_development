@@ -23,7 +23,15 @@ class EquipmentSlot:
     ring1: Optional["Equipment"] = None
     ring2: Optional["Equipment"] = None
     
-    def to_dict(self):
+    def to_dict(self) -> Dict[str, Dict]:
+        """轉換成字典
+
+        Returns
+        -------
+        Dict:
+            裝備欄字典
+        """
+        
         return {
             "weapon":   self.weapon.to_dict(),
             "head":     self.head.to_dict(),
@@ -38,7 +46,20 @@ class EquipmentSlot:
         }
         
     @classmethod
-    def from_dict(cls, data):
+    def from_dict(cls, data: Dict) -> "EquipmentSlot":
+        """將字典轉換為裝備物件
+
+        Parameters
+        ----------
+        data : dict
+            裝備欄字典
+
+        Returns
+        -------
+        EquipmentSlot
+            裝備欄物件
+        """
+        
         return cls(
             weapon   = Equipment.from_dict(data["weapon"])   if data.get("weapon")   else None,
             head     = Equipment.from_dict(data["head"])     if data.get("head")     else None,
@@ -52,7 +73,25 @@ class EquipmentSlot:
             ring2    = Equipment.from_dict(data["ring2"])    if data.get("ring2")    else None,
         )
     
-    def is_already_equipped(self, slot):
+    def is_already_equipped(self, slot: str) -> bool:
+        """檢查裝備欄位是否已經有裝備
+
+        Parameters
+        ----------
+        slot : str
+            裝備欄位
+
+        Returns
+        -------
+        bool
+            是否已經有裝備
+
+        Raises
+        ------
+        ValueError
+            無效的裝備欄位
+        """
+        
         if not hasattr(self, slot):
             raise ValueError(f"❌ 無效的裝備欄位: {slot}")
         
@@ -61,7 +100,18 @@ class EquipmentSlot:
     def equip(self, 
               slot: str, 
               equipment: "Equipment", 
-              equipinventory: "EquipInventory"):
+              equipinventory: "EquipInventory") -> None:
+        """將裝備裝備於裝備欄上
+
+        Parameters
+        ----------
+        slot : str
+            裝備欄位
+        equipment : Equipment
+            裝備
+        equipinventory : EquipInventory
+            玩家的裝備背包
+        """
         
         if getattr(self, slot):
             old_equipment = getattr(self, slot)

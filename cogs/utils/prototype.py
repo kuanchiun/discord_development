@@ -68,6 +68,17 @@ class Prototype(BaseItem):
         
         return self.item_id
     
+    def get_item_type(self) -> str:
+        """取得物品的物品類型
+
+        Returns
+        -------
+        str
+            物品ID
+        """
+        
+        return self.item_type
+    
     def get_display_name(self) -> str:
         """取得物品的顯示名稱
 

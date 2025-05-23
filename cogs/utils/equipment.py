@@ -20,8 +20,8 @@ class EnhanceResult(Enum):
 @dataclass
 class Equipment(BaseItem):
     # 共有屬性
-    item_type: str = "equipment" 
     item_id: str        # 查表ID
+    item_type: str = "equipment" 
     display_name: str   # 展示名稱
     rarity: str        # 稀有度
     figure_id: str      # 圖片ID
@@ -39,9 +39,18 @@ class Equipment(BaseItem):
     sockets: List[Optional[Dict[str, int]]] = field(
         default_factory = lambda: [None, None, None]) # 裝備插槽
     
-    def to_dict(self):
+    def to_dict(self) -> Dict:
+        """轉換成字典
+
+        Returns
+        -------
+        Dict:
+            裝備字典
+        """
+        
         return {
             "item_id": self.item_id,
+            "item_type": self.item_type,
             "display_name": self.display_name,
             "rarity":    self.rarity,
             "figure_id": self.figure_id,
@@ -55,9 +64,23 @@ class Equipment(BaseItem):
         }
         
     @classmethod
-    def from_dict(cls, data):
+    def from_dict(cls, data) -> "Equipment":
+        """將字典轉換為裝備物件
+
+        Parameters
+        ----------
+        data : dict
+            裝備字典
+
+        Returns
+        -------
+        Equipment
+            裝備物件
+        """
+        
         return cls(
             item_id = data.get("item_id", ""),
+            item_type = data.get("item_type", ""),
             display_name = data.get("display_name", ""),
             rarity = data.get("rarity", ""),
             figure_id = data.get("figure_id", ""),
@@ -80,6 +103,17 @@ class Equipment(BaseItem):
         """
         
         return self.item_id
+    
+    def get_item_type(self) -> str:
+        """取得物品的物品類型
+
+        Returns
+        -------
+        str
+            物品ID
+        """
+        
+        return self.item_type
     
     def get_display_name(self) -> str:
         """取得物品的顯示名稱

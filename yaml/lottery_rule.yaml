@@ -1,0 +1,16 @@
+RARITY_LIST:
+    - N
+    - R
+    - SR
+    - UR
+
+RARITY_PROBABILITY:
+    N: 50
+    R: 30
+    SR: 15
+    UR: 5
+
+ITEM_PROBABILITY:
+    equipments: 33.33333
+    items: 66.66667
+    
