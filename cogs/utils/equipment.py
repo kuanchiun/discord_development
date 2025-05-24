@@ -30,7 +30,7 @@ class Equipment(BaseItem):
     scroll_number: int   # 可使用卷軸次數
     success_level: int   # 卷軸使用成功次數
     
-    item_type: str = "equipment" 
+    item_type: str
     perference_job: Optional[str] = None  # 偏好職業
     attribute_bonus: Dict[str, int] = field(
         default_factory = dict) # 裝備屬性加成
@@ -124,6 +124,16 @@ class Equipment(BaseItem):
         
         return self.display_name
     
+    def get_description(self):
+        """取得物品的說明
+
+        Returns
+        -------
+        str
+            物品說明
+        """
+        return ""
+    
     def get_rarity(self) -> str:
         """取得物品的稀有度
 
@@ -156,6 +166,16 @@ class Equipment(BaseItem):
         """
         
         return self.sell_money
+    
+    def get_purchase_money(self):
+        """取得物品的商店購買價
+
+        Returns
+        -------
+        str
+            物品商店購買價
+        """
+        return super().get_purchase_money()
     
     def attempt_enhance(self, 
                         scroll: "Scroll", 

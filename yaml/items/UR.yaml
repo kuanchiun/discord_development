@@ -2,6 +2,7 @@ items:
     - item_id: origin
       item_type: prototype
       display_name: 原律-界鑿能量核心
+      description: "可用於兌換原律-界鑿系列武器"
       rarity: UR
       figure_id: "prototype_4"
       sell_money: 900

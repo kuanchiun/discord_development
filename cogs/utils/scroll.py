@@ -22,7 +22,7 @@ class Scroll(BaseItem):
     destroy_on_fail: bool  # 裝備是否會損壞
     effect: Dict[str, int]  # 卷軸強化數值
     
-    item_type: str = "scroll" 
+    item_type: str
     destroy_rate: Optional[float] = None  # 裝備損壞機率
     purchase_money: Optional[int] = None  # 商店購買價格
     
@@ -112,6 +112,16 @@ class Scroll(BaseItem):
         """
         
         return self.display_name
+    
+    def get_description(self):
+        """取得物品的說明
+
+        Returns
+        -------
+        str
+            物品說明
+        """
+        return self.description
     
     def get_rarity(self) -> str:
         """取得物品的稀有度

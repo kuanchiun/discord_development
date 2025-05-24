@@ -2,6 +2,7 @@ items:
     - item_id: older
       item_type: prototype
       display_name: 陳舊獎牌
+      description: "可用於兌換陳舊系列武器"
       rarity: N
       figure_id: prototype_1
       sell_money: 50

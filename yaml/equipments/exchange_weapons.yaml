@@ -1,5 +1,6 @@
 older:
     - item_id: older_sword_shield
+      item_type: equipment
       display_name: 陳舊劍盾
       rarity: "N"
       figure_id: older_sword_shield
@@ -21,6 +22,7 @@ older:
       sell_money: 50
     
     - item_id: older_swear
+      item_type: equipment
       display_name: 陳舊長槍
       rarity: "N"
       figure_id: older_swear
@@ -42,6 +44,7 @@ older:
       sell_money: 50
     
     - item_id: older_katana
+      item_type: equipment
       display_name: 陳舊武士刀
       rarity: "N"
       figure_id: older_katana
@@ -63,6 +66,7 @@ older:
       sell_money: 50
     
     - item_id: older_twin_blades
+      item_type: equipment
       display_name: 陳舊雙劍
       rarity: "N"
       figure_id: older_twin_blades
@@ -84,6 +88,7 @@ older:
       sell_money: 50
     
     - item_id: older_dual_pistols
+      item_type: equipment
       display_name: 陳舊雙槍
       rarity: "N"
       figure_id: older_dual_pistols
@@ -105,6 +110,7 @@ older:
       sell_money: 50
     
     - item_id: older_bow
+      item_type: equipment
       display_name: 陳舊長弓
       rarity: "N"
       figure_id: older_bow
@@ -126,6 +132,7 @@ older:
       sell_money: 50
     
     - item_id: older_rifle
+      item_type: equipment
       display_name: 陳舊步槍
       rarity: "N"
       figure_id: older_rifle
@@ -147,6 +154,7 @@ older:
       sell_money: 50
     
     - item_id: older_fire_staff
+      item_type: equipment
       display_name: 陳舊火焰法杖
       rarity: "N"
       figure_id: older_fire_staff
@@ -168,6 +176,7 @@ older:
       sell_money: 50
     
     - item_id: older_ice_staff
+      item_type: equipment
       display_name: 陳舊寒霜法杖
       rarity: "N"
       figure_id: older_ice_staff
@@ -189,6 +198,7 @@ older:
       sell_money: 50
     
     - item_id: older_thunder_staff
+      item_type: equipment
       display_name: 陳舊雷電法杖
       rarity: "N"
       figure_id: older_thunder_staff
@@ -210,6 +220,7 @@ older:
       sell_money: 50
     
     - item_id: older_dagger
+      item_type: equipment
       display_name: 陳舊匕首
       rarity: "N"
       figure_id: older_dagger
@@ -231,6 +242,7 @@ older:
       sell_money: 50
     
     - item_id: older_kunai
+      item_type: equipment
       display_name: 陳舊苦無
       rarity: "N"
       figure_id: older_kunai
@@ -252,6 +264,7 @@ older:
       sell_money: 50
     
     - item_id: older_playing_cards
+      item_type: equipment
       display_name: 陳舊撲克牌
       rarity: "N"
       figure_id: older_playing_cards
@@ -274,6 +287,7 @@ older:
 
 fate:
     - item_id: fate_sword_shield
+      item_type: equipment
       display_name: 命紋劍盾
       rarity: "R"
       figure_id: fate_sword_shield
@@ -295,6 +309,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_swear
+      item_type: equipment
       display_name: 命紋長槍
       rarity: "R"
       figure_id: fate_swear
@@ -316,6 +331,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_katana
+      item_type: equipment
       display_name: 命紋武士刀
       rarity: "R"
       figure_id: fate_katana
@@ -337,6 +353,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_twin_blades
+      item_type: equipment
       display_name: 命紋雙劍
       rarity: "R"
       figure_id: fate_twin_blades
@@ -358,6 +375,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_dual_pistols
+      item_type: equipment
       display_name: 命紋雙槍
       rarity: "R"
       figure_id: fate_dual_pistols
@@ -379,6 +397,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_bow
+      item_type: equipment
       display_name: 命紋長弓
       rarity: "R"
       figure_id: fate_bow
@@ -400,6 +419,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_rifle
+      item_type: equipment
       display_name: 命紋步槍
       rarity: "R"
       figure_id: fate_rifle
@@ -421,6 +441,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_fire_staff
+      item_type: equipment
       display_name: 命紋火焰法杖
       rarity: "R"
       figure_id: fate_fire_staff
@@ -442,6 +463,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_ice_staff
+      item_type: equipment
       display_name: 命紋寒霜法杖
       rarity: "R"
       figure_id: fate_ice_staff
@@ -463,6 +485,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_thunder_staff
+      item_type: equipment
       display_name: 命紋雷電法杖
       rarity: "R"
       figure_id: fate_thunder_staff
@@ -484,6 +507,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_dagger
+      item_type: equipment
       display_name: 命紋匕首
       rarity: "R"
       figure_id: fate_dagger
@@ -505,6 +529,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_kunai
+      item_type: equipment
       display_name: 命紋苦無
       rarity: "R"
       figure_id: fate_kunai
@@ -526,6 +551,7 @@ fate:
       sell_money: 125
     
     - item_id: fate_playing_cards
+      item_type: equipment
       display_name: 命紋撲克牌
       rarity: "R"
       figure_id: fate_playing_cards
@@ -548,6 +574,7 @@ fate:
 
 fairy:
     - item_id: fairy_sword_shield
+      item_type: equipment
       display_name: 聖痕劍盾
       rarity: "SR"
       figure_id: fairy_sword_shield
@@ -569,6 +596,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_swear
+      item_type: equipment
       display_name: 聖痕長槍
       rarity: "SR"
       figure_id: fairy_swear
@@ -590,6 +618,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_katana
+      item_type: equipment
       display_name: 聖痕武士刀
       rarity: "SR"
       figure_id: fairy_katana
@@ -611,6 +640,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_twin_blades
+      item_type: equipment
       display_name: 聖痕雙劍
       rarity: "SR"
       figure_id: fairy_twin_blades
@@ -632,6 +662,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_dual_pistols
+      item_type: equipment
       display_name: 聖痕雙槍
       rarity: "SR"
       figure_id: fairy_dual_pistols
@@ -653,6 +684,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_bow
+      item_type: equipment
       display_name: 聖痕長弓
       rarity: "SR"
       figure_id: fairy_bow
@@ -674,6 +706,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_rifle
+      item_type: equipment
       display_name: 聖痕步槍
       rarity: "SR"
       figure_id: fairy_rifle
@@ -695,6 +728,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_fire_staff
+      item_type: equipment
       display_name: 聖痕火焰法杖
       rarity: "SR"
       figure_id: fairy_fire_staff
@@ -716,6 +750,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_ice_staff
+      item_type: equipment
       display_name: 聖痕寒霜法杖
       rarity: "SR"
       figure_id: fairy_ice_staff
@@ -737,6 +772,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_thunder_staff
+      item_type: equipment
       display_name: 聖痕雷電法杖
       rarity: "SR"
       figure_id: fairy_thunder_staff
@@ -758,6 +794,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_dagger
+      item_type: equipment
       display_name: 聖痕匕首
       rarity: "SR"
       figure_id: fairy_dagger
@@ -779,6 +816,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_kunai
+      item_type: equipment
       display_name: 聖痕苦無
       rarity: "SR"
       figure_id: fairy_kunai
@@ -800,6 +838,7 @@ fairy:
       sell_money: 450
     
     - item_id: fairy_playing_cards
+      item_type: equipment
       display_name: 聖痕撲克牌
       rarity: "SR"
       figure_id: fairy_playing_cards
@@ -822,6 +861,7 @@ fairy:
 
 origin:
     - item_id: origin_sword_shield
+      item_type: equipment
       display_name: 原律-界鑿劍盾
       rarity: "UR"
       figure_id: origin_sword_shield
@@ -843,6 +883,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_swear
+      item_type: equipment
       display_name: 原律-界鑿長槍
       rarity: "UR"
       figure_id: origin_swear
@@ -864,6 +905,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_katana
+      item_type: equipment
       display_name: 原律-界鑿武士刀
       rarity: "UR"
       figure_id: origin_katana
@@ -885,6 +927,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_twin_blades
+      item_type: equipment
       display_name: 原律-界鑿雙劍
       rarity: "UR"
       figure_id: origin_twin_blades
@@ -906,6 +949,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_dual_pistols
+      item_type: equipment
       display_name: 原律-界鑿雙槍
       rarity: "UR"
       figure_id: origin_dual_pistols
@@ -927,6 +971,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_bow
+      item_type: equipment
       display_name: 原律-界鑿長弓
       rarity: "UR"
       figure_id: origin_bow
@@ -948,6 +993,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_rifle
+      item_type: equipment
       display_name: 原律-界鑿步槍
       rarity: "UR"
       figure_id: origin_rifle
@@ -969,6 +1015,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_fire_staff
+      item_type: equipment
       display_name: 原律-界鑿火焰法杖
       rarity: "UR"
       figure_id: origin_fire_staff
@@ -990,6 +1037,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_ice_staff
+      item_type: equipment
       display_name: 原律-界鑿寒霜法杖
       rarity: "UR"
       figure_id: origin_ice_staff
@@ -1011,6 +1059,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_thunder_staff
+      item_type: equipment
       display_name: 原律-界鑿雷電法杖
       rarity: "UR"
       figure_id: origin_thunder_staff
@@ -1032,6 +1081,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_dagger
+      item_type: equipment
       display_name: 原律-界鑿匕首
       rarity: "UR"
       figure_id: origin_dagger
@@ -1053,6 +1103,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_kunai
+      item_type: equipment
       display_name: 原律-界鑿苦無
       rarity: "UR"
       figure_id: origin_kunai
@@ -1074,6 +1125,7 @@ origin:
       sell_money: 900
     
     - item_id: origin_playing_cards
+      item_type: equipment
       display_name: 原律-界鑿撲克牌
       rarity: "UR"
       figure_id: origin_playing_cards

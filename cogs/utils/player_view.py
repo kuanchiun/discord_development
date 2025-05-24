@@ -15,7 +15,7 @@ from .player import Player
 
 class ConfirmResetView(View):
     def __init__(self, user: Member):
-        super().__init__(timeout = 60)
+        super().__init__(timeout = 30)
         self.user = user
         self.user_id = user.id
         

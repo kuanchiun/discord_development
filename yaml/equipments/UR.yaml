@@ -1,5 +1,6 @@
 items:
     - item_id: godfield_head
+      item_type: equipment
       display_name: 神域遺物-天目啟冕
       rarity: "UR"
       figure_id: godfield_head
@@ -9,9 +10,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 
@@ -21,6 +24,7 @@ items:
       sell_money: 900
     
     - item_id: godfield_chest
+      item_type: equipment
       display_name: 神域遺物-星宿神鎧
       rarity: "UR"
       figure_id: godfield_chest
@@ -30,9 +34,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 
@@ -42,6 +48,7 @@ items:
       sell_money: 900
     
     - item_id: godfield_leggings
+      item_type: equipment
       display_name: 神域遺物-天羽履痕
       rarity: "UR"
       figure_id: godfield_leggings
@@ -51,9 +58,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 
@@ -63,6 +72,7 @@ items:
       sell_money: 900
     
     - item_id: godfield_feet
+      item_type: equipment
       display_name: 神域遺物-寂滅行靴
       rarity: "UR"
       figure_id: godfield_feet
@@ -72,9 +82,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 
@@ -84,6 +96,7 @@ items:
       sell_money: 900
     
     - item_id: fallen_earring
+      item_type: equipment
       display_name: 天殞-天聲墜環
       rarity: "UR"
       figure_id: fallen_earring
@@ -93,9 +106,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 
@@ -105,6 +120,7 @@ items:
       sell_money: 900
     
     - item_id: fallen_necklace
+      item_type: equipment
       display_name: 天殞-斷界靈鍊
       rarity: "UR"
       figure_id: fallen_necklace
@@ -114,9 +130,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 
@@ -126,6 +144,7 @@ items:
       sell_money: 900
     
     - item_id: fallen_bracelet
+      item_type: equipment
       display_name: 天殞-災痕鐲印
       rarity: "UR"
       figure_id: fallen_bracelet
@@ -135,9 +154,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 
@@ -147,6 +168,7 @@ items:
       sell_money: 900
     
     - item_id: fallen_ring
+      item_type: equipment
       display_name: 天殞-諸界終環
       rarity: "UR"
       figure_id: fallen_ring
@@ -156,9 +178,11 @@ items:
       success_level: 0
       attribute_bonus:
           VIT: 30
+          WIS: 30
           STR: 30
           INT: 30
           DEX: 30
+          AGI: 30
           MND: 30
           LUK: 30
       sockets: 

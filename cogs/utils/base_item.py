@@ -17,6 +17,11 @@ class BaseItem(ABC):
         pass
     
     @abstractmethod
+    def get_description(self) -> str:
+        """取得物品說明"""
+        pass
+    
+    @abstractmethod
     def get_sell_money(self) -> int:
         """取得物品的商店售價"""
         pass

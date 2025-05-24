@@ -2,6 +2,7 @@ items:
     - item_id: fairy
       item_type: prototype
       display_name: 聖痕能量核心
+      description: "可用於兌換聖痕系列武器"
       rarity: SR
       figure_id: "prototype_3"
       sell_money: 500

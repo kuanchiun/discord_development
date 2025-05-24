@@ -2,6 +2,7 @@ items:
     - item_id: fate
       item_type: prototype
       display_name: 命紋能量核心
+      description: "可用於兌換命紋系列武器"
       rarity: R
       figure_id: "prototype_2"
       sell_money: 125

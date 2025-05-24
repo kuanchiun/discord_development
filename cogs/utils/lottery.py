@@ -43,7 +43,7 @@ class Lottery:
             抽獎池
         """
         
-        pool = defaultdict(lambda: {"equipment": [], "items": []})
+        pool = defaultdict(lambda: {"equipments": [], "items": []})
         
         for rarity in self.lottery_rule["RARITY_LIST"]:
             equipments_filepath = EQUIPMENT_PATH / f"{rarity}.yaml"
@@ -52,7 +52,7 @@ class Lottery:
             with open(equipments_filepath, "r", encoding = "utf-8") as file:
                 data = yaml.safe_load(file)
             for equipment in data["items"]:
-                pool[rarity]["equipment"].append(Equipment.from_dict(equipment))
+                pool[rarity]["equipments"].append(Equipment.from_dict(equipment))
             
             with open(items_filepath, "r", encoding = "utf-8") as file:
                 data = yaml.safe_load(file)
@@ -143,6 +143,10 @@ class Lottery:
                 player.equipinventory.add(item) 
             elif item.get_item_type() in ["prototype", "scroll"]:
                 player.iteminventory.add(item)
+        
+        player.iteminventory.money -= self.lottery_rule["COST"] * times
+        
+        player.save(user_id)
         
         return loots
                     

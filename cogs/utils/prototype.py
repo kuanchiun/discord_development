@@ -30,11 +30,12 @@ class Prototype(BaseItem):
     # 共有屬性
     item_id: str        # 查表ID
     display_name: str   # 展示名稱
+    description: str    # 物品說明
     rarity: str         # 稀有度
     figure_id: str      # 圖片ID
     sell_money: int     # 商店販售價格
     
-    item_type: str = "prototype" 
+    item_type: str
 
     
     def to_dict(self) -> Dict:
@@ -50,6 +51,7 @@ class Prototype(BaseItem):
             "item_id": self.item_id,
             "item_type": self.item_type,
             "display_name": self.display_name,
+            "description": self.description,
             "rarity":    self.rarity,
             "figure_id": self.figure_id,
             "sell_money": self.sell_money
@@ -74,6 +76,7 @@ class Prototype(BaseItem):
             item_id = data.get("item_id", ""),
             item_type = data.get("item_type", ""),
             display_name = data.get("display_name", ""),
+            description = data.get("description", ""),
             rarity = data.get("rarity", ""),
             figure_id = data.get("figure_id", ""),
             sell_money = data.get("sell_money", 0)
@@ -111,6 +114,16 @@ class Prototype(BaseItem):
         """
         
         return self.display_name
+    
+    def get_description(self):
+        """取得物品的說明
+
+        Returns
+        -------
+        str
+            物品說明
+        """
+        return self.description
     
     def get_rarity(self) -> str:
         """取得物品的稀有度
