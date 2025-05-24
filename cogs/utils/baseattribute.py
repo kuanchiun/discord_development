@@ -39,6 +39,7 @@ class BaseAttribute:
     AGI: int = 0
     MND: int = 0
     LUK: int = 0
+    remind_point: int = 50
     
     def to_dict(self) -> Dict:
         """轉換成字典
@@ -57,7 +58,8 @@ class BaseAttribute:
             "DEX": self.DEX,
             "AGI": self.AGI,
             "MND": self.MND,
-            "LUK": self.LUK
+            "LUK": self.LUK,
+            "remind_point": self.remind_point
         }
     
     @classmethod
@@ -83,5 +85,6 @@ class BaseAttribute:
             DEX = data.get("DEX", 0),
             AGI = data.get("AGI", 0),
             MND = data.get("MND", 0),
-            LUK = data.get("LUK", 0)
+            LUK = data.get("LUK", 0),
+            remind_point = data.get("remind_point", 0)
         )

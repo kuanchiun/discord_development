@@ -79,11 +79,11 @@ items:
     
     - item_id: UR_scroll_dominate
       item_type: scroll
-      display_name: "不滅的詛咒狡詐強化卷軸60％，失敗時50%使裝備消失"
+      display_name: "不滅的詛咒狡詐強化卷軸60％"
       rarity: UR
       figure_id: UR_scroll_1
       sell_money: 900
-      description: "成功率60％，AGI＋5，LUK＋5"
+      description: "成功率60％，AGI＋5，LUK＋5，失敗時50%使裝備消失"
       probability: 0.6
       destroy_on_fail: true
       destroy_rate: 0.5
