@@ -29,11 +29,12 @@ WEAPON_MAP: Dict = {
 class Prototype(BaseItem):
     # 共有屬性
     item_id: str        # 查表ID
-    item_type: str = "prototype" 
     display_name: str   # 展示名稱
     rarity: str         # 稀有度
     figure_id: str      # 圖片ID
     sell_money: int     # 商店販售價格
+    
+    item_type: str = "prototype" 
 
     
     def to_dict(self) -> Dict:

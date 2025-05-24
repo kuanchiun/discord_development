@@ -1,0 +1,33 @@
+baseattribute:
+  AGI: 0
+  DEX: 0
+  INT: 0
+  LUK: 0
+  MND: 0
+  STR: 0
+  VIT: 0
+  WIS: 0
+equipinventory:
+  bracelet: []
+  chest: []
+  earring: []
+  feet: []
+  head: []
+  leggings: []
+  necklace: []
+  ring: []
+  weapon: []
+equipmentslot:
+  bracelet: null
+  chest: null
+  earring: null
+  feet: null
+  head: null
+  leggings: null
+  necklace: null
+  ring1: null
+  ring2: null
+  weapon: null
+iteminventory:
+  inventory: {}
+  money: 0

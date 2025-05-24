@@ -11,7 +11,6 @@ from .base_item import BaseItem
 class Scroll(BaseItem):
     # 共有屬性
     item_id: str        # 查表ID
-    item_type: str = "scroll" 
     display_name: str   # 展示名稱
     rarity: str         # 稀有度
     figure_id: str      # 圖片ID
@@ -21,8 +20,10 @@ class Scroll(BaseItem):
     description: str    # 卷軸說明
     probability: float     # 強化成功機率
     destroy_on_fail: bool  # 裝備是否會損壞
-    destroy_rate: Optional[float] = None  # 裝備損壞機率
     effect: Dict[str, int]  # 卷軸強化數值
+    
+    item_type: str = "scroll" 
+    destroy_rate: Optional[float] = None  # 裝備損壞機率
     purchase_money: Optional[int] = None  # 商店購買價格
     
     def to_dict(self) -> Dict:
@@ -195,7 +196,6 @@ class Scroll(BaseItem):
 class PreventScroll(BaseItem):
     # 共有屬性
     item_id: str        # 查表ID
-    item_type: str = "prevent_scroll" 
     display_name: str   # 展示名稱
     rarity: str         # 稀有度
     figure_id: str      # 圖片ID
@@ -203,6 +203,7 @@ class PreventScroll(BaseItem):
     
     # 獨特屬性
     description: str    # 卷軸說明
+    item_type: str = "prevent_scroll" 
     purchase_money: Optional[int] = None  # 商店購買價格
     
     def to_dict(self) -> Dict:

@@ -23,6 +23,22 @@ class EquipmentSlot:
     ring1: Optional["Equipment"] = None
     ring2: Optional["Equipment"] = None
     
+    @staticmethod
+    def _safe_to_dict(slot: "Equipment") -> Optional[Dict]:
+        """檢測欄位是否為None，並轉換為字典
+
+        Parameters
+        ----------
+        obj : Equipment
+            裝備欄位
+
+        Returns
+        -------
+        Optional[Dict]
+            裝備資訊
+        """
+        return slot.to_dict() if slot else None
+    
     def to_dict(self) -> Dict[str, Dict]:
         """轉換成字典
 
@@ -33,16 +49,16 @@ class EquipmentSlot:
         """
         
         return {
-            "weapon":   self.weapon.to_dict(),
-            "head":     self.head.to_dict(),
-            "chest":    self.chest.to_dict(),
-            "leggings": self.leggings.to_dict(),
-            "feet":     self.feet.to_dict(),
-            "earring":  self.earring.to_dict(),
-            "necklace": self.necklace.to_dict(),
-            "bracelet": self.bracelet.to_dict(),
-            "ring1":    self.ring1.to_dict(),
-            "ring2":    self.ring2.to_dict()
+            "weapon":   self._safe_to_dict(self.weapon),
+            "head":     self._safe_to_dict(self.head),
+            "chest":    self._safe_to_dict(self.chest),
+            "leggings": self._safe_to_dict(self.leggings),
+            "feet":     self._safe_to_dict(self.feet),
+            "earring":  self._safe_to_dict(self.earring),
+            "necklace": self._safe_to_dict(self.necklace),
+            "bracelet": self._safe_to_dict(self.bracelet),
+            "ring1":    self._safe_to_dict(self.ring1),
+            "ring2":    self._safe_to_dict(self.ring2)
         }
         
     @classmethod

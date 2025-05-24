@@ -21,21 +21,19 @@ class EnhanceResult(Enum):
 class Equipment(BaseItem):
     # 共有屬性
     item_id: str        # 查表ID
-    item_type: str = "equipment" 
     display_name: str   # 展示名稱
     rarity: str        # 稀有度
     figure_id: str      # 圖片ID
     sell_money: int     # 商店販售價格
     # 獨特屬性
     part: str          # 裝備部位
-    perference_job: Optional[str] = None  # 偏好職業
-    
-    attribute_bonus: Dict[str, int] = field(
-        default_factory = dict) # 裝備屬性加成
-    
     scroll_number: int   # 可使用卷軸次數
     success_level: int   # 卷軸使用成功次數
     
+    item_type: str = "equipment" 
+    perference_job: Optional[str] = None  # 偏好職業
+    attribute_bonus: Dict[str, int] = field(
+        default_factory = dict) # 裝備屬性加成
     sockets: List[Optional[Dict[str, int]]] = field(
         default_factory = lambda: [None, None, None]) # 裝備插槽
     

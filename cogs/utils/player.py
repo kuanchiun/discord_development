@@ -6,6 +6,7 @@ from pathlib import Path
 
 import yaml
 
+from .baseattribute import BaseAttribute
 from .equipinventory import EquipInventory
 from .iteminventory import ItemInventory
 from .equipmentslot import EquipmentSlot

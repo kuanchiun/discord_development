@@ -51,16 +51,32 @@ class Shop:
     
     
     def purchase(self, user: Member, item_id: str, amount: int) -> str:
+        """購買物品
+
+        Parameters
+        ----------
+        user : Member
+            用戶
+        item_id : str
+            物品ID
+        amount : int
+            數量
+
+        Returns
+        -------
+        str
+            購買提示
+        """
         user_id = user.id
         purchase_item = self.commodities[item_id]
         purchase_money = purchase_item.get_purchase_money() * amount
         player = Player.load(user_id)
 
         if player.iteminventory.money < purchase_money:
-            return "❌ 你的持有金幣不足！"
+            return "⚠️ 系統提示：你的持有金幣不足！"
         
         player.iteminventory.add(purchase_item, amount)
         player.iteminventory.money -= purchase_money
         
-        return f"❌ 你使用 **{purchase_money}** 購買了 **{amount}** 張 **{purchase_item.get_display_name}**！"
+        return f"⚠️ 系統提示：你使用 **{purchase_money}** 購買了 **{amount}** 張 **{purchase_item.get_display_name}**！"
     
