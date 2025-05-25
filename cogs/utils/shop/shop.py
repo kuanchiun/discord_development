@@ -5,9 +5,9 @@ from discord import Member
 
 import yaml
 
-from .base_item import BaseItem
-from .scroll import Scroll, PreventScroll
-from .player import Player
+from ..item.base_item import BaseItem
+from ..item.scroll import Scroll, PreventScroll
+from ..player.player import Player
 
 ITEM_PATH = Path("yaml/items")
 

@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional, Dict
 
-from .base_item import BaseItem
-from .scroll import Scroll, PreventScroll
-from .prototype import Prototype
+from ..item.base_item import BaseItem
+from ..item.scroll import Scroll, PreventScroll
+from ..item.prototype import Prototype
 
 @dataclass
 class InventoryEntry:
@@ -209,4 +209,16 @@ class ItemInventory:
         
         return list(self.inventory.values())
     
+    def add_money(self, amount: int) -> None:
+        if amount < 0:
+            raise ValueError("❌ 金錢增加量不能為負數，請使用減少金錢函式。")
+        self.money += amount
+    
+    def use_money(self, amount: int) -> None:
+        if amount < 0:
+            raise ValueError("❌ 金錢增加量不能為負數，請使用減少金錢函式。")
+        self.money -= amount
+        
+    def can_afford(self, amounts: int) -> bool:
+        return self.money >= amounts
     

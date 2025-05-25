@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Dict, List, Union
 
-from .equipment import Equipment
+from ..item.equipment import Equipment
 from .iteminventory import ItemInventory
 
 @dataclass
@@ -196,5 +196,5 @@ class EquipInventory:
         except ValueError:
             return f"⚠️ 系統提示：裝備 **{equipment.get_display_name()}** 不在背包中，無法出售！"
         
-        iteminventory.money += gain_money
+        iteminventory.add_money(gain_money)
         return f"⚠️ 系統提示：你出售了**{equipment.get_display_name()}**，獲得{gain_money}元！"

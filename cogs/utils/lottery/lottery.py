@@ -6,11 +6,11 @@ from discord import Member
 
 import yaml
 
-from .player import Player
-from .base_item import BaseItem
-from .prototype import Prototype
-from .scroll import Scroll
-from .equipment import Equipment
+from ..player.player import Player
+from ..item.base_item import BaseItem
+from ..item.prototype import Prototype
+from ..item.scroll import Scroll
+from ..item.equipment import Equipment
 
 
 RULE_PATH = Path("yaml/")
@@ -144,7 +144,7 @@ class Lottery:
             elif item.get_item_type() in ["prototype", "scroll"]:
                 player.iteminventory.add(item)
         
-        player.iteminventory.money -= self.lottery_rule["COST"] * times
+        player.iteminventory.use_money(self.lottery_rule["COST"] * times)
         
         player.save(user_id)
         

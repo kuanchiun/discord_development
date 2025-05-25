@@ -1,24 +1,4 @@
-import yaml
-import math
-import discord
-
-from dataclasses import asdict, dataclass, field
-from pathlib import Path
-from typing import Optional, List, Union
-from random import choice
-from collections import Counter
-
-from discord import Embed, Member, Interaction
-from discord.ui import Button, View
-
-from .lottery import Lottery
-from .scroll import Scroll
-from .prototype import Prototype
-from .equipment import Equipment
-from .player import Player
-from .base_item import BaseItem
-
-FIGURE_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}/{figure_id}.png"
+IGURE_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}/{figure_id}.png"
 PART_MAPPING = {
     "head": "頭部",
     "chest": "身體",
@@ -315,4 +295,3 @@ class PublicDrawButton(Button):
             view = view  # ✅ 使用公開版本
         )
         view.message = await interaction.original_response()
-        

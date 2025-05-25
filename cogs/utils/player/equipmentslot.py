@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional, Dict, List, Tuple
 
-from .equipment import Equipment
+from ..item.equipment import Equipment
 from .equipinventory import EquipInventory
 
 SLOTS = [
