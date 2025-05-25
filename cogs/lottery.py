@@ -5,9 +5,9 @@ import pickle
 from discord.ext import commands
 from discord import app_commands, Interaction, Embed, Member
 
-from .utils.player import Player
-from .utils.lottery import Lottery
-from .utils.lottery_view import DrawLotteryView
+from .utils.player.player import Player
+from .utils.lottery.lottery import Lottery
+from .utils.lottery.lottery_view import DrawLotteryView
 
 
 class LotteryCog(commands.Cog):

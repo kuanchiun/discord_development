@@ -11,7 +11,7 @@ FIGURE_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/m
 PART_MAPPING = {
     "head": "頭部",
     "chest": "身體",
-    "legs": "腿部",
+    "leggings": "腿部",
     "feet": "腳部",
     "earring": "耳飾",
     "necklace": "項鍊",

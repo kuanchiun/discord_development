@@ -6,8 +6,8 @@ import os
 from discord.ext import commands
 from discord import app_commands, Interaction, Embed, Member
 
-from .utils.player import Player
-from .utils.player_view import ConfirmResetView
+from .utils.player.player import Player
+from .utils.player.player_view import ConfirmResetView
 
 class PlayerCog(commands.Cog):
     def __init__(self, bot):
