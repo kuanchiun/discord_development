@@ -87,11 +87,11 @@ class EquipInventory:
         """
         
         if not hasattr(self, slot):
-            raise ValueError(f"❌ 無效的裝備部位: {slot}")
+            raise ValueError(f"⚠️ 系統提示：無效的裝備部位: {slot}")
         
         slot = getattr(self, slot)
         if not isinstance(slot, list):
-            raise TypeError(f"⚠️ 欄位 {slot} 不是 list，無法操作裝備")
+            raise TypeError(f"⚠️ 系統提示：欄位 {slot} 不是 list，無法操作裝備")
         
         return slot
     
@@ -197,4 +197,4 @@ class EquipInventory:
             return f"⚠️ 系統提示：裝備 **{equipment.get_display_name()}** 不在背包中，無法出售！"
         
         iteminventory.add_money(gain_money)
-        return f"⚠️ 系統提示：你出售了**{equipment.get_display_name()}**，獲得{gain_money}元！"
+        return f"⚠️ 系統提示：你出售了**{equipment.get_display_name()}**，獲得💎**{gain_money}**！"

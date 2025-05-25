@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import Dict
 
 class BaseItem(ABC):
     @abstractmethod
@@ -39,4 +40,9 @@ class BaseItem(ABC):
     @abstractmethod
     def get_purchase_money(self) -> str:
         """取得物品商店購買價格"""
+        pass
+    
+    @abstractmethod
+    def to_dict(self) -> Dict:
+        """將物件儲存成字典"""
         pass

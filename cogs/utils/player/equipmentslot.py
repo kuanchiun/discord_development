@@ -109,7 +109,7 @@ class EquipmentSlot:
         """
         
         if not hasattr(self, slot):
-            raise ValueError(f"❌ 無效的裝備欄位: {slot}")
+            raise ValueError(f"⚠️ 系統提示：無效的裝備欄位: {slot}")
         
         return getattr(self, slot) is not None
         

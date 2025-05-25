@@ -31,13 +31,13 @@ class ConfirmResetButton(Button):
     
     async def callback(self, interaction: Interaction):
         if interaction.user != self.user:
-            await interaction.response.send_message("❌ 系統提示：你不能初始化別人的角色！",
+            await interaction.response.send_message("⚠️ 系統提示：你不能初始化別人的角色！",
                                                     ephemeral = True)
             return
         
         player = Player()
         player.save(self.user_id)
-        await interaction.response.edit_message(content = "✅ 系統提示：已初始化角色！", 
+        await interaction.response.edit_message(content = "⚠️ 系統提示：已初始化角色！", 
                                                 view = None)
     
 class CancelResetButton(Button):
@@ -51,5 +51,5 @@ class CancelResetButton(Button):
                                                     ephemeral = True)
             return
 
-        await interaction.response.edit_message(content = "✅ 系統提示：已取消初始化角色。", 
+        await interaction.response.edit_message(content = "⚠️ 系統提示：已取消初始化角色。", 
                                                 view = None)

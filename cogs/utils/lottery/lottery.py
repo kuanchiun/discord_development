@@ -127,14 +127,14 @@ class Lottery:
         player = Player.load(user_id)
         
         if player.iteminventory.money < self.lottery_rule["COST"] * times:
-            return "❌ 你的持有金幣不夠！"
+            return "⚠️ 系統提示：持有💎水晶不足！"
         
         if times == 1:
             loots = [self.draw()]
         elif times == 10:
             loots = self.draw_ten_time()
         else:
-            raise ValueError("❌ 抽獎次數必須為1或10")
+            raise ValueError("⚠️ 系統提示：抽獎次數必須為1或10")
         
         for item in loots:
             if item is None:

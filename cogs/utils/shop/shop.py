@@ -73,10 +73,10 @@ class Shop:
         player = Player.load(user_id)
 
         if player.iteminventory.money < purchase_money:
-            return "⚠️ 系統提示：你的持有金幣不足！"
+            return "⚠️ 系統提示：持有💎水晶不足！"
         
         player.iteminventory.add(purchase_item, amount)
         player.iteminventory.money -= purchase_money
         
-        return f"⚠️ 系統提示：你使用 **{purchase_money}** 購買了 **{amount}** 張 **{purchase_item.get_display_name}**！"
+        return f"⚠️ 系統提示：你使用 💎**{purchase_money}** 購買了 **{amount}** 張 **{purchase_item.get_display_name}**！"
     

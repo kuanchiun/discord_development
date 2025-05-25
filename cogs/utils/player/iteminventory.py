@@ -180,7 +180,7 @@ class ItemInventory:
         # 如果數量為零，直接刪除
         if entry.quantity == 0:
             del self.inventory[item_id]
-        return f"⚠️ 系統提示：你出售了**{amount}**個**{entry.item.get_display_name()}**，獲得{gain_money}元！"
+        return f"⚠️ 系統提示：你出售了**{amount}**個**{entry.item.get_display_name()}**，獲得💎**{gain_money}**！"
     
     def get(self, item_id: str) -> Optional[BaseItem]:
         """取得物品資訊
@@ -211,12 +211,12 @@ class ItemInventory:
     
     def add_money(self, amount: int) -> None:
         if amount < 0:
-            raise ValueError("❌ 金錢增加量不能為負數，請使用減少金錢函式。")
+            raise ValueError("⚠️ 系統提示：金錢增加量不能為負數，請使用減少金錢函式。")
         self.money += amount
     
     def use_money(self, amount: int) -> None:
         if amount < 0:
-            raise ValueError("❌ 金錢增加量不能為負數，請使用減少金錢函式。")
+            raise ValueError("⚠️ 系統提示：金錢增加量不能為負數，請使用減少金錢函式。")
         self.money -= amount
         
     def can_afford(self, amounts: int) -> bool:

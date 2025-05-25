@@ -1,13 +1,9 @@
-import discord
-import asyncio
-import pickle
-
 from discord.ext import commands
-from discord import app_commands, Interaction, Embed, Member
+from discord import app_commands, Interaction
 
 from .utils.player.player import Player
-from .utils.lottery.lottery import Lottery
-from .utils.lottery.lottery_view import DrawLotteryView
+from .utils.lottery import Lottery
+from .utils.lottery import DrawLotteryView
 
 
 class LotteryCog(commands.Cog):
@@ -15,7 +11,7 @@ class LotteryCog(commands.Cog):
         self.bot = bot
         self.lottery = Lottery()
         
-    @app_commands.command(name = "抽獎")
+    @app_commands.command(name = "抽獎", description = "來試試手氣吧！")
     async def draw(self, interaction: Interaction):
         user = interaction.user
         user_id = interaction.user.id
