@@ -54,7 +54,7 @@ class DrawLotteryOnceButton(Button):
         
         if isinstance(loot_result, list):
             embed = create_single_draw_embed(loot_result[0])
-            view = PublicDrawView(embed = embed, user = self.user)
+            view = DrawView(embed = embed, user = self.user)
             await interaction.response.edit_message(
                 content = f"🎁 單抽結果：",
                 embed = embed,
@@ -94,15 +94,22 @@ class DrawLotteryTenTimesButton(Button):
                 content = loots_result,
                 view = None
             )
-            
-class PublicDrawView(View):
+
+class BaseDrawView(View):
     def __init__(self, embed: Embed, user: Member, timeout: int = 30):
         super().__init__(timeout = timeout)
         self.embed = embed
         self.user = user
         
-        self.add_item(PublicDrawButton(self.embed, self.user))
+class DrawView(BaseDrawView):
+    def __init__(self, embed: Embed, user: Member, timeout: int = 30):
+        super().__init__(embed = embed, user = user, timeout = timeout)
         
+        self.add_item(PublicDrawButton(self.embed, self.user))
+
+class PublicDrawView(BaseDrawView):
+    def __init__(self, embed: Embed, user: Member, timeout: int = 60):
+        super().__init__(embed = embed, user = user, timeout = timeout)
 
 class PublicDrawButton(Button):
     def __init__(self, embed: Embed, user: Member):
@@ -115,7 +122,7 @@ class PublicDrawButton(Button):
             await interaction.response.send_message("❌ 這不是你的抽獎結果喔！", ephemeral=True)
             return
         
-        view = PublicDrawView(self.embeds, self.user)
+        view = PublicDrawView(self.embed, self.user)
         await interaction.response.send_message(
             content = f"🎁 {interaction.user.display_name} 公開了他的單抽結果",
             embed = self.embed,
@@ -144,13 +151,13 @@ class BaseDrawPageView(View):
 
 class DrawEmbedPageView(BaseDrawPageView):
     def __init__(self, embeds: List[Embed], user: Member):
-        super().__init__(embeds, user, timeout = 30)
+        super().__init__(embeds = embeds, user = user, timeout = 30)
         self.public_button = PublicDrawEmbedButton(embeds, user)
         self.add_item(self.public_button)
 
 class PublicDrawEmbedPageView(BaseDrawPageView):
     def __init__(self, embeds: List[Embed], user: Member):
-        super().__init__(embeds, user, timeout = 60) 
+        super().__init__(embeds = embeds, user = user, timeout = 60)
 
 class DrawPreviousPageButton(Button):
     def __init__(self, label: str, user: Member):

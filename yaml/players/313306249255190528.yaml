@@ -564,6 +564,29 @@ equipinventory:
     - true
     - null
     success_level: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 5
+      INT: 5
+      LUK: 5
+      MND: 5
+      STR: 5
+      VIT: 5
+      WIS: 5
+    display_name: 草布輕甲
+    figure_id: fabric_chest
+    item_id: fabric_chest
+    item_type: equipment
+    part: chest
+    perference_job: null
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
   earring:
   - attribute_bonus:
       AGI: 20
@@ -864,6 +887,29 @@ equipinventory:
     - true
     - true
     success_level: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 5
+      INT: 5
+      LUK: 5
+      MND: 5
+      STR: 5
+      VIT: 5
+      WIS: 5
+    display_name: 粗製耳環
+    figure_id: curde_earring
+    item_id: curde_earring
+    item_type: equipment
+    part: earring
+    perference_job: null
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
   feet:
   - attribute_bonus:
       AGI: 10
@@ -1153,6 +1199,52 @@ equipinventory:
     - null
     - null
     success_level: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 5
+      INT: 5
+      LUK: 5
+      MND: 5
+      STR: 5
+      VIT: 5
+      WIS: 5
+    display_name: 草布輕鞋
+    figure_id: fabric_feet
+    item_id: fabric_feet
+    item_type: equipment
+    part: feet
+    perference_job: null
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 5
+      INT: 5
+      LUK: 5
+      MND: 5
+      STR: 5
+      VIT: 5
+      WIS: 5
+    display_name: 草布輕鞋
+    figure_id: fabric_feet
+    item_id: fabric_feet
+    item_type: equipment
+    part: feet
+    perference_job: null
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
   head:
   - attribute_bonus:
       AGI: 5
@@ -1395,6 +1487,29 @@ equipinventory:
     sockets:
     - true
     - true
+    - null
+    success_level: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 5
+      INT: 5
+      LUK: 5
+      MND: 5
+      STR: 5
+      VIT: 5
+      WIS: 5
+    display_name: 草布兜帽
+    figure_id: fabric_head
+    item_id: fabric_head
+    item_type: equipment
+    part: head
+    perference_job: null
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    sockets:
+    - null
+    - null
     - null
     success_level: 0
   leggings:
@@ -2102,6 +2217,52 @@ equipinventory:
     - true
     - null
     success_level: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 5
+      INT: 5
+      LUK: 5
+      MND: 5
+      STR: 5
+      VIT: 5
+      WIS: 5
+    display_name: 粗製項鍊
+    figure_id: curde_necklace
+    item_id: curde_necklace
+    item_type: equipment
+    part: necklace
+    perference_job: null
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 5
+      INT: 5
+      LUK: 5
+      MND: 5
+      STR: 5
+      VIT: 5
+      WIS: 5
+    display_name: 粗製項鍊
+    figure_id: curde_necklace
+    item_id: curde_necklace
+    item_type: equipment
+    part: necklace
+    perference_job: null
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
   ring:
   - attribute_bonus:
       AGI: 10
@@ -2379,6 +2540,52 @@ equipinventory:
     - null
     - null
     success_level: 0
+  - attribute_bonus:
+      AGI: 20
+      DEX: 20
+      INT: 20
+      LUK: 20
+      MND: 20
+      STR: 20
+      VIT: 20
+      WIS: 20
+    display_name: 星霜指環
+    figure_id: star_ring
+    item_id: star_ring
+    item_type: equipment
+    part: ring
+    perference_job: null
+    rarity: SR
+    scroll_number: 5
+    sell_money: 450
+    sockets:
+    - true
+    - true
+    - null
+    success_level: 0
+  - attribute_bonus:
+      AGI: 10
+      DEX: 10
+      INT: 10
+      LUK: 10
+      MND: 10
+      STR: 10
+      VIT: 10
+      WIS: 10
+    display_name: 赤鐵戒指
+    figure_id: iron_ring
+    item_id: iron_ring
+    item_type: equipment
+    part: ring
+    perference_job: null
+    rarity: R
+    scroll_number: 5
+    sell_money: 125
+    sockets:
+    - true
+    - null
+    - null
+    success_level: 0
   weapon: []
 equipmentslot:
   bracelet: null
@@ -2440,7 +2647,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 11
+      quantity: 12
     N_scroll_LUK_1:
       item:
         description: 成功率100％，LUK＋1
@@ -2472,7 +2679,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 5
+      quantity: 6
     N_scroll_STR_1:
       item:
         description: 成功率100％，STR＋1
@@ -2488,7 +2695,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 5
+      quantity: 6
     N_scroll_VIT_1:
       item:
         description: 成功率100％，VIT＋1
@@ -2504,7 +2711,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 5
+      quantity: 6
     N_scroll_WIS_1:
       item:
         description: 成功率100％，WIS＋1
@@ -2520,7 +2727,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 8
+      quantity: 10
     N_scroll_dominate:
       item:
         description: 成功率100％，INT＋1，MND＋1
@@ -2537,7 +2744,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 13
+      quantity: 15
     N_scroll_fatal:
       item:
         description: 成功率100％，STR＋1，LUK＋1
@@ -2605,7 +2812,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 7
+      quantity: 8
     R_scroll_AGI_1:
       item:
         description: 成功率60％，AGI＋2
@@ -2638,6 +2845,22 @@ iteminventory:
         rarity: R
         sell_money: 125
       quantity: 5
+    R_scroll_INT_1:
+      item:
+        description: 成功率60％，INT＋2
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 高級INT強化卷軸60％
+        effect:
+          INT: 2
+        figure_id: R_scroll_1
+        item_id: R_scroll_INT_1
+        item_type: scroll
+        probability: 0.6
+        purchase_money: null
+        rarity: R
+        sell_money: 125
+      quantity: 1
     R_scroll_LUK_1:
       item:
         description: 成功率60％，LUK＋2
@@ -2753,7 +2976,7 @@ iteminventory:
         purchase_money: null
         rarity: R
         sell_money: 125
-      quantity: 7
+      quantity: 9
     R_scroll_fatal:
       item:
         description: 成功率60％，STR＋2，LUK＋2
@@ -2804,7 +3027,7 @@ iteminventory:
         purchase_money: null
         rarity: R
         sell_money: 125
-      quantity: 4
+      quantity: 5
     R_scroll_spirit:
       item:
         description: 成功率60％，VIT＋1，STR＋1，AGI＋1，LUK＋1
@@ -2920,7 +3143,7 @@ iteminventory:
         purchase_money: null
         rarity: SR
         sell_money: 500
-      quantity: 1
+      quantity: 2
     SR_scroll_STR_1:
       item:
         description: 成功率10％，STR＋3
@@ -3044,7 +3267,7 @@ iteminventory:
         purchase_money: null
         rarity: SR
         sell_money: 500
-      quantity: 2
+      quantity: 3
     SR_scroll_guard:
       item:
         description: 成功率10％，VIT＋3，STR＋3
@@ -3255,4 +3478,4 @@ iteminventory:
         rarity: N
         sell_money: 50
       quantity: 9
-  money: 14700
+  money: 12300
