@@ -1,0 +1,40 @@
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+Copyright (c) 2024 KuanChiun
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.  
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
+limitations under the License.
+
+【以下為 Apache License 2.0 中文翻譯，僅供參考，請以英文原文為準】
+
+Apache 授權版本 2.0，2004 年 1 月
+http://www.apache.org/licenses/
+
+版權 (c) 2024 KuanChiun
+
+根據 Apache 授權版本 2.0（以下簡稱「本授權」）授權給您，除非符合法律規定或書面同意，否則您不得使用本文件，除非您遵守以下條款。
+您可以在以下網址獲得本授權的副本：
+    http://www.apache.org/licenses/LICENSE-2.0
+
+除非適用法律要求或書面同意，依據本授權分發的軟體是按「原樣」提供，不附帶任何明示或暗示的保證或條件，包括但不限於適銷性或特定用途之適用性。請參閱授權條款瞭解特定語言下的權利與限制。
+
+---
+
+圖片使用說明（Image Disclaimer）
+
+本專案中包含的所有圖片（如展示圖片或示意圖）為使用 OpenAI 的 Sora 生成，僅供展示與說明用途。  
+這些圖片不包含在 Apache License 2.0 的授權範圍內，其使用可能受到著作權或第三方條款限制。
+
+All images included in this project (such as demonstration graphics or illustrative visuals) were generated using Sora (OpenAI). They are provided for demonstration and illustrative purposes only.
+These images are not covered under the Apache License 2.0 and may be subject to copyright or third-party usage restrictions.
