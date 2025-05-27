@@ -27,8 +27,9 @@ class PlayerCog(commands.Cog):
             )
         else:
             player = Player()
+            player.iteminventory.add_money(10000)
             player.save(user_id)
-            await interaction.response.send_message("✅ 已成功建立角色！", ephemeral = True)
+            await interaction.response.send_message("✅ 已成功建立角色！獲得發財金💎10000！", ephemeral = True)
     
     
     @app_commands.command(name = "點數配置", description = "配置角色屬性")

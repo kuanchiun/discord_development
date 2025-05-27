@@ -1,35 +1,44 @@
 from discord import Member, Interaction, ButtonStyle
 from discord.ui import Button, View
 
+import asyncio
+
+from ..player.player import Player
 from .lottery import Lottery
 from .draw_view import DrawView
 from .draw_page_view import DrawEmbedPageView
 from .lottery_utils import (
     create_multi_draw_embeds,
     create_single_draw_embed,
+    create_multi_draw_effect_embed,
+    create_single_draw_effect_embed
 )
+from .draw_demonstrate_choice import DrawDemonstrateView
 
 class DrawLotteryView(View):
-    def __init__(self, user: Member, lottery: Lottery):
+    def __init__(self, user: Member, player: Player, lottery: Lottery):
         super().__init__(timeout = 30)
         
         self.add_item(DrawLotteryOnceButton(
             label = "單抽！ 💎100",
             user = user,
+            player = player,
             lottery = lottery
         ))
         self.add_item(DrawLotteryTenTimesButton(
             label = "十連抽！ 💎1000",
             user = user,
+            player = player,
             lottery = lottery
         ))
         self.add_item(DrawLotteryCancelButton(user = user))
         
 class DrawLotteryOnceButton(Button):
-    def __init__(self, label: str, user: Member, lottery: Lottery):
+    def __init__(self, label: str, user: Member, player: Player, lottery: Lottery):
         super().__init__(label = label, style = ButtonStyle.primary)
         self.user = user
         self.user_id = user.id
+        self.player = player
         self.lottery = lottery
     
     async def callback(self, interaction: Interaction):
@@ -38,9 +47,15 @@ class DrawLotteryOnceButton(Button):
                                                     ephemeral = True)
             return
         
-        loot_result = self.lottery.process_draw(self.user, times = 1)
+        loot_result = self.lottery.process_draw(user_id = self.user_id, player = self.player, times = 1)
         
         if isinstance(loot_result, list):
+            embed = create_single_draw_effect_embed(loot_result[0].get_rarity())
+            await interaction.response.edit_message(
+                content=None,
+                embed=embed
+            )
+            asyncio.sleep(5)
             embed = create_single_draw_embed(loot_result[0])
             view = DrawView(embed = embed, user = self.user)
             await interaction.response.edit_message(
@@ -55,10 +70,11 @@ class DrawLotteryOnceButton(Button):
             )
 
 class DrawLotteryTenTimesButton(Button):
-    def __init__(self, label: str, user: Member, lottery: Lottery):
+    def __init__(self, label: str, user: Member, player: Player, lottery: Lottery):
         super().__init__(label = label, style = ButtonStyle.primary)
         self.user = user
         self.user_id = user.id
+        self.player = player
         self.lottery = lottery
     
     async def callback(self, interaction: Interaction):
@@ -67,14 +83,21 @@ class DrawLotteryTenTimesButton(Button):
                                                     ephemeral = True)
             return
         
-        loots_result = self.lottery.process_draw(self.user, times = 10)
+        loots_result = self.lottery.process_draw(user_id = self.user_id, player = self.player, times = 10)
         
         if isinstance(loots_result, list):
-            embeds = create_multi_draw_embeds(loots_result)
-            view = DrawEmbedPageView(embeds = embeds, user = self.user)
+            rarity_count, embeds, single_embeds = create_multi_draw_embeds(loots_result)
+            embed = create_multi_draw_effect_embed(rarity_count)
             await interaction.response.edit_message(
-                content = f"⚠️ 系統提示：十連抽結果：第 1 / 2 頁",
-                embed = embeds[0],
+                content=None,
+                embed=embed
+            )
+            asyncio.sleep(5)
+            view = DrawDemonstrateView(user = self.user,
+                                       embeds = embeds, 
+                                       single_embeds = single_embeds)
+            await interaction.response.edit_message(
+                content = f"抽卡結果：\n{rarity_count}\n請選擇展示方式：",
                 view = view
             )
         elif isinstance(loots_result, str):

@@ -18,12 +18,31 @@ SLOT_MAPPING = const["SLOT_MAPPING"]
 ITEM_TYPE_MAPPING = const["ITEM_TYPE_MAPPING"]
 RARITY_EMOJI = const["RARITY_EMOJI"]
 FIGURE_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}/{figure_id}.png"
+GIF_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}.gif"
 
+def create_single_draw_effect_embed(rarity):
+    gif_path = GIF_PATH.format(rarity = rarity)
+    embed = Embed(title="🎉 抽卡動畫")
+    embed.set_image(url=gif_path)
+
+    return embed
+    
+def create_multi_draw_effect_embed(rarity_count):
+    for rarity in ["UR", "SR", "R", "N"]:
+        if rarity_count[rarity] > 0:
+            gif_path = GIF_PATH.format(rarity = rarity)
+            embed = Embed(title="🎉 抽卡動畫")
+            embed.set_image(url=gif_path)
+
+            return embed
+    
 def summarize_rarity(loots: List[BaseItem]) -> str:
     counter = Counter(loot.get_rarity() for loot in loots)
     texts = "📊 稀有度統計： "
     for rarity in ["UR", "SR", "R", "N"]:
         texts += f"{RARITY_EMOJI[rarity]} {rarity}: {counter[rarity]}"
+    
+    return texts
 
 def create_single_draw_embed(loot: BaseItem) -> Embed:
     rarity = loot.get_rarity()
@@ -65,6 +84,7 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
 
 def create_multi_draw_embeds(loots: List[BaseItem]) -> List[Embed]:
     embeds = []
+    single_embeds = []
     rarity_count = summarize_rarity(loots)
     
     for page in range(0, len(loots), 5):
@@ -106,4 +126,7 @@ def create_multi_draw_embeds(loots: List[BaseItem]) -> List[Embed]:
         
         embeds.append(embed)
     
-    return embeds 
+    for loot in loots:
+        single_embeds.append(create_single_draw_embed(loot))
+    
+    return rarity_count, embeds, single_embeds

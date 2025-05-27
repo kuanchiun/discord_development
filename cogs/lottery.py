@@ -17,9 +17,10 @@ class LotteryCog(commands.Cog):
         user_id = interaction.user.id
         
         if Player.exists(user_id):
-            view = DrawLotteryView(user, self.lottery)
+            player = Player.load(user_id)
+            view = DrawLotteryView(user, player, self.lottery)
             await interaction.response.send_message(
-                content = "系統提示：抽獎！",
+                content = f"系統提示：抽獎！ 你的💎水晶持有數：{player.iteminventory.money}",
                 view = view,
                 ephemeral = True
             )

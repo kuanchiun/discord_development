@@ -36,8 +36,9 @@ class ConfirmResetButton(Button):
             return
         
         player = Player()
+        player.iteminventory.add_money(10000)
         player.save(self.user_id)
-        await interaction.response.edit_message(content = "⚠️ 系統提示：已初始化角色！", 
+        await interaction.response.edit_message(content = "⚠️ 系統提示：已初始化角色！獲得發財金💎10000！", 
                                                 view = None)
     
 class CancelResetButton(Button):

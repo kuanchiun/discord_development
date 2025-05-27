@@ -103,7 +103,7 @@ class Lottery:
         return [self.draw() for _ in range(10)]
     
     
-    def process_draw(self, user: Member, times: int = 1) -> Union[List["BaseItem"] | str]:
+    def process_draw(self, user_id: int, player: Player, times: int = 1) -> Union[List["BaseItem"] | str]:
         """執行抽獎
         
         Parameters
@@ -124,7 +124,6 @@ class Lottery:
             抽獎次數錯誤
         """
         
-        user_id = user.id
         player = Player.load(user_id)
         
         if player.iteminventory.money < self.lottery_rule["COST"] * times:
