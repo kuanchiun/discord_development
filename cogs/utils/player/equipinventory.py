@@ -134,6 +134,22 @@ class EquipInventory:
                 continue
         return all_equipment
     
+    def get_overloaded_slots(self) -> Dict[str, int]:
+        """回傳所有超過上限的欄位與裝備數量
+
+        Returns
+        -------
+        Dict[str, int]
+            所有超過上限的欄位與裝備數量
+        """
+        overloaded = {}
+        for slot in self.__dataclass_fields__:
+            slot_list = self.get_slot(slot)
+            if isinstance(slot_list, list) and len(slot_list) > MAX_EQUIP_PER_SLOT:
+                overloaded[slot] = len(slot_list)
+        
+        return overloaded
+        
     def add(self, equipment: Equipment) -> None:
         """將裝備加到對應的裝備欄位
 
