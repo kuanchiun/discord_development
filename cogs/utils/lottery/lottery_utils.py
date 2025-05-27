@@ -1,34 +1,23 @@
 from collections import Counter
 from typing import List, Dict
 from discord import Embed, Color
+from pathlib import Path
+
+import yaml
 
 from ..item.base_item import BaseItem
 from ..item.equipment import Equipment
 from ..item.scroll import Scroll
 from ..item.prototype import Prototype
 
+YAML_PATH = Path("yaml")
+with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
+    const = yaml.safe_load(f)
+
+SLOT_MAPPING = const["SLOT_MAPPING"]
+ITEM_TYPE_MAPPING = const["ITEM_TYPE_MAPPING"]
+RARITY_EMOJI = const["RARITY_EMOJI"]
 FIGURE_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}/{figure_id}.png"
-PART_MAPPING = {
-    "head": "頭部",
-    "chest": "身體",
-    "leggings": "腿部",
-    "feet": "腳部",
-    "earring": "耳飾",
-    "necklace": "項鍊",
-    "bracelet": "手鐲",
-    "ring": "戒指"
-}
-ITEM_TYPE_MAPPING = {
-    "equipment": "裝備",
-    "scroll": "卷軸",
-    "prototype": "原型武器"
-}
-RARITY_EMOJI = {
-    "N": "⬜",
-    "R": "🟦",
-    "SR": "🟪",
-    "UR": "🟨"
-}
 
 def summarize_rarity(loots: List[BaseItem]) -> str:
     counter = Counter(loot.get_rarity() for loot in loots)
@@ -52,7 +41,7 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
     
     if isinstance(loot, Equipment):
         attr_lines = [
-            f"【裝備部位】：{PART_MAPPING[loot.part]}",
+            f"【裝備部位】：{SLOT_MAPPING[loot.slot]}",
             f"VIT： +{loot.attribute_bonus['VIT']:>3}  WIS： +{loot.attribute_bonus['WIS']:>3}",
             f"STR： +{loot.attribute_bonus['STR']:>3}  INT： +{loot.attribute_bonus['INT']:>3}",
             f"DEX： +{loot.attribute_bonus['DEX']:>3}  AGI： +{loot.attribute_bonus['AGI']:>3}",
@@ -60,7 +49,7 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
         ]
         for i, socket in enumerate(loot.sockets, start=1):
             if socket is None:
-                attr_lines.append(f"潛能{i}: 空")
+                attr_lines.append(f"潛能{i}: 未開啟")
         
         attr_texts = "```\n" + "\n".join(attr_lines) + "\n```"
         
@@ -85,26 +74,26 @@ def create_multi_draw_embeds(loots: List[BaseItem]) -> List[Embed]:
             color = Color.gold()
         )
         
-        for i, loot in enumerate(loots[page:page + 5], start = 1):
+        for index, loot in enumerate(loots[page:page + 5], start = 1):
             display_name = loot.get_display_name()
             rarity = loot.get_rarity()
             item_type = loot.get_item_type()
             description = loot.get_description()
             
             if isinstance(loot, Equipment):
-                part = loot.part
+                slot = loot.slot
                 embed.add_field(
-                    name = f"{RARITY_EMOJI[rarity]}  {page + i}. {display_name}",
+                    name = f"{RARITY_EMOJI[rarity]}  {page + index}. {display_name}",
                     value = (
                         f"> **稀有度：** {rarity}\n" + 
                         f"> **類型：** {ITEM_TYPE_MAPPING[item_type]}\n" + 
-                        f"> **裝備部位：** {PART_MAPPING[part]}"
+                        f"> **裝備部位：** {SLOT_MAPPING[slot]}"
                     ),
                     inline = False
                 )
             else:
                 embed.add_field(
-                    name = f"{RARITY_EMOJI[rarity]}  {page + i}. {display_name}",
+                    name = f"{RARITY_EMOJI[rarity]}  {page + index}. {display_name}",
                     value = (
                         f"> **稀有度：** {rarity}\n" + 
                         f"> **類型：** {ITEM_TYPE_MAPPING[item_type]}\n" + 

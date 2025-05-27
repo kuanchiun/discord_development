@@ -4,7 +4,7 @@ items:
       display_name: 神域遺物-天目啟冕
       rarity: "UR"
       figure_id: godfield_head
-      part: head
+      slot: head
       perference_job: null
       scroll_number: 7
       success_level: 0
@@ -28,7 +28,7 @@ items:
       display_name: 神域遺物-星宿神鎧
       rarity: "UR"
       figure_id: godfield_chest
-      part: chest
+      slot: chest
       perference_job: null
       scroll_number: 7
       success_level: 0
@@ -52,7 +52,7 @@ items:
       display_name: 神域遺物-天羽履痕
       rarity: "UR"
       figure_id: godfield_leggings
-      part: leggings
+      slot: leggings
       perference_job: null
       scroll_number: 7
       success_level: 0
@@ -76,7 +76,7 @@ items:
       display_name: 神域遺物-寂滅行靴
       rarity: "UR"
       figure_id: godfield_feet
-      part: feet
+      slot: feet
       perference_job: null
       scroll_number: 7
       success_level: 0
@@ -100,7 +100,7 @@ items:
       display_name: 天殞-天聲墜環
       rarity: "UR"
       figure_id: fallen_earring
-      part: earring
+      slot: earring
       perference_job: null
       scroll_number: 7
       success_level: 0
@@ -124,7 +124,7 @@ items:
       display_name: 天殞-斷界靈鍊
       rarity: "UR"
       figure_id: fallen_necklace
-      part: necklace
+      slot: necklace
       perference_job: null
       scroll_number: 7
       success_level: 0
@@ -148,7 +148,7 @@ items:
       display_name: 天殞-災痕鐲印
       rarity: "UR"
       figure_id: fallen_bracelet
-      part: bracelet
+      slot: bracelet
       perference_job: null
       scroll_number: 7
       success_level: 0
@@ -172,7 +172,7 @@ items:
       display_name: 天殞-諸界終環
       rarity: "UR"
       figure_id: fallen_ring
-      part: ring
+      slot: ring
       perference_job: null
       scroll_number: 7
       success_level: 0

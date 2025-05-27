@@ -4,7 +4,7 @@ items:
       display_name: 草布兜帽
       rarity: "N"
       figure_id: fabric_head
-      part: head
+      slot: head
       perference_job: null
       scroll_number: 3
       success_level: 0
@@ -28,7 +28,7 @@ items:
       display_name: 草布輕甲
       rarity: "N"
       figure_id: fabric_chest
-      part: chest
+      slot: chest
       perference_job: null
       scroll_number: 3
       success_level: 0
@@ -52,7 +52,7 @@ items:
       display_name: 草布棉褲
       rarity: "N"
       figure_id: fabric_leggings
-      part: leggings
+      slot: leggings
       perference_job: null
       scroll_number: 3
       success_level: 0
@@ -76,7 +76,7 @@ items:
       display_name: 草布輕鞋
       rarity: "N"
       figure_id: fabric_feet
-      part: feet
+      slot: feet
       perference_job: null
       scroll_number: 3
       success_level: 0
@@ -100,7 +100,7 @@ items:
       display_name: 粗製耳環
       rarity: "N"
       figure_id: curde_earring
-      part: earring
+      slot: earring
       perference_job: null
       scroll_number: 3
       success_level: 0
@@ -124,7 +124,7 @@ items:
       display_name: 粗製項鍊
       rarity: "N"
       figure_id: curde_necklace
-      part: necklace
+      slot: necklace
       perference_job: null
       scroll_number: 3
       success_level: 0
@@ -148,7 +148,7 @@ items:
       display_name: 粗製手鐲
       rarity: "N"
       figure_id: curde_bracelet
-      part: bracelet
+      slot: bracelet
       perference_job: null
       scroll_number: 3
       success_level: 0
@@ -172,7 +172,7 @@ items:
       display_name: 粗製戒指
       rarity: "N"
       figure_id: curde_ring
-      part: ring
+      slot: ring
       perference_job: null
       scroll_number: 3
       success_level: 0

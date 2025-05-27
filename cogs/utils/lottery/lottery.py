@@ -13,9 +13,10 @@ from ..item.scroll import Scroll
 from ..item.equipment import Equipment
 
 
-RULE_PATH = Path("yaml/")
-ITEM_PATH = Path("yaml/items")
-EQUIPMENT_PATH = Path("yaml/equipments")
+YAML_PATH = Path("yaml/")
+RULE_PATH = YAML_PATH
+ITEM_PATH = YAML_PATH / "items"
+EQUIPMENT_PATH = YAML_PATH / "equipments"
 
 class Lottery:
     def __init__(self):

@@ -26,7 +26,7 @@ class Equipment(BaseItem):
     figure_id: str      # 圖片ID
     sell_money: int     # 商店販售價格
     # 獨特屬性
-    part: str          # 裝備部位
+    slot: str          # 裝備部位
     scroll_number: int   # 可使用卷軸次數
     success_level: int   # 卷軸使用成功次數
     
@@ -53,7 +53,7 @@ class Equipment(BaseItem):
             "rarity":    self.rarity,
             "figure_id": self.figure_id,
             "sell_money": self.sell_money,
-            "part":  self.part,
+            "slot":  self.slot,
             "perference_job": self.perference_job,
             "attribute_bonus": self.attribute_bonus,
             "scroll_number": self.scroll_number,
@@ -83,7 +83,7 @@ class Equipment(BaseItem):
             rarity = data.get("rarity", ""),
             figure_id = data.get("figure_id", ""),
             sell_money = data.get("sell_money", 0),
-            part = data.get("part", ""),
+            slot = data.get("slot", ""),
             perference_job = data.get("perference_job", None),
             attribute_bonus = data.get("attribute_bonus", {}),
             scroll_number = data.get("scroll_number", ""),

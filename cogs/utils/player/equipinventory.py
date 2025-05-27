@@ -65,7 +65,7 @@ class EquipInventory:
             ring =     [Equipment.from_dict(e) for e in data.get("ring", [])],
         )
     
-    def _get_slot(self, slot: str) -> List[Equipment]:
+    def get_slot(self, slot_name: str) -> List[Equipment]:
         """取得裝備欄位的裝備
 
         Parameters
@@ -86,16 +86,16 @@ class EquipInventory:
             裝備欄位型別不是List
         """
         
-        if not hasattr(self, slot):
+        if not hasattr(self, slot_name):
             raise ValueError(f"⚠️ 系統提示：無效的裝備部位: {slot}")
         
-        slot = getattr(self, slot)
+        slot = getattr(self, slot_name)
         if not isinstance(slot, list):
             raise TypeError(f"⚠️ 系統提示：欄位 {slot} 不是 list，無法操作裝備")
         
         return slot
     
-    def get_equipment(self, slot: str, index: int) -> "Equipment":
+    def get_equipment(self, slot_name: str, index: int) -> "Equipment":
         """取得裝備資訊
 
         Parameters
@@ -111,26 +111,10 @@ class EquipInventory:
             裝備
         """
         
-        slot_list = self._get_slot(slot)
+        slot_list = self.get_slot(slot_name)
         
         return slot_list[index]
-    
-    def list_slot_equipment(self, slot: str) -> List["Equipment"]:
-        """取得裝備欄位的裝備
 
-        Parameters
-        ----------
-        slot : str
-            裝備欄位名稱
-
-        Returns
-        -------
-        List[Equipment]
-            裝備欄位的所有裝備
-        """
-        
-        return self._get_slot(slot)
-    
     def list_equipment(self) -> List["Equipment"]:
         """取得所有裝備
 
@@ -143,7 +127,7 @@ class EquipInventory:
         all_equipment = []
         for slot in self.__dataclass_fields__:
             try:
-                all_equipment.extend(self._get_slot(slot))
+                all_equipment.extend(self.get_slot(slot))
             except (ValueError, TypeError):
                 continue
         return all_equipment
@@ -157,7 +141,7 @@ class EquipInventory:
             裝備
         """
         
-        slot = self._get_slot(equipment.part)
+        slot = self.get_slot(equipment.slot)
         slot.append(equipment)
 
     def remove(self, equipment: Equipment) -> None:
@@ -169,7 +153,7 @@ class EquipInventory:
             裝備
         """
         
-        slot = self._get_slot(equipment.part)
+        slot = self.get_slot(equipment.slot)
         slot.remove(equipment)
 
     def sell(self, equipment: Equipment, iteminventory: ItemInventory) -> str:
@@ -188,7 +172,7 @@ class EquipInventory:
             販售資訊
         """
         
-        slot = self._get_slot(equipment.part)
+        slot = self.get_slot(equipment.slot)
         gain_money = equipment.get_sell_money()
         
         try:

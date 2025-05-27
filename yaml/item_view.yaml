@@ -1,0 +1,21 @@
+SLOT_MAPPING:
+  weapon: 武器
+  head: 頭部
+  chest: 身體
+  leggings: 腿部
+  feet: 腳部
+  earring: 耳飾
+  necklace: 項鍊
+  bracelet: 手鐲
+  ring: 戒指
+
+ITEM_TYPE_MAPPING:
+  equipment: 裝備
+  scroll: 卷軸
+  prototype: 原型武器
+
+RARITY_EMOJI:
+  N: ⬜
+  R: 🟦
+  SR: 🟪
+  UR: 🟨

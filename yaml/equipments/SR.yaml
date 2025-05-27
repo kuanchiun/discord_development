@@ -4,7 +4,7 @@ items:
       display_name: 方舟遺產戰冠
       rarity: "SR"
       figure_id: ark_head
-      part: head
+      slot: head
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -28,7 +28,7 @@ items:
       display_name: 方舟遺產心鎧
       rarity: "SR"
       figure_id: ark_chest
-      part: chest
+      slot: chest
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -52,7 +52,7 @@ items:
       display_name: 方舟遺產腿鎧
       rarity: "SR"
       figure_id: ark_leggings
-      part: leggings
+      slot: leggings
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -76,7 +76,7 @@ items:
       display_name: 方舟遺產行靴
       rarity: "SR"
       figure_id: ark_feet
-      part: feet
+      slot: feet
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -100,7 +100,7 @@ items:
       display_name: 星霜耳墜
       rarity: "SR"
       figure_id: star_earring
-      part: earring
+      slot: earring
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -124,7 +124,7 @@ items:
       display_name: 星霜吊墜
       rarity: "SR"
       figure_id: star_necklace
-      part: necklace
+      slot: necklace
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -148,7 +148,7 @@ items:
       display_name: 星霜手鐲
       rarity: "SR"
       figure_id: star_bracelet
-      part: bracelet
+      slot: bracelet
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -172,7 +172,7 @@ items:
       display_name: 星霜指環
       rarity: "SR"
       figure_id: star_ring
-      part: ring
+      slot: ring
       perference_job: null
       scroll_number: 5
       success_level: 0

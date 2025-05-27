@@ -4,7 +4,7 @@ items:
       display_name: 暗影守衛頭盔
       rarity: "R"
       figure_id: shadow_head
-      part: head
+      slot: head
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -28,7 +28,7 @@ items:
       display_name: 暗影守衛胸甲
       rarity: "R"
       figure_id: shadow_chest
-      part: chest
+      slot: chest
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -52,7 +52,7 @@ items:
       display_name: 暗影守衛長褲
       rarity: "R"
       figure_id: shadow_leggings
-      part: leggings
+      slot: leggings
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -76,7 +76,7 @@ items:
       display_name: 暗影守衛戰靴
       rarity: "R"
       figure_id: shadow_feet
-      part: feet
+      slot: feet
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -100,7 +100,7 @@ items:
       display_name: 赤鐵耳環
       rarity: "R"
       figure_id: iron_earring
-      part: earring
+      slot: earring
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -124,7 +124,7 @@ items:
       display_name: 赤鐵項鍊
       rarity: "R"
       figure_id: iron_necklace
-      part: necklace
+      slot: necklace
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -148,7 +148,7 @@ items:
       display_name: 赤鐵手鐲
       rarity: "R"
       figure_id: iron_bracelet
-      part: bracelet
+      slot: bracelet
       perference_job: null
       scroll_number: 5
       success_level: 0
@@ -172,7 +172,7 @@ items:
       display_name: 赤鐵戒指
       rarity: "R"
       figure_id: iron_ring
-      part: ring
+      slot: ring
       perference_job: null
       scroll_number: 5
       success_level: 0
