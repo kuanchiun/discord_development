@@ -4,6 +4,8 @@ from typing import Optional, Dict, List, Union
 from ..item.equipment import Equipment
 from .iteminventory import ItemInventory
 
+MAX_EQUIP_PER_SLOT = 10
+
 @dataclass
 class EquipInventory:
     weapon: List["Equipment"] = field(default_factory = list)
