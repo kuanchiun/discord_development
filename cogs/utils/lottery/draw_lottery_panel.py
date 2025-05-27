@@ -1,5 +1,6 @@
 from discord import Member, Interaction, ButtonStyle
 from discord.ui import Button, View
+from collections import Counter
 
 import asyncio
 
@@ -52,13 +53,15 @@ class DrawLotteryOnceButton(Button):
         if isinstance(loot_result, list):
             embed = create_single_draw_effect_embed(loot_result[0].get_rarity())
             await interaction.response.edit_message(
-                content=None,
-                embed=embed
+                content = None,
+                embed = embed,
+                view = None
             )
-            asyncio.sleep(5)
+            await asyncio.sleep(4)
             embed = create_single_draw_embed(loot_result[0])
             view = DrawView(embed = embed, user = self.user)
-            await interaction.response.edit_message(
+            message = await interaction.original_response()
+            await message.edit(
                 content = f"🎁 單抽結果：",
                 embed = embed,
                 view = view
@@ -87,17 +90,21 @@ class DrawLotteryTenTimesButton(Button):
         
         if isinstance(loots_result, list):
             rarity_count, embeds, single_embeds = create_multi_draw_embeds(loots_result)
-            embed = create_multi_draw_effect_embed(rarity_count)
+            counter = Counter(loot.get_rarity() for loot in loots_result)
+            embed = create_multi_draw_effect_embed(counter)
             await interaction.response.edit_message(
-                content=None,
-                embed=embed
+                content = None,
+                embed = embed,
+                view = None
             )
-            asyncio.sleep(5)
+            await asyncio.sleep(4)
             view = DrawDemonstrateView(user = self.user,
                                        embeds = embeds, 
                                        single_embeds = single_embeds)
-            await interaction.response.edit_message(
+            message = await interaction.original_response()
+            await message.edit(
                 content = f"抽卡結果：\n{rarity_count}\n請選擇展示方式：",
+                embed = None,
                 view = view
             )
         elif isinstance(loots_result, str):

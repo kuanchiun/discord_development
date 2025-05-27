@@ -1,5 +1,5 @@
 from collections import Counter
-from typing import List, Dict
+from typing import List, Dict, Tuple
 from discord import Embed, Color
 from pathlib import Path
 
@@ -22,7 +22,7 @@ GIF_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main
 
 def create_single_draw_effect_embed(rarity):
     gif_path = GIF_PATH.format(rarity = rarity)
-    embed = Embed(title="🎉 抽卡動畫")
+    embed = Embed(title = None)
     embed.set_image(url=gif_path)
 
     return embed
@@ -31,7 +31,7 @@ def create_multi_draw_effect_embed(rarity_count):
     for rarity in ["UR", "SR", "R", "N"]:
         if rarity_count[rarity] > 0:
             gif_path = GIF_PATH.format(rarity = rarity)
-            embed = Embed(title="🎉 抽卡動畫")
+            embed = Embed(title = None)
             embed.set_image(url=gif_path)
 
             return embed
@@ -40,7 +40,9 @@ def summarize_rarity(loots: List[BaseItem]) -> str:
     counter = Counter(loot.get_rarity() for loot in loots)
     texts = "📊 稀有度統計： "
     for rarity in ["UR", "SR", "R", "N"]:
-        texts += f"{RARITY_EMOJI[rarity]} {rarity}: {counter[rarity]}"
+        texts += f"{RARITY_EMOJI[rarity]}  {rarity}: {counter[rarity]}"
+        if rarity != "N":
+            texts += " | "
     
     return texts
 
@@ -82,7 +84,7 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
     
     return embed
 
-def create_multi_draw_embeds(loots: List[BaseItem]) -> List[Embed]:
+def create_multi_draw_embeds(loots: List[BaseItem]) -> Tuple[Dict[str, int], List[Embed], List[Embed]]:
     embeds = []
     single_embeds = []
     rarity_count = summarize_rarity(loots)

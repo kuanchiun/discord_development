@@ -15,6 +15,7 @@ class BaseDrawPageView(View):
 
         self.add_item(self.prev_button)
         self.add_item(self.next_button)
+        self.add_item(CancelDrawPageButton("關閉介面", user = user))
 
         self.update_button_state()
 
@@ -62,3 +63,18 @@ class DrawNextPageButton(Button):
             embed = view.embeds[view.current_page],
             view = view
         )
+
+class CancelDrawPageButton(Button):
+    def __init__(self, label: str, user: Member):
+        super().__init__(label = label, style = ButtonStyle.secondary)
+        self.user = user
+    
+    async def callback(self, interaction: Interaction):
+        if interaction.user != self.user:
+            await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔", 
+                                                    ephemeral = True)
+            return
+
+        await interaction.response.edit_message(content = "⚠️ 系統提示：已關閉抽卡結果", 
+                                                embed = None,
+                                                view = None)
