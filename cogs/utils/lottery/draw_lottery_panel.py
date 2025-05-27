@@ -12,20 +12,18 @@ from .lottery_utils import (
 class DrawLotteryView(View):
     def __init__(self, user: Member, lottery: Lottery):
         super().__init__(timeout = 30)
-        self.user = user
-        self.user_id = user.id
-        self.lottery = lottery
         
         self.add_item(DrawLotteryOnceButton(
             label = "單抽！ 💎100",
-            user = self.user,
-            lottery = self.lottery
+            user = user,
+            lottery = lottery
         ))
         self.add_item(DrawLotteryTenTimesButton(
             label = "十連抽！ 💎1000",
-            user = self.user,
-            lottery = self.lottery
+            user = user,
+            lottery = lottery
         ))
+        self.add_item(DrawLotteryCancelButton(user = user))
         
 class DrawLotteryOnceButton(Button):
     def __init__(self, label: str, user: Member, lottery: Lottery):
@@ -85,7 +83,15 @@ class DrawLotteryTenTimesButton(Button):
                 view = None
             )
 
-
-
-
-
+class DrawLotteryCancelButton(Button):
+    def __init__(self, user: Member):
+        super().__init__(label = "關閉", style = ButtonStyle.secondary)
+        self.user = user
+    
+    async def callback(self, interaction: Interaction):
+        if interaction.user != self.user:
+            await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔！",
+                                                    ephemeral = True)
+            return
+        
+        await interaction.response.edit_message(content = "系統提示：已關閉", view = None)

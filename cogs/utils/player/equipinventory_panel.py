@@ -59,7 +59,7 @@ class EquipSlotButton(Button):
 
 class EquipSlotCancelButton(Button):
     def __init__(self, user: Member):
-        super().__init__(label = "取消", style = ButtonStyle.primary)
+        super().__init__(label = "關閉", style = ButtonStyle.secondary)
         self.user = user
     
     async def callback(self, interaction: Interaction):
@@ -67,5 +67,5 @@ class EquipSlotCancelButton(Button):
             await interaction.response.send_message("⚠️ 這不是你的介面喔", ephemeral = True)
             return
         
-        await interaction.response.edit_message(content = "系統提示：已取消", view = None)
+        await interaction.response.edit_message(content = "系統提示：已關閉", view = None)
     

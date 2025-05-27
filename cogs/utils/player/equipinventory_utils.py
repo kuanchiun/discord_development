@@ -47,7 +47,7 @@ def create_slot_embed(slot: List[Equipment], slot_name: str) -> Embed:
             attr_texts = "```\n" + "\n".join(attr_lines) + "\n```"
         
             embed.add_field(
-                name = f"裝備{index}. **{display_name}**",
+                name = f"裝備{index + page}. **{display_name}**",
                 value = attr_texts,
                 inline = True
             )
