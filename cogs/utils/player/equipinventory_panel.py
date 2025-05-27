@@ -14,6 +14,9 @@ with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
 
 SLOT_MAPPING = const["SLOT_MAPPING"]
 
+###########################
+# EquipInventoryView class
+###########################
 class EquipInventoryView(View):
     def __init__(self, user: Member, timeout:int = 30):
         super().__init__(timeout = timeout)
@@ -57,6 +60,9 @@ class EquipSlotButton(Button):
                                  slot_name = self.slot_name)
         )
 
+##############################
+# EquipSlotCancelButton class
+##############################
 class EquipSlotCancelButton(Button):
     def __init__(self, user: Member):
         super().__init__(label = "關閉", style = ButtonStyle.secondary)

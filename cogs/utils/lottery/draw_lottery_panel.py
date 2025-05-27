@@ -16,6 +16,9 @@ from .lottery_utils import (
 )
 from .draw_demonstrate_choice import DrawDemonstrateView
 
+########################
+# DrawLotteryView class
+########################
 class DrawLotteryView(View):
     def __init__(self, user: Member, player: Player, lottery: Lottery):
         super().__init__(timeout = 30)
@@ -34,6 +37,9 @@ class DrawLotteryView(View):
         ))
         self.add_item(DrawLotteryCancelButton(user = user))
         
+##############################
+# DrawLotteryOnceButton class
+##############################
 class DrawLotteryOnceButton(Button):
     def __init__(self, label: str, user: Member, player: Player, lottery: Lottery):
         super().__init__(label = label, style = ButtonStyle.primary)
@@ -72,6 +78,9 @@ class DrawLotteryOnceButton(Button):
                 view = None
             )
 
+##################################
+# DrawLotteryTenTimesButton class
+##################################
 class DrawLotteryTenTimesButton(Button):
     def __init__(self, label: str, user: Member, player: Player, lottery: Lottery):
         super().__init__(label = label, style = ButtonStyle.primary)
@@ -113,6 +122,9 @@ class DrawLotteryTenTimesButton(Button):
                 view = None
             )
 
+################################
+# DrawLotteryCancelButton class
+################################
 class DrawLotteryCancelButton(Button):
     def __init__(self, user: Member):
         super().__init__(label = "關閉", style = ButtonStyle.secondary)

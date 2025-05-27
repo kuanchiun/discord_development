@@ -9,6 +9,9 @@ SLOTS = [
     "earring", "necklace", "bracelet", "ring1", "ring2"
 ]
 
+######################
+# EquipmentSlot class
+######################
 @dataclass
 class EquipmentSlot:
     weapon: Optional["Equipment"] = None

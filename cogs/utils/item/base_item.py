@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Dict
 
+#################
+# BaseItem class
+#################
 class BaseItem(ABC):
     @abstractmethod
     def get_item_id(self) -> str:

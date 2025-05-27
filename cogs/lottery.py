@@ -5,7 +5,9 @@ from .utils.player.player import Player
 from .utils.lottery import Lottery
 from .utils.lottery import DrawLotteryView
 
-
+###################
+# LotteryCog class
+###################
 class LotteryCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

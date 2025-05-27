@@ -5,6 +5,9 @@ from typing import List
 from .draw_page_view import DrawEmbedPageView
 from .draw_single_view import DrawSingleView
 
+############################
+# DrawDemonstrateView class
+############################
 class DrawDemonstrateView(View):
     def __init__(self, 
                  user: Member,
@@ -21,7 +24,9 @@ class DrawDemonstrateView(View):
                                                   embeds = embeds,
                                                   single_embeds = single_embeds))
         
-
+#################################
+# DrawOnceDemonsrateButton class
+#################################
 class DrawOnceDemonsrateButton(Button):
     def __init__(self, label: str, user: Member, embeds: List[Embed]):
         super().__init__(label = label, style = ButtonStyle.primary)
@@ -41,6 +46,9 @@ class DrawOnceDemonsrateButton(Button):
             view = view
         )
 
+####################################
+# DrawSingleDemonstrateButton class
+####################################
 class DrawSingleDemonstrateButton(Button):
     def __init__(self, 
                  label: str, 

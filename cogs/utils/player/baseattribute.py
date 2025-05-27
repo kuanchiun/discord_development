@@ -29,6 +29,9 @@ import yaml
 └───────────┴──────────────────────────────────────┘
 """
 
+######################
+# BaseAttribute class
+######################
 @dataclass
 class BaseAttribute:
     VIT: int = 0

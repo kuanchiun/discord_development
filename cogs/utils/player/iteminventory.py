@@ -5,6 +5,9 @@ from ..item.base_item import BaseItem
 from ..item.scroll import Scroll, PreventScroll
 from ..item.prototype import Prototype
 
+#######################
+# InventoryEntry class
+#######################
 @dataclass
 class InventoryEntry:
     item: BaseItem
@@ -51,6 +54,9 @@ class InventoryEntry:
         
         return cls(item = item, quantity = data["quantity"])
 
+######################
+# ItemInventory class
+######################
 @dataclass
 class ItemInventory:
     inventory: Dict[str, "InventoryEntry"] = field(default_factory = dict)

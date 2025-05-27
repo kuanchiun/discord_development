@@ -12,7 +12,9 @@ from discord.ui import Button, View
 
 from .player import Player
 
-
+#########################
+# ConfirmResetView class
+#########################
 class ConfirmResetView(View):
     def __init__(self, user: Member):
         super().__init__(timeout = 30)
@@ -22,7 +24,9 @@ class ConfirmResetView(View):
         self.add_item(ConfirmResetButton("⚠️ 確認初始化", self.user, self.user_id))
         self.add_item(CancelResetButton("❌ 取消初始化", self.user))
         
-
+###########################
+# ConfirmResetButton class
+###########################
 class ConfirmResetButton(Button):
     def __init__(self, label: str, user: Member, user_id: int):
         super().__init__(label = label, style = discord.ButtonStyle.danger)
@@ -40,7 +44,10 @@ class ConfirmResetButton(Button):
         player.save(self.user_id)
         await interaction.response.edit_message(content = "⚠️ 系統提示：已初始化角色！獲得發財金💎10000！", 
                                                 view = None)
-    
+ 
+##########################
+# CancelResetButton class
+##########################
 class CancelResetButton(Button):
     def __init__(self, label: str, user: Member):
         super().__init__(label = label, style = discord.ButtonStyle.secondary)

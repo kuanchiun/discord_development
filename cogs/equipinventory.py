@@ -7,6 +7,9 @@ from .utils.player.equipinventory_panel import EquipInventoryView
 from .utils.player.equipinventory_slot_view import EquipSlotView
 from .utils.player.equipinventory_utils import create_slot_embed
 
+##########################
+# EquipInventoryCog class
+##########################
 class EquipInventoryCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

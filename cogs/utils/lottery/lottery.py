@@ -18,6 +18,9 @@ RULE_PATH = YAML_PATH
 ITEM_PATH = YAML_PATH / "items"
 EQUIPMENT_PATH = YAML_PATH / "equipments"
 
+################
+# Lottery class
+################
 class Lottery:
     def __init__(self):
         self.lottery_rule = self.load_lottery_rule()

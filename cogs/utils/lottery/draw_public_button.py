@@ -4,7 +4,9 @@ from typing import List
 
 from .draw_page_view import PublicDrawEmbedPageView
 
-
+##############################
+# PublicDrawEmbedButton class
+##############################
 class PublicDrawEmbedButton(Button):
     def __init__(self, embeds: List[Embed], user: Member):
         super().__init__(label = "📢 公開顯示", style = ButtonStyle.primary)

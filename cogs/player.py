@@ -9,6 +9,9 @@ from discord import app_commands, Interaction, Embed, Member
 from .utils.player.player import Player
 from .utils.player.player_view import ConfirmResetView
 
+##################
+# PlayerCog class
+##################
 class PlayerCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

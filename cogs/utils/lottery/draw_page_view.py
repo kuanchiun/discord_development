@@ -2,6 +2,9 @@ from discord import Embed, Member, Interaction, ButtonStyle
 from discord.ui import Button, View
 from typing import List
 
+#########################
+# BaseDrawPageView class
+#########################
 class BaseDrawPageView(View):
     def __init__(self, embeds: List[Embed], user: Member, timeout: int = 30):
         super().__init__(timeout = timeout)
@@ -23,6 +26,9 @@ class BaseDrawPageView(View):
         self.prev_button.disabled = self.current_page == 0
         self.next_button.disabled = self.current_page >= self.total_pages - 1
 
+##########################
+# DrawEmbedPageView class
+##########################
 class DrawEmbedPageView(BaseDrawPageView):
     def __init__(self, embeds: List[Embed], user: Member):
         from .draw_public_button import PublicDrawEmbedButton
@@ -30,10 +36,16 @@ class DrawEmbedPageView(BaseDrawPageView):
         self.public_button = PublicDrawEmbedButton(embeds, user)
         self.add_item(self.public_button)
 
+################################
+# PublicDrawEmbedPageView class
+################################
 class PublicDrawEmbedPageView(BaseDrawPageView):
     def __init__(self, embeds: List[Embed], user: Member):
         super().__init__(embeds = embeds, user = user, timeout = 60)
 
+###############################
+# DrawPreviousPageButton class
+###############################
 class DrawPreviousPageButton(Button):
     def __init__(self, label: str, user: Member):
         super().__init__(label = label, style = ButtonStyle.primary)
@@ -49,6 +61,9 @@ class DrawPreviousPageButton(Button):
             view = view
         )
 
+###########################
+# DrawNextPageButton class
+###########################
 class DrawNextPageButton(Button):
     def __init__(self, label: str, user: Member):
         super().__init__(label = label, style = ButtonStyle.primary)
@@ -64,6 +79,9 @@ class DrawNextPageButton(Button):
             view = view
         )
 
+#############################
+# CancelDrawPageButton class
+#############################
 class CancelDrawPageButton(Button):
     def __init__(self, label: str, user: Member):
         super().__init__(label = label, style = ButtonStyle.secondary)

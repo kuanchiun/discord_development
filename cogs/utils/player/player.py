@@ -13,7 +13,9 @@ from .equipmentslot import EquipmentSlot
 
 PLAYER_SAVEPATH = Path("yaml/players")
 
-
+###############
+# Player class
+###############
 @dataclass
 class Player:
     baseattribute: "BaseAttribute" = None

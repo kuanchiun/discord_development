@@ -14,6 +14,9 @@ with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
 
 SLOT_MAPPING = const["SLOT_MAPPING"]
 
+######################
+# EquipSlotView class
+######################
 class EquipSlotView(View):
     def __init__(self, embeds: List[Embed], equip_names: List[str], user: Member, slot_name: str, timeout: int = 30, items_per_page: int = 2):
         super().__init__(timeout=timeout)
@@ -64,6 +67,9 @@ class EquipSlotView(View):
                 btn.label = "-"
                 btn.disabled = True
 
+#################################
+# BaseUserRestrictedButton class
+#################################
 class BaseUserRestrictedButton(Button):
     def __init__(self, user: Member, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -75,6 +81,9 @@ class BaseUserRestrictedButton(Button):
             return False
         return True
 
+###############################
+# SlotPreviousPageButton class
+###############################
 class SlotPreviousPageButton(BaseUserRestrictedButton):
     def __init__(self, label: str, user: Member, slot_name: str):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
@@ -94,6 +103,9 @@ class SlotPreviousPageButton(BaseUserRestrictedButton):
             view = view
         )
     
+###########################
+# SlotNextPageButton class
+###########################
 class SlotNextPageButton(BaseUserRestrictedButton):
     def __init__(self, label: str, user: Member, slot_name: str):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
@@ -112,7 +124,10 @@ class SlotNextPageButton(BaseUserRestrictedButton):
             embed = view.embeds[view.current_page],
             view = view
         )
-        
+
+##############################
+# SelectEquipmentButton class
+##############################
 class SelectEquipmentButton(BaseUserRestrictedButton):
     def __init__(self, label: str, user: Member, index: int):
         super().__init__(user = user, label = label, style = ButtonStyle.success)
@@ -126,7 +141,10 @@ class SelectEquipmentButton(BaseUserRestrictedButton):
         await interaction.response.edit_message(
             ...
         )
-        
+
+##################################
+# EquipSlotViewCancelButton class
+################################## 
 class EquipSlotViewCancelButton(BaseUserRestrictedButton):
     def __init__(self, user: Member):
         super().__init__(user = user, label = "關閉", style = ButtonStyle.secondary)

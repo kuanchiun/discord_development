@@ -4,6 +4,9 @@ from typing import List
 
 from .draw_public_button import PublicDrawEmbedButton
 
+#######################
+# DrawSingleView class
+#######################
 class DrawSingleView(View):
     def __init__(self, 
                  user: Member,
@@ -31,6 +34,9 @@ class DrawSingleView(View):
     def update_button_state(self):
         self.next_button.disabled = self.current_page >= self.total_pages - 1
     
+#################################
+# DrawSingleNextPageButton class
+#################################
 class DrawSingleNextPageButton(Button):
     def __init__(self, label: str, user: Member):
         super().__init__(label = label, style = ButtonStyle.primary)
@@ -46,6 +52,9 @@ class DrawSingleNextPageButton(Button):
             view = view
         )
 
+###############################
+# CancelDrawSingleButton class
+###############################
 class CancelDrawSingleButton(Button):
     def __init__(self, label: str, user: Member):
         super().__init__(label = label, style = ButtonStyle.secondary)

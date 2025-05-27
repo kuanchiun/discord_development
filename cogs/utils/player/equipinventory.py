@@ -6,6 +6,9 @@ from .iteminventory import ItemInventory
 
 MAX_EQUIP_PER_SLOT = 10
 
+#######################
+# EquipInventory class
+#######################
 @dataclass
 class EquipInventory:
     weapon: List["Equipment"] = field(default_factory = list)
