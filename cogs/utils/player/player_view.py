@@ -11,6 +11,7 @@ from discord import Embed, Member, Interaction
 from discord.ui import Button, View
 
 from .player import Player
+from ..basebutton import BaseUserRestrictedButton
 
 #########################
 # ConfirmResetView class
@@ -19,24 +20,28 @@ class ConfirmResetView(View):
     def __init__(self, user: Member):
         super().__init__(timeout = 30)
         self.user = user
-        self.user_id = user.id
+        self.message = None  # 待會儲存訊息物件（用來編輯）
         
-        self.add_item(ConfirmResetButton("⚠️ 確認初始化", self.user, self.user_id))
-        self.add_item(CancelResetButton("❌ 取消初始化", self.user))
+        self.add_item(ConfirmResetButton(user = user, label = "⚠️ 確認初始化"))
+        self.add_item(CancelResetButton(user = user, label = "❌ 取消初始化"))
+    
+    async def on_timeout(self):
+        if self.message:
+            await self.message.edit(
+                content = "⏰ 操作逾時，初始化取消。",
+                view = None
+            )
         
 ###########################
 # ConfirmResetButton class
 ###########################
-class ConfirmResetButton(Button):
-    def __init__(self, label: str, user: Member, user_id: int):
-        super().__init__(label = label, style = discord.ButtonStyle.danger)
-        self.user = user
-        self.user_id = user_id
+class ConfirmResetButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = discord.ButtonStyle.danger)
+        self.user_id = user.id
     
     async def callback(self, interaction: Interaction):
-        if interaction.user != self.user:
-            await interaction.response.send_message("⚠️ 系統提示：你不能初始化別人的角色！",
-                                                    ephemeral = True)
+        if not await self.check_user(interaction):
             return
         
         player = Player()
@@ -48,15 +53,12 @@ class ConfirmResetButton(Button):
 ##########################
 # CancelResetButton class
 ##########################
-class CancelResetButton(Button):
-    def __init__(self, label: str, user: Member):
-        super().__init__(label = label, style = discord.ButtonStyle.secondary)
-        self.user = user
+class CancelResetButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = discord.ButtonStyle.secondary)
     
     async def callback(self, interaction: Interaction):
-        if interaction.user != self.user:
-            await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔", 
-                                                    ephemeral = True)
+        if not await self.check_user(interaction):
             return
 
         await interaction.response.edit_message(content = "⚠️ 系統提示：已取消初始化角色。", 

@@ -7,6 +7,7 @@ import yaml
 from .player import Player
 from .equipinventory_utils import create_slot_embed
 from .equipinventory_slot_view import EquipSlotView
+from ..basebutton import BaseUserRestrictedButton
 
 YAML_PATH = Path("yaml")
 with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
@@ -23,21 +24,23 @@ class EquipInventoryView(View):
         self.user = user
         self.user_id = user.id
         
-        self.add_item(EquipSlotButton("weapon", self.user))
-        self.add_item(EquipSlotButton("head", self.user))
-        self.add_item(EquipSlotButton("chest", self.user))
-        self.add_item(EquipSlotButton("leggings", self.user))
-        self.add_item(EquipSlotButton("feet", self.user))
-        self.add_item(EquipSlotButton("earring", self.user))
-        self.add_item(EquipSlotButton("necklace", self.user))
-        self.add_item(EquipSlotButton("bracelet", self.user))
-        self.add_item(EquipSlotButton("ring", self.user))
-        self.add_item(EquipSlotCancelButton(self.user))
-        
-class EquipSlotButton(Button):
-    def __init__(self, slot_name: str, user: Member):
-        super().__init__(label = SLOT_MAPPING[slot_name], style = ButtonStyle.primary)
-        self.user = user
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "weapon"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "head"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "chest"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "leggings"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "feet"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "earring"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "necklace"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "bracelet"))
+        self.add_item(EquipSlotButton(user = self.user, slot_name = "ring"))
+        self.add_item(EquipSlotCancelButton(user = self.user, label = "關閉介面"))
+
+########################
+# EquipSlotButton class
+########################
+class EquipSlotButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, slot_name: str):
+        super().__init__(user = user, label = SLOT_MAPPING[slot_name], style = ButtonStyle.primary)
         self.user_id = user.id
         self.slot_name = slot_name
     
@@ -63,10 +66,9 @@ class EquipSlotButton(Button):
 ##############################
 # EquipSlotCancelButton class
 ##############################
-class EquipSlotCancelButton(Button):
-    def __init__(self, user: Member):
-        super().__init__(label = "關閉", style = ButtonStyle.secondary)
-        self.user = user
+class EquipSlotCancelButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     
     async def callback(self, interaction: Interaction):
         if interaction.user != self.user:

@@ -1,6 +1,8 @@
 from discord import Embed, Member, Interaction, ButtonStyle
 from discord.ui import Button, View
 
+from ..basebutton import BaseUserRestrictedButton
+
 #####################
 # BaseDrawView class
 #####################
@@ -14,10 +16,20 @@ class BaseDrawView(View):
 # DrawView class
 #################
 class DrawView(BaseDrawView):
-    def __init__(self, embed: Embed, user: Member, timeout: int = 30):
+    def __init__(self, embed: Embed, user: Member, timeout: int = 60):
         super().__init__(embed = embed, user = user, timeout = timeout)
+        self.message = None
         
-        self.add_item(PublicDrawButton(self.embed, self.user))
+        self.add_item(PublicDrawButton(user = user, label = "📢 公開顯示", embed = embed))
+        self.add_item(CancelDrawButton(user = user, label = "關閉介面"))
+    
+    async def on_timeout(self):
+        if self.message:
+            await self.message.edit(
+                content = "⏰ 操作逾時，關閉抽卡結果。",
+                embed = None,
+                view = None
+            )
 
 #######################
 # PublicDrawView class
@@ -29,11 +41,10 @@ class PublicDrawView(BaseDrawView):
 #########################
 # PublicDrawButton class
 #########################
-class PublicDrawButton(Button):
-    def __init__(self, embed: Embed, user: Member):
-        super().__init__(label = "📢 公開顯示", style = ButtonStyle.primary)
+class PublicDrawButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str, embed: Embed):
+        super().__init__(user = user, label = label, style = ButtonStyle.primary)
         self.embed = embed
-        self.user = user
     
     async def callback(self, interaction: Interaction):
         if interaction.user.id != self.user.id:
@@ -46,3 +57,18 @@ class PublicDrawButton(Button):
             embed = self.embed,
             view = view  # ✅ 使用公開版本
         )
+
+#############################
+# CancelDrawButton class
+#############################
+class CancelDrawButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.secondary)
+    
+    async def callback(self, interaction: Interaction):
+        if not await self.check_user(interaction):
+            return
+
+        await interaction.response.edit_message(content = "⚠️ 系統提示：已關閉抽卡結果", 
+                                                embed = None,
+                                                view = None)

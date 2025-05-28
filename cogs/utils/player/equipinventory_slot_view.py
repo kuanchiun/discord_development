@@ -7,6 +7,7 @@ import math
 import yaml
 
 from .player import Player
+from ..basebutton import BaseUserRestrictedButton
 
 YAML_PATH = Path("yaml")
 with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
@@ -31,9 +32,9 @@ class EquipSlotView(View):
         self.index = 0  # 第一頁的起始 index
 
         # 分頁按鈕
-        self.prev_button = SlotPreviousPageButton("⬅ 上一頁", user = user, slot_name = slot_name)
-        self.next_button = SlotNextPageButton("➡ 下一頁", user = user, slot_name = slot_name)
-        self.cancel_button = EquipSlotViewCancelButton(user = user)
+        self.prev_button = SlotPreviousPageButton(user = user, label = "⬅ 上一頁", slot_name = slot_name)
+        self.next_button = SlotNextPageButton(user = user, label = "➡ 下一頁", slot_name = slot_name)
+        self.cancel_button = EquipSlotViewCancelButton(user = user, label = "關閉介面")
         self.add_item(self.prev_button)
 
         # 動態裝備按鈕們（初始化）
@@ -67,25 +68,11 @@ class EquipSlotView(View):
                 btn.label = "-"
                 btn.disabled = True
 
-#################################
-# BaseUserRestrictedButton class
-#################################
-class BaseUserRestrictedButton(Button):
-    def __init__(self, user: Member, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.user = user
-
-    async def check_user(self, interaction: Interaction) -> bool:
-        if interaction.user != self.user:
-            await interaction.response.send_message("❌ 這不是你的介面喔！", ephemeral=True)
-            return False
-        return True
-
 ###############################
 # SlotPreviousPageButton class
 ###############################
 class SlotPreviousPageButton(BaseUserRestrictedButton):
-    def __init__(self, label: str, user: Member, slot_name: str):
+    def __init__(self, user: Member, label: str, slot_name: str):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
         self.slot_display_name = SLOT_MAPPING[slot_name]
         
@@ -107,7 +94,7 @@ class SlotPreviousPageButton(BaseUserRestrictedButton):
 # SlotNextPageButton class
 ###########################
 class SlotNextPageButton(BaseUserRestrictedButton):
-    def __init__(self, label: str, user: Member, slot_name: str):
+    def __init__(self, user: Member, label: str, slot_name: str):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
         self.slot_display_name = SLOT_MAPPING[slot_name]
         
@@ -129,7 +116,7 @@ class SlotNextPageButton(BaseUserRestrictedButton):
 # SelectEquipmentButton class
 ##############################
 class SelectEquipmentButton(BaseUserRestrictedButton):
-    def __init__(self, label: str, user: Member, index: int):
+    def __init__(self, user: Member, label: str, index: int):
         super().__init__(user = user, label = label, style = ButtonStyle.success)
         self.index = index
     
@@ -146,8 +133,8 @@ class SelectEquipmentButton(BaseUserRestrictedButton):
 # EquipSlotViewCancelButton class
 ################################## 
 class EquipSlotViewCancelButton(BaseUserRestrictedButton):
-    def __init__(self, user: Member):
-        super().__init__(user = user, label = "關閉", style = ButtonStyle.secondary)
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     
     async def callback(self, interaction: Interaction):
         if not await self.check_user(interaction):

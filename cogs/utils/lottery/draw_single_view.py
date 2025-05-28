@@ -2,48 +2,109 @@ from discord import Embed, Member, Interaction, ButtonStyle
 from discord.ui import Button, View
 from typing import List
 
-from .draw_public_button import PublicDrawEmbedButton
+from ..basebutton import BaseUserRestrictedButton
 
-#######################
-# DrawSingleView class
-#######################
-class DrawSingleView(View):
+###########################
+# BaseDrawSingleView class
+###########################
+class BaseDrawSingleView(View):
     def __init__(self, 
                  user: Member,
                  embeds: List[Embed], 
                  single_embeds: List[Embed],
                  timeout = 30):
+        
         super().__init__(timeout = timeout)
         self.user = user
         self.embeds = embeds
         self.single_embeds = single_embeds
+        self.message = None
         
         self.current_page = 0
         self.total_pages = len(single_embeds)
         
-        self.next_button = DrawSingleNextPageButton(label = "➡ 下一個", user = user)
-        self.public_button = PublicDrawEmbedButton(embeds = embeds, user = user)
-        self.end_button = CancelDrawSingleButton(label = "關閉介面", user = user)
+        self.previous_button = DrawSinglePreviousPageButton(user = user, label = "⬅ 上一頁")
+        self.next_button = DrawSingleNextPageButton(user = user, label = "➡ 下一頁")
         
+        self.add_item(self.previous_button)
         self.add_item(self.next_button)
-        self.add_item(self.public_button)
-        self.add_item(self.end_button)
         
         self.update_button_state()
         
     def update_button_state(self):
         self.next_button.disabled = self.current_page >= self.total_pages - 1
     
+    async def on_timeout(self):
+        if self.message:
+            await self.message.edit(
+                content = "⏰ 操作逾時，關閉抽卡結果。",
+                embed = None,
+                view = None
+            )
+
+#######################
+# DrawSingleView class
+#######################
+class DrawSingleView(BaseDrawSingleView):
+    def __init__(self, 
+                 user: Member,
+                 embeds: List[Embed], 
+                 single_embeds: List[Embed],
+                 timeout = 30):
+        super().__init__(user = user,
+                         embeds = embeds,
+                         single_embeds = single_embeds,
+                         timeout = timeout)
+
+        self.public_button = PublicDrawSingleButton(user = user, 
+                                                    label = "📢 公開顯示",
+                                                    embeds = embeds, 
+                                                    single_embeds = single_embeds)
+        self.add_item(self.public_button)
+        
+        self.close_button = CloseDrawSingleButton(user = user, label = "關閉介面")
+        self.add_item(self.close_button)
+
+#######################
+# DrawSingleView class
+#######################
+class PublicDrawSingleView(BaseDrawSingleView):
+    def __init__(self, 
+                 user: Member,
+                 embeds: List[Embed], 
+                 single_embeds: List[Embed],
+                 timeout = 60):
+        super().__init__(user = user,
+                         embeds = embeds,
+                         single_embeds = single_embeds,
+                         timeout = timeout)
+    
+#####################################
+# DrawSinglePreviousPageButton class
+#####################################
+class DrawSinglePreviousPageButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.primary)
+    
+    async def callback(self, interaction: Interaction):
+        view: BaseDrawSingleView = self.view
+        view.current_page -= 1
+        view.update_button_state()
+        await interaction.response.edit_message(
+            content = f"**{self.user.display_name}** 的十連抽結果：第 {view.current_page + 1} / {view.total_pages}",
+            embed = view.single_embeds[view.current_page],
+            view = view
+        )    
+
 #################################
 # DrawSingleNextPageButton class
 #################################
-class DrawSingleNextPageButton(Button):
-    def __init__(self, label: str, user: Member):
-        super().__init__(label = label, style = ButtonStyle.primary)
-        self.user = user
+class DrawSingleNextPageButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.primary)
     
     async def callback(self, interaction: Interaction):
-        view: DrawSingleView = self.view
+        view: BaseDrawSingleView = self.view
         view.current_page += 1
         view.update_button_state()
         await interaction.response.edit_message(
@@ -51,14 +112,33 @@ class DrawSingleNextPageButton(Button):
             embed = view.single_embeds[view.current_page],
             view = view
         )
+        
+##############################
+# PublicDrawSingleButton class
+##############################
+class PublicDrawSingleButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str, embeds: List[Embed], single_embeds: List[Embed]):
+        super().__init__(user = user, label = label, style = ButtonStyle.primary)
+        self.embeds = embeds
+        self.single_embeds = single_embeds
 
-###############################
-# CancelDrawSingleButton class
-###############################
-class CancelDrawSingleButton(Button):
-    def __init__(self, label: str, user: Member):
-        super().__init__(label = label, style = ButtonStyle.secondary)
-        self.user = user
+    async def callback(self, interaction: Interaction):
+        view = PublicDrawSingleView(user = self.user, 
+                                    embeds = self.embeds, 
+                                    single_embeds = self.single_embeds)
+        await interaction.response.send_message(
+            content = f"⚠️ 系統提示：{interaction.user.display_name} 公開了他的十連抽結果：第 1 / {len(self.single_embeds)} 頁",
+            embed = self.single_embeds[0],
+            view = view  # ✅ 使用公開版本
+        )
+        view.message = await interaction.original_response()
+
+##############################
+# CloseDrawSingleButton class
+##############################
+class CloseDrawSingleButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     
     async def callback(self, interaction: Interaction):
         if interaction.user != self.user:

@@ -28,6 +28,8 @@ class PlayerCog(commands.Cog):
                 view = view,
                 ephemeral = True
             )
+            message = await interaction.original_response()
+            view.message = message
         else:
             player = Player()
             player.iteminventory.add_money(10000)

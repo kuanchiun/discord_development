@@ -197,7 +197,7 @@ items:
     
     - item_id: SR_scroll_spirit
       item_type: scroll
-      display_name: 傳說戰意卷軸60%
+      display_name: 傳說戰意卷軸10%
       rarity: SR
       figure_id: SR_scroll_3
       sell_money: 500
@@ -213,7 +213,7 @@ items:
     
     - item_id: SR_scroll_arcana
       item_type: scroll
-      display_name: 傳說秘能卷軸60%
+      display_name: 傳說秘能卷軸10%
       rarity: SR
       figure_id: SR_scroll_3
       sell_money: 500
@@ -229,7 +229,7 @@ items:
       
     - item_id: SR_scroll_arcana
       item_type: scroll
-      display_name: 傳說奇襲卷軸60%
+      display_name: 傳說奇襲卷軸10%
       rarity: SR
       figure_id: SR_scroll_3
       sell_money: 500
@@ -245,7 +245,7 @@ items:
     
     - item_id: SR_scroll_arcana
       item_type: scroll
-      display_name: 傳說均衡卷軸60%
+      display_name: 傳說均衡卷軸10%
       rarity: SR
       figure_id: SR_scroll_3
       sell_money: 500
@@ -261,7 +261,7 @@ items:
     
     - item_id: SR_scroll_all
       item_type: scroll
-      display_name: 傳說全屬性卷軸60%
+      display_name: 傳說全屬性卷軸10%
       rarity: SR
       figure_id: SR_scroll_4
       sell_money: 500

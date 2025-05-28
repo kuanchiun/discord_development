@@ -15,6 +15,7 @@ from .lottery_utils import (
     create_single_draw_effect_embed
 )
 from .draw_demonstrate_choice import DrawDemonstrateView
+from ..basebutton import BaseUserRestrictedButton
 
 ########################
 # DrawLotteryView class
@@ -35,23 +36,20 @@ class DrawLotteryView(View):
             player = player,
             lottery = lottery
         ))
-        self.add_item(DrawLotteryCancelButton(user = user))
+        self.add_item(DrawLotteryCancelButton(user = user, label = "關閉介面"))
         
 ##############################
 # DrawLotteryOnceButton class
 ##############################
-class DrawLotteryOnceButton(Button):
-    def __init__(self, label: str, user: Member, player: Player, lottery: Lottery):
-        super().__init__(label = label, style = ButtonStyle.primary)
-        self.user = user
+class DrawLotteryOnceButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str, player: Player, lottery: Lottery):
+        super().__init__(user = user, label = label, style = ButtonStyle.primary)
         self.user_id = user.id
         self.player = player
         self.lottery = lottery
     
     async def callback(self, interaction: Interaction):
-        if interaction.user != self.user:
-            await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔！",
-                                                    ephemeral = True)
+        if not await self.check_user(interaction):
             return
         
         loot_result = self.lottery.process_draw(user_id = self.user_id, player = self.player, times = 1)
@@ -72,6 +70,7 @@ class DrawLotteryOnceButton(Button):
                 embed = embed,
                 view = view
             )
+            view.message = message
         elif isinstance(loot_result, str):
             await interaction.response.edit_message(
                 content = loot_result,
@@ -81,18 +80,15 @@ class DrawLotteryOnceButton(Button):
 ##################################
 # DrawLotteryTenTimesButton class
 ##################################
-class DrawLotteryTenTimesButton(Button):
-    def __init__(self, label: str, user: Member, player: Player, lottery: Lottery):
-        super().__init__(label = label, style = ButtonStyle.primary)
-        self.user = user
+class DrawLotteryTenTimesButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str, player: Player, lottery: Lottery):
+        super().__init__(user = user, label = label, style = ButtonStyle.primary)
         self.user_id = user.id
         self.player = player
         self.lottery = lottery
     
     async def callback(self, interaction: Interaction):
-        if interaction.user != self.user:
-            await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔！",
-                                                    ephemeral = True)
+        if not await self.check_user(interaction):
             return
         
         loots_result = self.lottery.process_draw(user_id = self.user_id, player = self.player, times = 10)
@@ -116,6 +112,7 @@ class DrawLotteryTenTimesButton(Button):
                 embed = None,
                 view = view
             )
+            view.message = message
         elif isinstance(loots_result, str):
             await interaction.response.edit_message(
                 content = loots_result,
@@ -125,15 +122,12 @@ class DrawLotteryTenTimesButton(Button):
 ################################
 # DrawLotteryCancelButton class
 ################################
-class DrawLotteryCancelButton(Button):
-    def __init__(self, user: Member):
-        super().__init__(label = "關閉", style = ButtonStyle.secondary)
-        self.user = user
+class DrawLotteryCancelButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     
     async def callback(self, interaction: Interaction):
-        if interaction.user != self.user:
-            await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔！",
-                                                    ephemeral = True)
+        if not await self.check_user(interaction):
             return
         
         await interaction.response.edit_message(content = "系統提示：已關閉", view = None)
