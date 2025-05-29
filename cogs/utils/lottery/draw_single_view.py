@@ -1,5 +1,5 @@
 from discord import Embed, Member, Interaction, ButtonStyle
-from discord.ui import Button, View
+from discord.ui import View
 from typing import List
 
 from ..basebutton import BaseUserRestrictedButton

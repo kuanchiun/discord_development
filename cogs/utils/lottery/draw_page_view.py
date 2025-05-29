@@ -1,5 +1,5 @@
 from discord import Embed, Member, Interaction, ButtonStyle
-from discord.ui import Button, View
+from discord.ui import View
 from typing import List
 
 from ..basebutton import BaseUserRestrictedButton
@@ -7,7 +7,7 @@ from ..basebutton import BaseUserRestrictedButton
 #########################
 # BaseDrawPageView class
 #########################
-class BaseDrawPageView(View):
+class BaseDrawAllView(View):
     def __init__(self, embeds: List[Embed], user: Member, timeout: int = 30):
         super().__init__(timeout = timeout)
         self.embeds = embeds
@@ -39,17 +39,17 @@ class BaseDrawPageView(View):
 ##########################
 # DrawEmbedPageView class
 ##########################
-class DrawEmbedPageView(BaseDrawPageView):
+class DrawAllView(BaseDrawAllView):
     def __init__(self, embeds: List[Embed], user: Member):
         super().__init__(embeds = embeds, user = user, timeout = 30)
         self.public_button = PublicDrawEmbedButton(user = user, label = "📢 公開顯示", embeds = embeds)
         self.add_item(self.public_button)
-        self.add_item(CancelDrawPageButton(user = user, label = "關閉介面"))
+        self.add_item(CloseDrawPageButton(user = user, label = "關閉介面"))
 
 ################################
 # PublicDrawEmbedPageView class
 ################################
-class PublicDrawEmbedPageView(BaseDrawPageView):
+class PublicDrawAllView(BaseDrawAllView):
     def __init__(self, embeds: List[Embed], user: Member):
         super().__init__(embeds = embeds, user = user, timeout = 60)
 
@@ -61,7 +61,7 @@ class DrawPreviousPageButton(BaseUserRestrictedButton):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
     
     async def callback(self, interaction: Interaction):
-        view: BaseDrawPageView = self.view
+        view: BaseDrawAllView = self.view
         view.current_page -= 1
         view.update_button_state()
         await interaction.response.edit_message(
@@ -78,7 +78,7 @@ class DrawNextPageButton(BaseUserRestrictedButton):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
     
     async def callback(self, interaction: Interaction):
-        view: BaseDrawPageView = self.view
+        view: BaseDrawAllView = self.view
         view.current_page += 1
         view.update_button_state()
         await interaction.response.edit_message(
@@ -87,10 +87,10 @@ class DrawNextPageButton(BaseUserRestrictedButton):
             view = view
         )
 
-#############################
-# CancelDrawPageButton class
-#############################
-class CancelDrawPageButton(BaseUserRestrictedButton):
+############################
+# CloseDrawPageButton class
+############################
+class CloseDrawPageButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str):
         super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     
@@ -111,7 +111,7 @@ class PublicDrawEmbedButton(BaseUserRestrictedButton):
         self.embeds = embeds
 
     async def callback(self, interaction: Interaction):
-        view = PublicDrawEmbedPageView(user = self.user, embeds = self.embeds)
+        view = PublicDrawAllView(user = self.user, embeds = self.embeds)
         await interaction.response.send_message(
             content = f"⚠️ 系統提示：{interaction.user.display_name} 公開了他的十連抽結果：第 1 / {len(self.embeds)} 頁",
             embed = self.embeds[0],

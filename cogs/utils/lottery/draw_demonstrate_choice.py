@@ -1,8 +1,8 @@
 from discord import Embed, Member, Interaction, ButtonStyle
-from discord.ui import Button, View
+from discord.ui import View
 from typing import List
 
-from .draw_page_view import DrawEmbedPageView
+from .draw_page_view import DrawAllView
 from .draw_single_view import DrawSingleView
 from ..basebutton import BaseUserRestrictedButton
 
@@ -18,14 +18,14 @@ class DrawDemonstrateView(View):
         super().__init__(timeout = timeout)
         self.message = None  # 待會儲存訊息物件（用來編輯）
         
-        self.add_item(DrawOnceDemonsrateButton(user = user, 
+        self.add_item(ShowAllDrawResultsButton(user = user, 
                                                label = "一次展示", 
                                                embeds = embeds))
-        self.add_item(DrawSingleDemonstrateButton(user = user, 
+        self.add_item(ShowSingleDrawResultButton(user = user, 
                                                   label = "單張個別展示", 
                                                   embeds = embeds,
                                                   single_embeds = single_embeds))
-        self.add_item(CancelDrawDemonstrateButton(user = user,
+        self.add_item(CloseDrawDemonstrateButton(user = user,
                                                   label = "關閉介面"))
     
     async def on_timeout(self):
@@ -39,7 +39,7 @@ class DrawDemonstrateView(View):
 #################################
 # DrawOnceDemonsrateButton class
 #################################
-class DrawOnceDemonsrateButton(BaseUserRestrictedButton):
+class ShowAllDrawResultsButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str, embeds: List[Embed]):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
         self.embeds = embeds
@@ -48,7 +48,7 @@ class DrawOnceDemonsrateButton(BaseUserRestrictedButton):
         if not await self.check_user(interaction):
             return
         
-        view = DrawEmbedPageView(self.embeds, self.user)
+        view = DrawAllView(self.embeds, self.user)
         await interaction.response.edit_message(
             content = f"⚠️ 系統提示：**{self.user.display_name}** 的十連抽結果：第 1 / 2 頁",
             embed = view.embeds[0],
@@ -61,7 +61,7 @@ class DrawOnceDemonsrateButton(BaseUserRestrictedButton):
 ####################################
 # DrawSingleDemonstrateButton class
 ####################################
-class DrawSingleDemonstrateButton(BaseUserRestrictedButton):
+class ShowSingleDrawResultButton(BaseUserRestrictedButton):
     def __init__(self, 
                  user: Member, 
                  label: str, 
@@ -87,10 +87,10 @@ class DrawSingleDemonstrateButton(BaseUserRestrictedButton):
         message = await interaction.original_response()
         view.message = message
 
-####################################
-# CancelDrawDemonstrateButton class
-####################################
-class CancelDrawDemonstrateButton(BaseUserRestrictedButton):
+###################################
+# CloseDrawDemonstrateButton class
+###################################
+class CloseDrawDemonstrateButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str):
         super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     

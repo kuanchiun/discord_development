@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Optional, Dict, List, Tuple
+from dataclasses import dataclass
+from typing import Optional, Dict
 
 from ..item.equipment import Equipment
 from .equipinventory import EquipInventory

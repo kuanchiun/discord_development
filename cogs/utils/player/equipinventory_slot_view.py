@@ -1,5 +1,5 @@
 from discord import Embed, Member, Interaction, ButtonStyle
-from discord.ui import Button, View
+from discord.ui import View
 from pathlib import Path
 from typing import List
 

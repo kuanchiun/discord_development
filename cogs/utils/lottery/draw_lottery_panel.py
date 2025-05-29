@@ -1,5 +1,5 @@
 from discord import Member, Interaction, ButtonStyle
-from discord.ui import Button, View
+from discord.ui import View
 from collections import Counter
 
 import asyncio
@@ -7,7 +7,6 @@ import asyncio
 from ..player.player import Player
 from .lottery import Lottery
 from .draw_view import DrawView
-from .draw_page_view import DrawEmbedPageView
 from .lottery_utils import (
     create_multi_draw_embeds,
     create_single_draw_embed,

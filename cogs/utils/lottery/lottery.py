@@ -2,7 +2,6 @@ from typing import Dict, List, Union
 from collections import defaultdict
 from random import choice, choices
 from pathlib import Path
-from discord import Member
 
 import yaml
 
