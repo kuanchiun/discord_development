@@ -15,7 +15,7 @@ with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
 SLOT_MAPPING = const["SLOT_MAPPING"]
 RARITY_EMOJI = const["RARITY_EMOJI"]
 
-def create_slot_embed(slot: List[Equipment], slot_name: str) -> Embed:
+def create_equip_inventory_slot_embed(slot: List[Equipment], slot_name: str) -> Embed:
     equip_names = [equipment.get_display_name() for equipment in slot]
     embeds = []
     

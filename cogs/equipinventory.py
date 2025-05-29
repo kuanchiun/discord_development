@@ -4,8 +4,8 @@ from discord import app_commands, Interaction
 from .utils.player.player import Player
 from .utils.player.equipinventory import EquipInventory
 from .utils.player.equipinventory_panel import EquipInventoryView
-from .utils.player.equipinventory_slot_view import EquipSlotView
-from .utils.player.equipinventory_utils import create_slot_embed
+from .utils.player.equipinventory_slot_view import EquipInventorySlotView
+from .utils.player.equipinventory_utils import create_equip_inventory_slot_embed
 
 ##########################
 # EquipInventoryCog class
