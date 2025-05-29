@@ -42,9 +42,9 @@ class BaseDrawAllView(View):
 class DrawAllView(BaseDrawAllView):
     def __init__(self, embeds: List[Embed], user: Member):
         super().__init__(embeds = embeds, user = user, timeout = 30)
-        self.public_button = PublicDrawEmbedButton(user = user, label = "📢 公開顯示", embeds = embeds)
+        self.public_button = PublicDrawAllButton(user = user, label = "📢 公開顯示", embeds = embeds)
         self.add_item(self.public_button)
-        self.add_item(CloseDrawPageButton(user = user, label = "關閉介面"))
+        self.add_item(CloseDrawAllButton(user = user, label = "關閉介面"))
 
 ################################
 # PublicDrawEmbedPageView class
@@ -56,7 +56,7 @@ class PublicDrawAllView(BaseDrawAllView):
 ###############################
 # DrawPreviousPageButton class
 ###############################
-class DrawPreviousPageButton(BaseUserRestrictedButton):
+class DrawAllPreviousPageButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
     
@@ -73,7 +73,7 @@ class DrawPreviousPageButton(BaseUserRestrictedButton):
 ###########################
 # DrawNextPageButton class
 ###########################
-class DrawNextPageButton(BaseUserRestrictedButton):
+class DrawAllNextPageButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
     
@@ -90,7 +90,7 @@ class DrawNextPageButton(BaseUserRestrictedButton):
 ############################
 # CloseDrawPageButton class
 ############################
-class CloseDrawPageButton(BaseUserRestrictedButton):
+class CloseDrawAllButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str):
         super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     
@@ -103,9 +103,9 @@ class CloseDrawPageButton(BaseUserRestrictedButton):
                                                 view = None)
 
 ##############################
-# PublicDrawEmbedButton class
+# PublicDrawAllButton class
 ##############################
-class PublicDrawEmbedButton(BaseUserRestrictedButton):
+class PublicDrawAllButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str, embeds: List[Embed]):
         super().__init__(user = user, label = label, style = ButtonStyle.primary)
         self.embeds = embeds

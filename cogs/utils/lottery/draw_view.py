@@ -21,7 +21,7 @@ class DrawView(BaseDrawView):
         self.message = None
         
         self.add_item(PublicDrawButton(user = user, label = "📢 公開顯示", embed = embed))
-        self.add_item(CancelDrawButton(user = user, label = "關閉介面"))
+        self.add_item(CloseDrawButton(user = user, label = "關閉介面"))
     
     async def on_timeout(self):
         if self.message:
@@ -58,10 +58,10 @@ class PublicDrawButton(BaseUserRestrictedButton):
             view = view  # ✅ 使用公開版本
         )
 
-#############################
-# CancelDrawButton class
-#############################
-class CancelDrawButton(BaseUserRestrictedButton):
+########################
+# CloseDrawButton class
+########################
+class CloseDrawButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str):
         super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     

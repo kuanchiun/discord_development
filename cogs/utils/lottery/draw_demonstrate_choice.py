@@ -2,7 +2,7 @@ from discord import Embed, Member, Interaction, ButtonStyle
 from discord.ui import View
 from typing import List
 
-from .draw_page_view import DrawAllView
+from .draw_all_view import DrawAllView
 from .draw_single_view import DrawSingleView
 from ..basebutton import BaseUserRestrictedButton
 
