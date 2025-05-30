@@ -35,6 +35,7 @@ class EquipInventorySlotView(View):
         self.prev_button = EquipInventorySlotPreviousPageButton(user = user, label = "⬅ 上一頁", slot_name = slot_name)
         self.next_button = EquipInventorySlotNextPageButton(user = user, label = "➡ 下一頁", slot_name = slot_name)
         self.cancel_button = CloseEquipInventorySlotViewButton(user = user, label = "關閉介面")
+        self.back_button = EquipInventorySlotViewBackButton(user = user, label = "返回裝備背包介面")
         self.add_item(self.prev_button)
 
         # 動態裝備按鈕們（初始化）
@@ -42,6 +43,7 @@ class EquipInventorySlotView(View):
         self._build_equipment_buttons()
 
         self.add_item(self.next_button)
+        self.add_item(self.back_button)
         self.add_item(self.cancel_button)
         self.update_button_state()
 
@@ -112,9 +114,9 @@ class EquipInventorySlotNextPageButton(BaseUserRestrictedButton):
             view = view
         )
 
-##############################
-# SelectEquipmentButton class
-##############################
+############################################
+# EquipInventorySelectEquipmentButton class
+############################################
 class EquipInventorySelectEquipmentButton(BaseUserRestrictedButton):
     def __init__(self, user: Member, label: str, index: int):
         super().__init__(user = user, label = label, style = ButtonStyle.success)
@@ -141,3 +143,25 @@ class CloseEquipInventorySlotViewButton(BaseUserRestrictedButton):
             return
         
         await interaction.response.edit_message(content = "系統提示：已關閉", embed = None, view = None)
+
+
+###################################
+# EquipInventorySlotViewBackButton
+###################################
+class EquipInventorySlotViewBackButton(BaseUserRestrictedButton):
+    
+    def __init__(self, user: Member, label = str):
+        super().__init__(user = user, label = label, style = ButtonStyle.secondary)
+    
+    async def callback(self, interaction: Interaction):
+        from .equipinventory_panel import EquipInventoryView
+        
+        if not await self.check_user(interaction):
+            return
+        
+        view = EquipInventoryView(user = self.user)
+        
+        await interaction.response.edit_message(content = "系統提示：請選擇裝備欄位",
+                                                embed = None,
+                                                view = view)
+        

@@ -45,6 +45,7 @@ class EquipInventorySlotButton(BaseUserRestrictedButton):
         self.slot_name = slot_name
     
     async def callback(self, interaction: Interaction):
+        view: EquipInventoryView = self.view
         if interaction.user != self.user:
             await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔！",
                                                     ephemeral = True)
@@ -52,6 +53,14 @@ class EquipInventorySlotButton(BaseUserRestrictedButton):
         
         player = Player.load(self.user_id)
         slot = player.equipinventory.get_slot(self.slot_name)
+        
+        if len(slot) == 0:
+            await interaction.response.edit_message(
+                content = f"系統提示：你的**{SLOT_MAPPING[self.slot_name]}**欄位沒有裝備，請重新選擇欄位",
+                view = view
+            )
+            return
+        
         embeds, equip_names = create_equip_inventory_slot_embed(slot, self.slot_name)
         
         await interaction.response.edit_message(
@@ -62,6 +71,7 @@ class EquipInventorySlotButton(BaseUserRestrictedButton):
                                           user = self.user, 
                                           slot_name = self.slot_name)
         )
+        return
 
 ##############################
 # CloseEquipSlotButton class
@@ -76,4 +86,5 @@ class CloseEquipInventorySlotButton(BaseUserRestrictedButton):
             return
         
         await interaction.response.edit_message(content = "系統提示：已關閉", view = None)
+        return 
     
