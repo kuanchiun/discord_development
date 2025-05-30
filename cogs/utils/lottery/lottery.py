@@ -141,10 +141,17 @@ class Lottery:
         for item in loots:
             if item is None:
                 continue
-            if item.get_item_type() == "equipment":
-                player.equipinventory.add(item) 
-            elif item.get_item_type() in ["prototype", "scroll"]:
+
+            item_type = item.get_item_type()
+
+            if item_type == "equipment":
+                item.initialize_attribute()
+                player.equipinventory.add(item)
+            elif item_type in {"prototype", "scroll"}:
                 player.iteminventory.add(item)
+            else:
+                # 可選：增加未知類型警告
+                print(f"⚠️ 未知物品類型：{item_type}")
         
         player.iteminventory.use_money(self.lottery_rule["COST"] * times)
         

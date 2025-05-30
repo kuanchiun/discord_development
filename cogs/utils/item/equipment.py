@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional, Dict, List, Tuple
 from random import choice, choices
 from enum import Enum
+from collections import Counter
 
 from .scroll import Scroll
 from .base_item import BaseItem
@@ -25,12 +26,15 @@ class Equipment(BaseItem):
     rarity: str        # 稀有度
     figure_id: str      # 圖片ID
     sell_money: int     # 商店販售價格
+    purchase_money: int
     # 獨特屬性
     slot: str          # 裝備部位
     scroll_number: int   # 可使用卷軸次數
     success_level: int   # 卷軸使用成功次數
     
     item_type: str
+    total_point: int
+    
     perference_job: Optional[str] = None  # 偏好職業
     attribute_bonus: Dict[str, int] = field(
         default_factory = dict) # 裝備屬性加成
@@ -53,12 +57,14 @@ class Equipment(BaseItem):
             "rarity":    self.rarity,
             "figure_id": self.figure_id,
             "sell_money": self.sell_money,
+            "purchase_money": self.purchase_money,
             "slot":  self.slot,
             "perference_job": self.perference_job,
             "attribute_bonus": self.attribute_bonus,
             "scroll_number": self.scroll_number,
             "success_level": self.success_level,
-            "sockets": self.sockets
+            "sockets": self.sockets,
+            "total_point": self.total_point
         }
         
     @classmethod
@@ -83,12 +89,14 @@ class Equipment(BaseItem):
             rarity = data.get("rarity", ""),
             figure_id = data.get("figure_id", ""),
             sell_money = data.get("sell_money", 0),
+            purchase_money = data.get("purchase_money", 0),
             slot = data.get("slot", ""),
             perference_job = data.get("perference_job", None),
             attribute_bonus = data.get("attribute_bonus", {}),
             scroll_number = data.get("scroll_number", ""),
             success_level = data.get("success_level", ""),
-            sockets = data.get("sockets", [None, None, None])
+            sockets = data.get("sockets", [None, None, None]),
+            total_point = data.get("total_point", 0)
         )
     
     def get_item_id(self) -> str:
@@ -167,15 +175,29 @@ class Equipment(BaseItem):
         
         return self.sell_money
     
-    def get_purchase_money(self):
+    def get_purchase_money(self) -> int:
         """取得物品的商店購買價
 
         Returns
         -------
-        str
+        int
             物品商店購買價
         """
-        return super().get_purchase_money()
+        return self.purchase_money
+    
+    def initialize_attribute(self) -> None:
+        attributes = ["VIT", "WIS", "STR", "INT", "DEX", "AGI", "MND", "LUK"]
+        
+        for attr in attributes:
+            self.attribute_bonus.setdefault(attr, 0)
+        
+        distribution = choices(attributes, k=self.total_point)
+        counts = Counter(distribution)
+
+        for attr, count in counts.items():
+            self.attribute_bonus[attr] += count
+
+        self.total_point = 0
     
     def attempt_enhance(self, 
                         scroll: "Scroll", 

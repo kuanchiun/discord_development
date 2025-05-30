@@ -152,7 +152,7 @@ class Prototype(BaseItem):
 
         Returns
         -------
-        str
+        int
             物品售價
         """
         
@@ -161,6 +161,9 @@ class Prototype(BaseItem):
     def get_purchase_money(self):
         """取得物品商店購買價格"""
         return super().get_purchase_money()
+    
+    def initialize_attribute(self):
+        return super().initialize_attribute()
     
     def exchange_weapon(self, weapon_type: str) -> Optional["Equipment"]:
         """使用貨幣兌換系列武器

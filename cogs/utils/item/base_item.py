@@ -41,7 +41,7 @@ class BaseItem(ABC):
         pass
     
     @abstractmethod
-    def get_purchase_money(self) -> str:
+    def get_purchase_money(self) -> int:
         """取得物品商店購買價格"""
         pass
     
@@ -49,3 +49,8 @@ class BaseItem(ABC):
     def to_dict(self) -> Dict:
         """將物件儲存成字典"""
         pass
+    
+    @abstractmethod
+    def initialize_attribute(self) -> None:
+        """由子類別 override，基底為空或拋錯"""
+        raise NotImplementedError

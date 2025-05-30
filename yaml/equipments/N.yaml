@@ -9,19 +9,21 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: fabric_chest
       item_type: equipment
@@ -33,19 +35,21 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: fabric_leggings
       item_type: equipment
@@ -57,19 +61,21 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: fabric_feet
       item_type: equipment
@@ -81,19 +87,21 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: curde_earring
       item_type: equipment
@@ -105,19 +113,21 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: curde_necklace
       item_type: equipment
@@ -129,19 +139,21 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: curde_bracelet
       item_type: equipment
@@ -153,19 +165,21 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: curde_ring
       item_type: equipment
@@ -177,16 +191,18 @@ items:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          WIS: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          AGI: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0

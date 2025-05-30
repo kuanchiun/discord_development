@@ -165,6 +165,9 @@ class Scroll(BaseItem):
             商店購買價格
         """
         return self.purchase_money
+    
+    def initialize_attribute(self):
+        return super().initialize_attribute()
 
     def determine_success(self) -> bool:
         """決定強化是否成功

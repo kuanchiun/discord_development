@@ -9,19 +9,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: shadow_chest
       item_type: equipment
@@ -33,19 +35,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: shadow_leggings
       item_type: equipment
@@ -57,19 +61,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: shadow_feet
       item_type: equipment
@@ -81,19 +87,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: iron_earring
       item_type: equipment
@@ -105,19 +113,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: iron_necklace
       item_type: equipment
@@ -129,19 +139,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: iron_bracelet
       item_type: equipment
@@ -153,19 +165,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: iron_ring
       item_type: equipment
@@ -177,16 +191,18 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          WIS: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          AGI: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0

@@ -9,19 +9,21 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: godfield_chest
       item_type: equipment
@@ -33,19 +35,21 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: godfield_leggings
       item_type: equipment
@@ -57,19 +61,21 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: godfield_feet
       item_type: equipment
@@ -81,19 +87,21 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: fallen_earring
       item_type: equipment
@@ -105,19 +113,21 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: fallen_necklace
       item_type: equipment
@@ -129,19 +139,21 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: fallen_bracelet
       item_type: equipment
@@ -153,19 +165,21 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: fallen_ring
       item_type: equipment
@@ -177,16 +191,18 @@ items:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          WIS: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          AGI: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0

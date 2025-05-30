@@ -9,17 +9,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_swear
       item_type: equipment
@@ -31,17 +35,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_katana
       item_type: equipment
@@ -53,17 +61,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_twin_blades
       item_type: equipment
@@ -75,17 +87,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_dual_pistols
       item_type: equipment
@@ -97,17 +113,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_bow
       item_type: equipment
@@ -119,17 +139,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_rifle
       item_type: equipment
@@ -141,17 +165,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_fire_staff
       item_type: equipment
@@ -163,17 +191,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_ice_staff
       item_type: equipment
@@ -185,17 +217,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_thunder_staff
       item_type: equipment
@@ -207,17 +243,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_dagger
       item_type: equipment
@@ -229,17 +269,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_kunai
       item_type: equipment
@@ -251,17 +295,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
     
     - item_id: older_playing_cards
       item_type: equipment
@@ -273,17 +321,21 @@ older:
       scroll_number: 3
       success_level: 0
       attribute_bonus:
-          VIT: 5
-          STR: 5
-          INT: 5
-          DEX: 5
-          MND: 5
-          LUK: 5
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - null
           - null
           - null
       sell_money: 50
+      total_point: 20
+      purchase_money: 0
 
 fate:
     - item_id: fate_sword_shield
@@ -296,17 +348,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_swear
       item_type: equipment
@@ -318,17 +374,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_katana
       item_type: equipment
@@ -340,17 +400,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_twin_blades
       item_type: equipment
@@ -362,17 +426,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_dual_pistols
       item_type: equipment
@@ -384,17 +452,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_bow
       item_type: equipment
@@ -406,17 +478,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_rifle
       item_type: equipment
@@ -428,17 +504,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_fire_staff
       item_type: equipment
@@ -450,17 +530,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_ice_staff
       item_type: equipment
@@ -472,17 +556,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_thunder_staff
       item_type: equipment
@@ -494,17 +582,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_dagger
       item_type: equipment
@@ -516,17 +608,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_kunai
       item_type: equipment
@@ -538,17 +634,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
     
     - item_id: fate_playing_cards
       item_type: equipment
@@ -560,17 +660,21 @@ fate:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 10
-          STR: 10
-          INT: 10
-          DEX: 10
-          MND: 10
-          LUK: 10
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - null
           - null
       sell_money: 125
+      total_point: 50
+      purchase_money: 0
 
 fairy:
     - item_id: fairy_sword_shield
@@ -583,17 +687,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_swear
       item_type: equipment
@@ -605,17 +713,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_katana
       item_type: equipment
@@ -627,17 +739,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_twin_blades
       item_type: equipment
@@ -649,17 +765,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_dual_pistols
       item_type: equipment
@@ -671,17 +791,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_bow
       item_type: equipment
@@ -693,17 +817,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_rifle
       item_type: equipment
@@ -715,17 +843,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_fire_staff
       item_type: equipment
@@ -737,17 +869,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_ice_staff
       item_type: equipment
@@ -759,17 +895,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_thunder_staff
       item_type: equipment
@@ -781,17 +921,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_dagger
       item_type: equipment
@@ -803,17 +947,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_kunai
       item_type: equipment
@@ -825,17 +973,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: fairy_playing_cards
       item_type: equipment
@@ -847,17 +999,21 @@ fairy:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
 
 origin:
     - item_id: origin_sword_shield
@@ -870,17 +1026,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_swear
       item_type: equipment
@@ -892,17 +1052,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_katana
       item_type: equipment
@@ -914,17 +1078,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_twin_blades
       item_type: equipment
@@ -936,17 +1104,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_dual_pistols
       item_type: equipment
@@ -958,17 +1130,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_bow
       item_type: equipment
@@ -980,17 +1156,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_rifle
       item_type: equipment
@@ -1002,17 +1182,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_fire_staff
       item_type: equipment
@@ -1024,17 +1208,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_ice_staff
       item_type: equipment
@@ -1046,17 +1234,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_thunder_staff
       item_type: equipment
@@ -1068,17 +1260,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_dagger
       item_type: equipment
@@ -1090,17 +1286,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_kunai
       item_type: equipment
@@ -1112,17 +1312,21 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0
     
     - item_id: origin_playing_cards
       item_type: equipment
@@ -1134,14 +1338,18 @@ origin:
       scroll_number: 7
       success_level: 0
       attribute_bonus:
-          VIT: 30
-          STR: 30
-          INT: 30
-          DEX: 30
-          MND: 30
-          LUK: 30
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - true
       sell_money: 900
+      total_point: 110
+      purchase_money: 0

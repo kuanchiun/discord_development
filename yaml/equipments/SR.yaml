@@ -9,19 +9,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: ark_chest
       item_type: equipment
@@ -33,19 +35,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: ark_leggings
       item_type: equipment
@@ -57,19 +61,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: ark_feet
       item_type: equipment
@@ -81,19 +87,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: star_earring
       item_type: equipment
@@ -105,19 +113,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: star_necklace
       item_type: equipment
@@ -129,19 +139,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: star_bracelet
       item_type: equipment
@@ -153,19 +165,21 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0
     
     - item_id: star_ring
       item_type: equipment
@@ -177,16 +191,18 @@ items:
       scroll_number: 5
       success_level: 0
       attribute_bonus:
-          VIT: 20
-          WIS: 20
-          STR: 20
-          INT: 20
-          DEX: 20
-          AGI: 20
-          MND: 20
-          LUK: 20
+          VIT: 0
+          WIS: 0
+          STR: 0
+          INT: 0
+          DEX: 0
+          AGI: 0
+          MND: 0
+          LUK: 0
       sockets: 
           - true
           - true
           - null
       sell_money: 450
+      total_point: 80
+      purchase_money: 0

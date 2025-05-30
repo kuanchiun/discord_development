@@ -87,7 +87,7 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
             f"MND： +{loot.attribute_bonus['MND']:>3}  LUK： +{loot.attribute_bonus['LUK']:>3}",
         ]
         for i, socket in enumerate(loot.sockets, start=1):
-            if socket is None:
+            if socket is True:
                 attr_lines.append(f"潛能{i}: 未開啟")
         
         attr_texts = "```\n" + "\n".join(attr_lines) + "\n```"
