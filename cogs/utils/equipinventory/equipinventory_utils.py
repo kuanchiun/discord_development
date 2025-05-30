@@ -4,7 +4,7 @@ from typing import List
 
 import yaml
 
-from .player import Player
+from ..player.player import Player
 from .equipinventory import EquipInventory
 from ..item.equipment import Equipment
 

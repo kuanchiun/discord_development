@@ -4,7 +4,7 @@ from pathlib import Path
 
 import yaml
 
-from .player import Player
+from ..player.player import Player
 from .equipinventory_utils import create_equip_inventory_slot_embed
 from .equipinventory_slot_view import EquipInventorySlotView
 from ..basebutton import BaseUserRestrictedButton

@@ -6,7 +6,7 @@ from typing import List
 import math
 import yaml
 
-from .player import Player
+from ..player.player import Player
 from ..basebutton import BaseUserRestrictedButton
 
 YAML_PATH = Path("yaml")

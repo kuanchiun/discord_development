@@ -7,7 +7,7 @@ from discord.ext import commands
 from discord import app_commands, Interaction, Embed, Member
 
 from .utils.player.player import Player
-from .utils.player.player_view import ConfirmResetView
+from .utils.player.initialize_player_view import ConfirmResetView
 
 ##################
 # PlayerCog class

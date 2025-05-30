@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Optional, Dict
 
 from ..item.equipment import Equipment
-from .equipinventory import EquipInventory
+from ..equipinventory.equipinventory import EquipInventory
 
 SLOTS = [
     "weapon", "head", "chest", "leggings", "feet",

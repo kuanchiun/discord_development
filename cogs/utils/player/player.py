@@ -7,9 +7,9 @@ from pathlib import Path
 import yaml
 
 from .baseattribute import BaseAttribute
-from .equipinventory import EquipInventory
-from .iteminventory import ItemInventory
-from .equipmentslot import EquipmentSlot
+from ..equipinventory.equipinventory import EquipInventory
+from ..iteminventory.iteminventory import ItemInventory
+from ..equipmentslot.equipmentslot import EquipmentSlot
 
 PLAYER_SAVEPATH = Path("yaml/players")
 
