@@ -34,6 +34,7 @@ class DrawDemonstrateView(View):
                 content = "⏰ 操作逾時，關閉抽卡結果。",
                 view = None
             )
+        return 
     
     
 #################################
@@ -56,6 +57,7 @@ class ShowAllDrawResultsButton(BaseUserRestrictedButton):
         )
         message = await interaction.original_response()
         view.message = message
+        return
         
 
 ####################################
@@ -86,6 +88,7 @@ class ShowSingleDrawResultButton(BaseUserRestrictedButton):
         )
         message = await interaction.original_response()
         view.message = message
+        return
 
 ###################################
 # CloseDrawDemonstrateButton class
@@ -101,3 +104,4 @@ class CloseDrawDemonstrateButton(BaseUserRestrictedButton):
         await interaction.response.edit_message(content = "⚠️ 系統提示：已關閉抽卡結果", 
                                                 embed = None,
                                                 view = None)
+        return

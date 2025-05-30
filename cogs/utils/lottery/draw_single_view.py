@@ -41,6 +41,7 @@ class BaseDrawSingleView(View):
                 embed = None,
                 view = None
             )
+        return
 
 #######################
 # DrawSingleView class
@@ -94,7 +95,8 @@ class DrawSinglePreviousPageButton(BaseUserRestrictedButton):
             content = f"**{self.user.display_name}** 的十連抽結果：第 {view.current_page + 1} / {view.total_pages}",
             embed = view.single_embeds[view.current_page],
             view = view
-        )    
+        )
+        return
 
 #################################
 # DrawSingleNextPageButton class
@@ -112,6 +114,7 @@ class DrawSingleNextPageButton(BaseUserRestrictedButton):
             embed = view.single_embeds[view.current_page],
             view = view
         )
+        return
         
 ##############################
 # PublicDrawSingleButton class
@@ -132,6 +135,7 @@ class PublicDrawSingleButton(BaseUserRestrictedButton):
             view = view  # ✅ 使用公開版本
         )
         view.message = await interaction.original_response()
+        return
 
 ##############################
 # CloseDrawSingleButton class
@@ -149,3 +153,4 @@ class CloseDrawSingleButton(BaseUserRestrictedButton):
         await interaction.response.edit_message(content = "⚠️ 系統提示：已關閉抽卡結果", 
                                                 embed = None,
                                                 view = None)
+        return

@@ -46,6 +46,24 @@ def summarize_rarity(loots: List[BaseItem]) -> str:
     
     return texts
 
+def create_summarize_rarity_embed(loots: List[BaseItem]) -> Embed:
+    counter = Counter(loot.get_rarity() for loot in loots)
+    
+    embed = Embed(
+        title = "📊 稀有度統計",
+        description = "該次十連抽稀有度分布",
+        color = Color.gold()
+    )
+    
+    for rarity in ["UR", "SR", "R", "N"]:
+        embed.add_field(
+            name = f"{RARITY_EMOJI[rarity]} {rarity}",
+            value = f"{counter[rarity]} 件",
+            inline = False
+        )
+        
+    return embed
+
 def create_single_draw_embed(loot: BaseItem) -> Embed:
     rarity = loot.get_rarity()
     item_type = loot.get_item_type()
@@ -84,7 +102,7 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
     
     return embed
 
-def create_multi_draw_embeds(loots: List[BaseItem]) -> Tuple[Dict[str, int], List[Embed], List[Embed]]:
+def create_multi_draw_embeds(loots: List[BaseItem]) -> Tuple[List[Embed], List[Embed]]:
     embeds = []
     single_embeds = []
     rarity_count = summarize_rarity(loots)
@@ -131,4 +149,4 @@ def create_multi_draw_embeds(loots: List[BaseItem]) -> Tuple[Dict[str, int], Lis
     for loot in loots:
         single_embeds.append(create_single_draw_embed(loot))
     
-    return rarity_count, embeds, single_embeds
+    return embeds, single_embeds

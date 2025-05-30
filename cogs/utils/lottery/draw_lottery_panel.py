@@ -11,7 +11,8 @@ from .lottery_utils import (
     create_multi_draw_embeds,
     create_single_draw_embed,
     create_multi_draw_effect_embed,
-    create_single_draw_effect_embed
+    create_single_draw_effect_embed,
+    create_summarize_rarity_embed
 )
 from .draw_demonstrate_choice import DrawDemonstrateView
 from ..basebutton import BaseUserRestrictedButton
@@ -75,6 +76,7 @@ class DrawLotteryOnceButton(BaseUserRestrictedButton):
                 content = loot_result,
                 view = None
             )
+        return
 
 ##################################
 # DrawLotteryTenTimesButton class
@@ -93,7 +95,7 @@ class DrawLotteryTenTimesButton(BaseUserRestrictedButton):
         loots_result = self.lottery.process_draw(user_id = self.user_id, player = self.player, times = 10)
         
         if isinstance(loots_result, list):
-            rarity_count, embeds, single_embeds = create_multi_draw_embeds(loots_result)
+            embeds, single_embeds = create_multi_draw_embeds(loots_result)
             counter = Counter(loot.get_rarity() for loot in loots_result)
             embed = create_multi_draw_effect_embed(counter)
             await interaction.response.edit_message(
@@ -102,13 +104,14 @@ class DrawLotteryTenTimesButton(BaseUserRestrictedButton):
                 view = None
             )
             await asyncio.sleep(4)
+            embed = create_summarize_rarity_embed(loots_result)
             view = DrawDemonstrateView(user = self.user,
                                        embeds = embeds, 
                                        single_embeds = single_embeds)
             message = await interaction.original_response()
             await message.edit(
-                content = f"抽卡結果：\n{rarity_count}\n請選擇展示方式：",
-                embed = None,
+                content = f"請選擇展示方式：",
+                embed = embed,
                 view = view
             )
             view.message = message
@@ -117,6 +120,7 @@ class DrawLotteryTenTimesButton(BaseUserRestrictedButton):
                 content = loots_result,
                 view = None
             )
+        return
 
 ################################
 # DrawLotteryCancelButton class
@@ -130,3 +134,4 @@ class DrawLotteryCancelButton(BaseUserRestrictedButton):
             return
         
         await interaction.response.edit_message(content = "系統提示：已關閉", view = None)
+        return

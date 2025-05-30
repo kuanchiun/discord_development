@@ -30,6 +30,7 @@ class DrawView(BaseDrawView):
                 embed = None,
                 view = None
             )
+        return
 
 #######################
 # PublicDrawView class
@@ -55,8 +56,8 @@ class PublicDrawButton(BaseUserRestrictedButton):
         await interaction.response.send_message(
             content = f"⚠️ 系統提示：🎁 {interaction.user.display_name} 公開了他的單抽結果",
             embed = self.embed,
-            view = view  # ✅ 使用公開版本
-        )
+            view = view)
+        return
 
 ########################
 # CloseDrawButton class
@@ -72,3 +73,4 @@ class CloseDrawButton(BaseUserRestrictedButton):
         await interaction.response.edit_message(content = "⚠️ 系統提示：已關閉抽卡結果", 
                                                 embed = None,
                                                 view = None)
+        return

@@ -16,8 +16,8 @@ class BaseDrawAllView(View):
         self.total_pages = len(embeds)
         self.message = None
 
-        self.prev_button = DrawPreviousPageButton(user = user, label = "⬅ 上一頁")
-        self.next_button = DrawNextPageButton(user = user, label = "➡ 下一頁")
+        self.prev_button = DrawAllPreviousPageButton(user = user, label = "⬅ 上一頁")
+        self.next_button = DrawAllNextPageButton(user = user, label = "➡ 下一頁")
 
         self.add_item(self.prev_button)
         self.add_item(self.next_button)
@@ -27,6 +27,7 @@ class BaseDrawAllView(View):
     def update_button_state(self):
         self.prev_button.disabled = self.current_page == 0
         self.next_button.disabled = self.current_page >= self.total_pages - 1
+        return 
         
     async def on_timeout(self):
         if self.message:
@@ -35,6 +36,7 @@ class BaseDrawAllView(View):
                 embed = None,
                 view = None
             )
+        return 
 
 ##########################
 # DrawEmbedPageView class
@@ -69,6 +71,7 @@ class DrawAllPreviousPageButton(BaseUserRestrictedButton):
             embed = view.embeds[view.current_page],
             view = view
         )
+        return 
 
 ###########################
 # DrawNextPageButton class
@@ -86,6 +89,7 @@ class DrawAllNextPageButton(BaseUserRestrictedButton):
             embed = view.embeds[view.current_page],
             view = view
         )
+        return 
 
 ############################
 # CloseDrawPageButton class
@@ -101,6 +105,7 @@ class CloseDrawAllButton(BaseUserRestrictedButton):
         await interaction.response.edit_message(content = "⚠️ 系統提示：已關閉抽卡結果", 
                                                 embed = None,
                                                 view = None)
+        return 
 
 ##############################
 # PublicDrawAllButton class
@@ -118,3 +123,4 @@ class PublicDrawAllButton(BaseUserRestrictedButton):
             view = view  # ✅ 使用公開版本
         )
         view.message = await interaction.original_response()
+        return 
