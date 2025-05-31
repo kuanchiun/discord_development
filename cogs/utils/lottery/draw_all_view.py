@@ -44,8 +44,7 @@ class BaseDrawAllView(View):
 class DrawAllView(BaseDrawAllView):
     def __init__(self, embeds: List[Embed], user: Member):
         super().__init__(embeds = embeds, user = user, timeout = 30)
-        self.public_button = PublicDrawAllButton(user = user, label = "📢 公開顯示", embeds = embeds)
-        self.add_item(self.public_button)
+        self.add_item(PublicDrawAllButton(user = user, label = "📢 公開顯示", embeds = embeds))
         self.add_item(CloseDrawAllButton(user = user, label = "關閉介面"))
 
 ################################
@@ -116,11 +115,14 @@ class PublicDrawAllButton(BaseUserRestrictedButton):
         self.embeds = embeds
 
     async def callback(self, interaction: Interaction):
+        if not await self.check_user(interaction):
+            return
+        
         view = PublicDrawAllView(user = self.user, embeds = self.embeds)
         await interaction.response.send_message(
             content = f"⚠️ 系統提示：{interaction.user.display_name} 公開了他的十連抽結果：第 1 / {len(self.embeds)} 頁",
             embed = self.embeds[0],
-            view = view  # ✅ 使用公開版本
+            view = view
         )
         view.message = await interaction.original_response()
         return 

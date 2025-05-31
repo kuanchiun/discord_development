@@ -26,10 +26,12 @@ class LotteryCog(commands.Cog):
                 view = view,
                 ephemeral = True
             )
+            view.message = await interaction.original_response()
         else:
             await interaction.response.send_message(
                 content = "⚠️ 系統提示：你尚未創建角色！",
             )
+        return 
     
-async def setup(bot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(LotteryCog(bot))

@@ -119,6 +119,9 @@ class EquipInventory:
         slot_list = self.get_slot(slot_name)
         
         return slot_list[index]
+    
+    def get_slot_equipment_name_list(self, slot_name: str) -> List[str]:
+        return [item.get_display_name() for item in self.get_slot(slot_name)]
 
     def list_equipment(self) -> List["Equipment"]:
         """取得所有裝備

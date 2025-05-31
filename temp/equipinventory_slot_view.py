@@ -126,6 +126,8 @@ class EquipInventorySelectEquipmentButton(BaseUserRestrictedButton):
         view: EquipInventorySlotView = self.view
         if not await self.check_user(interaction):
             return
+        slot_name = view.slot_name
+        
         
         await interaction.response.edit_message(
             ...

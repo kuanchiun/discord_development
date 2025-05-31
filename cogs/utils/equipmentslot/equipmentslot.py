@@ -115,10 +115,16 @@ class EquipmentSlot:
             raise ValueError(f"⚠️ 系統提示：無效的裝備欄位: {slot_name}")
         
         return getattr(self, slot_name) is not None
+    
+    def get_slot(self, slot_name: str) -> Equipment:
+        
+        if not hasattr(self, slot_name):
+            raise ValueError(f"⚠️ 系統提示：無效的裝備欄位: {slot_name}")
+        return getattr(self, slot_name)
         
     def equip(self, 
               slot_name: str, 
-              equipment: "Equipment", 
+              index: int, 
               equipinventory: "EquipInventory") -> None:
         """將裝備裝備於裝備欄上
 
@@ -126,16 +132,18 @@ class EquipmentSlot:
         ----------
         slot : str
             裝備欄位
-        equipment : Equipment
-            裝備
+        index : int
+            裝備位在背包哪一格
         equipinventory : EquipInventory
             玩家的裝備背包
         """
         
         if getattr(self, slot_name):
             old_equipment = getattr(self, slot_name)
-            getattr(equipinventory, slot_name).append(old_equipment)
-            
-        setattr(self, slot_name, equipment)
+            equipinventory.get_slot(slot_name = slot_name).append(old_equipment)
+        
+        selected_equipment = equipinventory.get_slot(slot_name = slot_name)[index]
+        setattr(self, slot_name, selected_equipment)
+        equipinventory.get_slot().pop(index)
     
     

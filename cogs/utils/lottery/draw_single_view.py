@@ -57,14 +57,12 @@ class DrawSingleView(BaseDrawSingleView):
                          single_embeds = single_embeds,
                          timeout = timeout)
 
-        self.public_button = PublicDrawSingleButton(user = user, 
+        self.add_item(PublicDrawSingleButton(user = user, 
                                                     label = "📢 公開顯示",
                                                     embeds = embeds, 
-                                                    single_embeds = single_embeds)
-        self.add_item(self.public_button)
+                                                    single_embeds = single_embeds))
         
-        self.close_button = CloseDrawSingleButton(user = user, label = "關閉介面")
-        self.add_item(self.close_button)
+        self.add_item(CloseDrawSingleButton(user = user, label = "關閉抽卡介面"))
 
 #######################
 # DrawSingleView class
@@ -145,9 +143,7 @@ class CloseDrawSingleButton(BaseUserRestrictedButton):
         super().__init__(user = user, label = label, style = ButtonStyle.secondary)
     
     async def callback(self, interaction: Interaction):
-        if interaction.user != self.user:
-            await interaction.response.send_message("⚠️ 系統提示：這不是你的介面喔", 
-                                                    ephemeral = True)
+        if not await self.check_user(interaction):
             return
 
         await interaction.response.edit_message(content = "⚠️ 系統提示：已關閉抽卡結果", 

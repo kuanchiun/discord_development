@@ -21,7 +21,7 @@ class DrawView(BaseDrawView):
         self.message = None
         
         self.add_item(PublicDrawButton(user = user, label = "📢 公開顯示", embed = embed))
-        self.add_item(CloseDrawButton(user = user, label = "關閉介面"))
+        self.add_item(CloseDrawButton(user = user, label = "關閉抽卡介面"))
     
     async def on_timeout(self):
         if self.message:
@@ -38,6 +38,7 @@ class DrawView(BaseDrawView):
 class PublicDrawView(BaseDrawView):
     def __init__(self, embed: Embed, user: Member, timeout: int = 60):
         super().__init__(embed = embed, user = user, timeout = timeout)
+        self.message = None
 
 #########################
 # PublicDrawButton class
@@ -48,8 +49,7 @@ class PublicDrawButton(BaseUserRestrictedButton):
         self.embed = embed
     
     async def callback(self, interaction: Interaction):
-        if interaction.user.id != self.user.id:
-            await interaction.response.send_message("⚠️ 系統提示：這不是你的抽獎結果喔！", ephemeral=True)
+        if not await self.check_user(interaction):
             return
         
         view = PublicDrawView(self.embed, self.user)
@@ -57,6 +57,7 @@ class PublicDrawButton(BaseUserRestrictedButton):
             content = f"⚠️ 系統提示：🎁 {interaction.user.display_name} 公開了他的單抽結果",
             embed = self.embed,
             view = view)
+        view.message = await interaction.original_response()
         return
 
 ########################

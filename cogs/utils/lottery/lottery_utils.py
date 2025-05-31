@@ -10,6 +10,10 @@ from ..item.equipment.equipment import Equipment
 from ..item.scroll import Scroll
 from ..item.prototype import Prototype
 
+
+###########
+# CONSTANT
+###########
 YAML_PATH = Path("yaml")
 with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
     const = yaml.safe_load(f)
@@ -20,14 +24,39 @@ RARITY_EMOJI = const["RARITY_EMOJI"]
 FIGURE_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}/{figure_id}.png"
 GIF_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}.gif"
 
-def create_single_draw_effect_embed(rarity):
+
+def create_single_draw_effect_embed(rarity: str) -> Embed:
+    """生成單抽的抽獎光效展示
+
+    Parameters
+    ----------
+    rarity : str
+        稀有度
+        
+    Returns
+    -------
+    Embed
+        抽獎光效展示
+    """
     gif_path = GIF_PATH.format(rarity = rarity)
     embed = Embed(title = None)
     embed.set_image(url=gif_path)
 
     return embed
     
-def create_multi_draw_effect_embed(rarity_count):
+def create_multi_draw_effect_embed(rarity_count: Dict[str, int]) -> Embed:
+    """生成十連抽的抽獎光效展示
+
+    Parameters
+    ----------
+    rarity_count : Dict[str, int]
+        十連抽稀有度分布
+
+    Returns
+    -------
+    Embed
+        抽獎光效展示
+    """
     for rarity in ["UR", "SR", "R", "N"]:
         if rarity_count[rarity] > 0:
             gif_path = GIF_PATH.format(rarity = rarity)
@@ -37,6 +66,18 @@ def create_multi_draw_effect_embed(rarity_count):
             return embed
     
 def summarize_rarity(loots: List[BaseItem]) -> str:
+    """生成稀有度統計文字結果
+
+    Parameters
+    ----------
+    loots : List[BaseItem]
+        單抽/十連抽結果
+
+    Returns
+    -------
+    str
+        稀有度統計文字結果
+    """
     counter = Counter(loot.get_rarity() for loot in loots)
     texts = "📊 稀有度統計： "
     for rarity in ["UR", "SR", "R", "N"]:
@@ -47,6 +88,18 @@ def summarize_rarity(loots: List[BaseItem]) -> str:
     return texts
 
 def create_summarize_rarity_embed(loots: List[BaseItem]) -> Embed:
+    """生成稀有度統計文字展示
+
+    Parameters
+    ----------
+    loots : List[BaseItem]
+        單抽/十連抽結果
+
+    Returns
+    -------
+    Embed
+        稀有度統計文字展示
+    """
     counter = Counter(loot.get_rarity() for loot in loots)
     
     embed = Embed(
@@ -65,6 +118,18 @@ def create_summarize_rarity_embed(loots: List[BaseItem]) -> Embed:
     return embed
 
 def create_single_draw_embed(loot: BaseItem) -> Embed:
+    """生成單抽物品展示
+
+    Parameters
+    ----------
+    loot : BaseItem
+        單抽結果
+
+    Returns
+    -------
+    Embed
+        單抽物品展示
+    """
     rarity = loot.get_rarity()
     item_type = loot.get_item_type()
     figure_id = loot.get_figure_id()
@@ -89,6 +154,7 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
         for i, socket in enumerate(loot.sockets, start=1):
             if socket is True:
                 attr_lines.append(f"潛能{i}: 未開啟")
+        attr_lines.append(f"剩餘強化次數：{loot.scroll_number}")
         
         attr_texts = "```\n" + "\n".join(attr_lines) + "\n```"
         
@@ -103,6 +169,18 @@ def create_single_draw_embed(loot: BaseItem) -> Embed:
     return embed
 
 def create_multi_draw_embeds(loots: List[BaseItem]) -> Tuple[List[Embed], List[Embed]]:
+    """生成十連抽物品展示
+
+    Parameters
+    ----------
+    loots : List[BaseItem]
+        十連抽結果
+
+    Returns
+    -------
+    Tuple[List[Embed], List[Embed]]
+        十連抽物品展示
+    """
     embeds = []
     single_embeds = []
     rarity_count = summarize_rarity(loots)

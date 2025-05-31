@@ -11,7 +11,9 @@ from ..item.prototype import Prototype
 from ..item.scroll import Scroll
 from ..item.equipment.equipment import Equipment
 
-
+###########
+# CONSTANT
+###########
 YAML_PATH = Path("yaml/")
 RULE_PATH = YAML_PATH
 ITEM_PATH = YAML_PATH / "items"

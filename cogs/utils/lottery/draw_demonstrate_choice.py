@@ -16,7 +16,7 @@ class DrawDemonstrateView(View):
                  single_embeds: List[Embed],
                  timeout = 60):
         super().__init__(timeout = timeout)
-        self.message = None  # 待會儲存訊息物件（用來編輯）
+        self.message = None 
         
         self.add_item(ShowAllDrawResultsButton(user = user, 
                                                label = "一次展示", 
@@ -55,8 +55,7 @@ class ShowAllDrawResultsButton(BaseUserRestrictedButton):
             embed = view.embeds[0],
             view = view
         )
-        message = await interaction.original_response()
-        view.message = message
+        view.message = await interaction.original_response()
         return
         
 
@@ -86,8 +85,7 @@ class ShowSingleDrawResultButton(BaseUserRestrictedButton):
                 embed = view.single_embeds[0],
                 view = view
         )
-        message = await interaction.original_response()
-        view.message = message
+        view.message = await interaction.original_response()
         return
 
 ###################################

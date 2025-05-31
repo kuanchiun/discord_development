@@ -23,6 +23,7 @@ from ..basebutton import BaseUserRestrictedButton
 class DrawLotteryView(View):
     def __init__(self, user: Member, player: Player, lottery: Lottery):
         super().__init__(timeout = 30)
+        self.message = None
         
         self.add_item(DrawLotteryOnceButton(
             label = "單抽！ 💎100",
@@ -37,6 +38,15 @@ class DrawLotteryView(View):
             lottery = lottery
         ))
         self.add_item(DrawLotteryCancelButton(user = user, label = "關閉介面"))
+    
+    async def on_timeout(self):
+        if self.message:
+            await self.message.edit(
+                content = "⏰ 操作逾時，關閉抽卡結果。",
+                embed = None,
+                view = None
+            )
+        return
         
 ##############################
 # DrawLotteryOnceButton class
@@ -133,5 +143,5 @@ class DrawLotteryCancelButton(BaseUserRestrictedButton):
         if not await self.check_user(interaction):
             return
         
-        await interaction.response.edit_message(content = "系統提示：已關閉", view = None)
+        await interaction.response.edit_message(content = "系統提示：已關閉", embed = None, view = None)
         return
