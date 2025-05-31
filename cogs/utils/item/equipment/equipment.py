@@ -4,8 +4,8 @@ from random import choice, choices
 from enum import Enum
 from collections import Counter
 
-from .scroll import Scroll
-from .base_item import BaseItem
+from ..scroll import Scroll
+from ..base_item import BaseItem
 
 ######################
 # EnhanceResult class

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Dict, List
 
-from ..item.equipment import Equipment
+from ..item.equipment.equipment import Equipment
 from ..iteminventory.iteminventory import ItemInventory
 
 MAX_EQUIP_PER_SLOT = 10

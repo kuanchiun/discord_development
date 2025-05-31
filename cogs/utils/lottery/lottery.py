@@ -9,7 +9,7 @@ from ..player.player import Player
 from ..item.base_item import BaseItem
 from ..item.prototype import Prototype
 from ..item.scroll import Scroll
-from ..item.equipment import Equipment
+from ..item.equipment.equipment import Equipment
 
 
 YAML_PATH = Path("yaml/")

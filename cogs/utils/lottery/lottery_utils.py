@@ -6,7 +6,7 @@ from pathlib import Path
 import yaml
 
 from ..item.base_item import BaseItem
-from ..item.equipment import Equipment
+from ..item.equipment.equipment import Equipment
 from ..item.scroll import Scroll
 from ..item.prototype import Prototype
 

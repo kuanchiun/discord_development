@@ -6,7 +6,7 @@ import yaml
 
 from ..player.player import Player
 from .equipinventory import EquipInventory
-from ..item.equipment import Equipment
+from ..item.equipment.equipment import Equipment
 
 YAML_PATH = Path("yaml")
 with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:

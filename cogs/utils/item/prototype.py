@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional, Dict
 import yaml
 
-from .equipment import Equipment
+from .equipment.equipment import Equipment
 from .base_item import BaseItem
 
 

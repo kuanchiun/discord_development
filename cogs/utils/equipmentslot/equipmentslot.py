@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional, Dict
 
-from ..item.equipment import Equipment
+from ..item.equipment.equipment import Equipment
 from ..equipinventory.equipinventory import EquipInventory
 
 SLOTS = [
@@ -92,7 +92,7 @@ class EquipmentSlot:
             ring2    = Equipment.from_dict(data["ring2"])    if data.get("ring2")    else None,
         )
     
-    def is_already_equipped(self, slot: str) -> bool:
+    def is_already_equipped(self, slot_name: str) -> bool:
         """檢查裝備欄位是否已經有裝備
 
         Parameters
@@ -111,13 +111,13 @@ class EquipmentSlot:
             無效的裝備欄位
         """
         
-        if not hasattr(self, slot):
-            raise ValueError(f"⚠️ 系統提示：無效的裝備欄位: {slot}")
+        if not hasattr(self, slot_name):
+            raise ValueError(f"⚠️ 系統提示：無效的裝備欄位: {slot_name}")
         
-        return getattr(self, slot) is not None
+        return getattr(self, slot_name) is not None
         
     def equip(self, 
-              slot: str, 
+              slot_name: str, 
               equipment: "Equipment", 
               equipinventory: "EquipInventory") -> None:
         """將裝備裝備於裝備欄上
@@ -132,10 +132,10 @@ class EquipmentSlot:
             玩家的裝備背包
         """
         
-        if getattr(self, slot):
-            old_equipment = getattr(self, slot)
-            getattr(equipinventory, slot).append(old_equipment)
+        if getattr(self, slot_name):
+            old_equipment = getattr(self, slot_name)
+            getattr(equipinventory, slot_name).append(old_equipment)
             
-        setattr(self, slot, equipment)
+        setattr(self, slot_name, equipment)
     
     
