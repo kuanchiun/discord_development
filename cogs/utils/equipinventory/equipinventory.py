@@ -121,6 +121,18 @@ class EquipInventory:
         return slot_list[index]
     
     def get_slot_equipment_name_list(self, slot_name: str) -> List[str]:
+        """取得裝備欄位所有裝備名稱
+
+        Parameters
+        ----------
+        slot_name : str
+            裝備欄位
+
+        Returns
+        -------
+        List[str]
+            裝備欄位所有裝備名稱
+        """
         return [item.get_display_name() for item in self.get_slot(slot_name)]
 
     def list_equipment(self) -> List["Equipment"]:
