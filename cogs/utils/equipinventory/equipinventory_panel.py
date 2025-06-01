@@ -7,6 +7,7 @@ import yaml
 from ..player.player import Player
 from ..basebutton import BaseUserRestrictedButton
 from .equipinventory_utils import create_equip_inventory_slot_embed
+from .equipinventory_slot_view import EquipInventorySlotView
 
 
 ###########
@@ -74,9 +75,13 @@ class EquipInventorySlotButton(BaseUserRestrictedButton):
             return
         
         embeds = create_equip_inventory_slot_embed(slot, self.label)
-        
+        view = EquipInventorySlotView(user = self.user,
+                                      player = view.player,
+                                      slot_name = self.slot_name,
+                                      embeds = embeds)
         await interaction.response.edit_message(
             content = "系統提示：請選擇裝備",
+            view = view,
             embed = embeds[0]
         )
         return

@@ -41,7 +41,8 @@ def create_equip_inventory_slot_embed(slot: List[Equipment], label: str) -> Embe
                 f"VIT： +{equipment.attribute_bonus['VIT']:>3}  WIS： +{equipment.attribute_bonus['WIS']:>3}",
                 f"STR： +{equipment.attribute_bonus['STR']:>3}  INT： +{equipment.attribute_bonus['INT']:>3}",
                 f"DEX： +{equipment.attribute_bonus['DEX']:>3}  AGI： +{equipment.attribute_bonus['AGI']:>3}",
-                f"MND： +{equipment.attribute_bonus['MND']:>3}  LUK： +{equipment.attribute_bonus['LUK']:>3}"
+                f"MND： +{equipment.attribute_bonus['MND']:>3}  LUK： +{equipment.attribute_bonus['LUK']:>3}",
+                ""
             ]
             for i, socket in enumerate(equipment.sockets, start = 1):
                 if isinstance(socket, Dict):
@@ -49,6 +50,7 @@ def create_equip_inventory_slot_embed(slot: List[Equipment], label: str) -> Embe
                     attr_lines.append(f"潛能{i}: {attribute} +{value:>2}")
                 elif isinstance(socket, bool):
                     attr_lines.append(f"潛能{i}: 未開啟")
+            attr_lines.append("")
             attr_lines.append(f"剩餘強化次數：{scroll_number}")
             
             attr_texts = "```\n" + "\n".join(attr_lines) + "\n```"
