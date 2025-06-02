@@ -10,7 +10,32 @@ baseattribute:
   remind_point: 50
 equipinventory:
   bracelet: []
-  chest: []
+  chest:
+  - attribute_bonus:
+      AGI: 6
+      DEX: 4
+      INT: 8
+      LUK: 8
+      MND: 5
+      STR: 6
+      VIT: 6
+      WIS: 7
+    display_name: 暗影守衛胸甲
+    figure_id: shadow_chest
+    item_id: shadow_chest
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: R
+    scroll_number: 5
+    sell_money: 125
+    slot: chest
+    sockets:
+    - true
+    - null
+    - null
+    success_level: 0
+    total_point: 0
   earring:
   - attribute_bonus:
       AGI: 9
@@ -37,9 +62,159 @@ equipinventory:
     - null
     success_level: 0
     total_point: 0
+  - attribute_bonus:
+      AGI: 1
+      DEX: 3
+      INT: 2
+      LUK: 3
+      MND: 4
+      STR: 0
+      VIT: 4
+      WIS: 3
+    display_name: 粗製耳環
+    figure_id: curde_earring
+    item_id: curde_earring
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: earring
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
+  - attribute_bonus:
+      AGI: 10
+      DEX: 15
+      INT: 15
+      LUK: 9
+      MND: 5
+      STR: 11
+      VIT: 6
+      WIS: 9
+    display_name: 星霜耳墜
+    figure_id: star_earring
+    item_id: star_earring
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: SR
+    scroll_number: 5
+    sell_money: 450
+    slot: earring
+    sockets:
+    - true
+    - true
+    - null
+    success_level: 0
+    total_point: 0
   feet: []
-  head: []
-  leggings: []
+  head:
+  - attribute_bonus:
+      AGI: 2
+      DEX: 1
+      INT: 3
+      LUK: 2
+      MND: 3
+      STR: 3
+      VIT: 4
+      WIS: 2
+    display_name: 草布兜帽
+    figure_id: fabric_head
+    item_id: fabric_head
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: head
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
+  leggings:
+  - attribute_bonus:
+      AGI: 3
+      DEX: 9
+      INT: 8
+      LUK: 4
+      MND: 8
+      STR: 7
+      VIT: 5
+      WIS: 6
+    display_name: 暗影守衛長褲
+    figure_id: shadow_leggings
+    item_id: shadow_leggings
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: R
+    scroll_number: 5
+    sell_money: 125
+    slot: leggings
+    sockets:
+    - true
+    - null
+    - null
+    success_level: 0
+    total_point: 0
+  - attribute_bonus:
+      AGI: 5
+      DEX: 3
+      INT: 2
+      LUK: 3
+      MND: 0
+      STR: 2
+      VIT: 3
+      WIS: 2
+    display_name: 草布棉褲
+    figure_id: fabric_leggings
+    item_id: fabric_leggings
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: leggings
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
+  - attribute_bonus:
+      AGI: 3
+      DEX: 9
+      INT: 8
+      LUK: 4
+      MND: 8
+      STR: 7
+      VIT: 5
+      WIS: 6
+    display_name: 暗影守衛長褲
+    figure_id: shadow_leggings
+    item_id: shadow_leggings
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: R
+    scroll_number: 5
+    sell_money: 125
+    slot: leggings
+    sockets:
+    - true
+    - null
+    - null
+    success_level: 0
+    total_point: 0
   necklace:
   - attribute_bonus:
       AGI: 2
@@ -91,7 +266,82 @@ equipinventory:
     - null
     success_level: 0
     total_point: 0
-  ring: []
+  - attribute_bonus:
+      AGI: 1
+      DEX: 7
+      INT: 3
+      LUK: 1
+      MND: 1
+      STR: 2
+      VIT: 3
+      WIS: 2
+    display_name: 粗製項鍊
+    figure_id: curde_necklace
+    item_id: curde_necklace
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: necklace
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
+  ring:
+  - attribute_bonus:
+      AGI: 1
+      DEX: 4
+      INT: 3
+      LUK: 3
+      MND: 2
+      STR: 2
+      VIT: 4
+      WIS: 1
+    display_name: 粗製戒指
+    figure_id: curde_ring
+    item_id: curde_ring
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: ring
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
+  - attribute_bonus:
+      AGI: 1
+      DEX: 4
+      INT: 3
+      LUK: 3
+      MND: 2
+      STR: 2
+      VIT: 4
+      WIS: 1
+    display_name: 粗製戒指
+    figure_id: curde_ring
+    item_id: curde_ring
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: ring
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
   weapon: []
 equipmentslot:
   bracelet: null
@@ -176,11 +426,84 @@ equipmentslot:
   head: null
   leggings: null
   necklace: null
-  ring: null
+  ring:
+    attribute_bonus:
+      AGI: 8
+      DEX: 5
+      INT: 11
+      LUK: 11
+      MND: 9
+      STR: 9
+      VIT: 12
+      WIS: 15
+    display_name: 星霜指環
+    figure_id: star_ring
+    item_id: star_ring
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: SR
+    scroll_number: 5
+    sell_money: 450
+    slot: ring
+    sockets:
+    - true
+    - true
+    - null
+    success_level: 0
+    total_point: 0
   ring2: null
   weapon: null
 iteminventory:
   inventory:
+    N_scroll_DEX_1:
+      item:
+        description: 成功率100％，DEX＋1
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 普通DEX強化卷軸100％
+        effect:
+          DEX: 1
+        figure_id: N_scroll_1
+        item_id: N_scroll_DEX_1
+        item_type: scroll
+        probability: 1.0
+        purchase_money: null
+        rarity: N
+        sell_money: 50
+      quantity: 1
+    N_scroll_LUK_1:
+      item:
+        description: 成功率100％，LUK＋1
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 普通LUK強化卷軸100％
+        effect:
+          LUK: 1
+        figure_id: N_scroll_1
+        item_id: N_scroll_LUK_1
+        item_type: scroll
+        probability: 1.0
+        purchase_money: null
+        rarity: N
+        sell_money: 50
+      quantity: 1
+    N_scroll_MND_1:
+      item:
+        description: 成功率100％，MND＋1
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 普通MND強化卷軸100％
+        effect:
+          MND: 1
+        figure_id: N_scroll_1
+        item_id: N_scroll_MND_1
+        item_type: scroll
+        probability: 1.0
+        purchase_money: null
+        rarity: N
+        sell_money: 50
+      quantity: 2
     N_scroll_STR_1:
       item:
         description: 成功率100％，STR＋1
@@ -197,6 +520,22 @@ iteminventory:
         rarity: N
         sell_money: 50
       quantity: 1
+    N_scroll_WIS_1:
+      item:
+        description: 成功率100％，WIS＋1
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 普通WIS強化卷軸100％
+        effect:
+          WIS: 1
+        figure_id: N_scroll_1
+        item_id: N_scroll_WIS_1
+        item_type: scroll
+        probability: 1.0
+        purchase_money: null
+        rarity: N
+        sell_money: 50
+      quantity: 2
     N_scroll_dominate:
       item:
         description: 成功率100％，INT＋1，MND＋1
@@ -213,7 +552,7 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 2
+      quantity: 3
     N_scroll_guard:
       item:
         description: 成功率100％，VIT＋1，STR＋1
@@ -230,7 +569,24 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
-      quantity: 2
+      quantity: 4
+    N_scroll_swift:
+      item:
+        description: 成功率100％，DEX＋1，AGI＋1
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 普通迅捷強化卷軸100％
+        effect:
+          AGI: 1
+          DEX: 1
+        figure_id: N_scroll_2
+        item_id: N_scroll_swift
+        item_type: scroll
+        probability: 1.0
+        purchase_money: null
+        rarity: N
+        sell_money: 50
+      quantity: 1
     R_scroll_STR_1:
       item:
         description: 成功率60％，STR＋2
@@ -263,6 +619,22 @@ iteminventory:
         rarity: R
         sell_money: 125
       quantity: 1
+    R_scroll_WIS_1:
+      item:
+        description: 成功率60％，WIS＋2
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 高級WIS強化卷軸60％
+        effect:
+          WIS: 2
+        figure_id: R_scroll_1
+        item_id: R_scroll_WIS_1
+        item_type: scroll
+        probability: 0.6
+        purchase_money: null
+        rarity: R
+        sell_money: 125
+      quantity: 1
     R_scroll_dominate:
       item:
         description: 成功率60％，AGI＋2，LUK＋2
@@ -274,6 +646,40 @@ iteminventory:
           LUK: 2
         figure_id: R_scroll_2
         item_id: R_scroll_dominate
+        item_type: scroll
+        probability: 0.6
+        purchase_money: null
+        rarity: R
+        sell_money: 125
+      quantity: 1
+    R_scroll_fatal:
+      item:
+        description: 成功率60％，STR＋2，LUK＋2
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 高級致命強化卷軸60％
+        effect:
+          LUK: 2
+          STR: 2
+        figure_id: R_scroll_2
+        item_id: R_scroll_fatal
+        item_type: scroll
+        probability: 0.6
+        purchase_money: null
+        rarity: R
+        sell_money: 125
+      quantity: 1
+    R_scroll_guard:
+      item:
+        description: 成功率60％，VIT＋2，STR＋2
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 高級堅韌強化卷軸60％
+        effect:
+          STR: 2
+          VIT: 2
+        figure_id: R_scroll_2
+        item_id: R_scroll_guard
         item_type: scroll
         probability: 0.6
         purchase_money: null
@@ -313,6 +719,75 @@ iteminventory:
         rarity: SR
         sell_money: 500
       quantity: 1
+    SR_scroll_DEX_1:
+      item:
+        description: 成功率10％，DEX＋3
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 傳說DEX強化卷軸10％
+        effect:
+          DEX: 3
+        figure_id: SR_scroll_1
+        item_id: SR_scroll_DEX_1
+        item_type: scroll
+        probability: 0.1
+        purchase_money: null
+        rarity: SR
+        sell_money: 500
+      quantity: 1
+    SR_scroll_arcana:
+      item:
+        description: 成功率10％，STR＋2，DEX＋2，AGI＋2，LUK＋2
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 傳說奇襲卷軸10%
+        effect:
+          AGI: 2
+          DEX: 2
+          LUK: 2
+          STR: 2
+        figure_id: SR_scroll_3
+        item_id: SR_scroll_arcana
+        item_type: scroll
+        probability: 0.1
+        purchase_money: null
+        rarity: SR
+        sell_money: 500
+      quantity: 1
+    SR_scroll_guard:
+      item:
+        description: 成功率10％，VIT＋3，STR＋3
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 傳說堅韌強化卷軸10％
+        effect:
+          STR: 3
+          VIT: 3
+        figure_id: SR_scroll_2
+        item_id: SR_scroll_guard
+        item_type: scroll
+        probability: 0.1
+        purchase_money: null
+        rarity: SR
+        sell_money: 500
+      quantity: 1
+    SR_scroll_magic:
+      item:
+        description: 成功率10％，WIS＋3，INT＋3
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 傳說秘術強化卷軸10％
+        effect:
+          INT: 3
+          WIS: 3
+        figure_id: SR_scroll_2
+        item_id: SR_scroll_magic
+        item_type: scroll
+        probability: 0.1
+        purchase_money: null
+        rarity: SR
+        sell_money: 500
+      quantity: 1
     SR_scroll_spirit:
       item:
         description: 成功率10％，VIT＋2，STR＋2，AGI＋2，LUK＋2
@@ -331,6 +806,16 @@ iteminventory:
         purchase_money: null
         rarity: SR
         sell_money: 500
+      quantity: 2
+    fate:
+      item:
+        description: 可用於兌換命紋系列武器
+        display_name: 命紋能量核心
+        figure_id: prototype_2
+        item_id: fate
+        item_type: prototype
+        rarity: R
+        sell_money: 125
       quantity: 1
     origin:
       item:
@@ -342,4 +827,4 @@ iteminventory:
         rarity: UR
         sell_money: 900
       quantity: 2
-  money: 8000
+  money: 5000
