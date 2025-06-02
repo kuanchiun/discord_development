@@ -23,7 +23,7 @@ class EquipmentSlot:
     earring: Optional["Equipment"] = None
     necklace: Optional["Equipment"] = None
     bracelet: Optional["Equipment"] = None
-    ring1: Optional["Equipment"] = None
+    ring: Optional["Equipment"] = None
     ring2: Optional["Equipment"] = None
     
     @staticmethod
@@ -60,7 +60,7 @@ class EquipmentSlot:
             "earring":  self._safe_to_dict(self.earring),
             "necklace": self._safe_to_dict(self.necklace),
             "bracelet": self._safe_to_dict(self.bracelet),
-            "ring1":    self._safe_to_dict(self.ring1),
+            "ring":    self._safe_to_dict(self.ring),
             "ring2":    self._safe_to_dict(self.ring2)
         }
         
@@ -88,8 +88,8 @@ class EquipmentSlot:
             earring  = Equipment.from_dict(data["earring"])  if data.get("earring")  else None,
             necklace = Equipment.from_dict(data["necklace"]) if data.get("necklace") else None,
             bracelet = Equipment.from_dict(data["bracelet"]) if data.get("bracelet") else None,
-            ring1    = Equipment.from_dict(data["ring1"])    if data.get("ring1")    else None,
-            ring2    = Equipment.from_dict(data["ring2"])    if data.get("ring2")    else None,
+            ring    =  Equipment.from_dict(data["ring"])     if data.get("ring")     else None,
+            ring2    = Equipment.from_dict(data["ring2"])    if data.get("ring2")    else None
         )
     
     def is_already_equipped(self, slot_name: str) -> bool:

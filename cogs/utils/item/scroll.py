@@ -51,7 +51,7 @@ class Scroll(BaseItem):
         }
         
     @classmethod
-    def from_dict(cls, data) -> "Scroll":
+    def from_dict(cls, data: Dict) -> "Scroll":
         """將字典轉換為卷軸物件
 
         Parameters

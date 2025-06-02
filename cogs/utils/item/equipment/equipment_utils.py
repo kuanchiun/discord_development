@@ -17,6 +17,7 @@ with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
     const = yaml.safe_load(f)
 
 RARITY_EMOJI = const["RARITY_EMOJI"]
+EQUIP_SLOT_MAPPING = const["EQUIP_SLOT_MAPPING"]
 FIGURE_PATH = "https://raw.githubusercontent.com/kuanchiun/discord_development/main/figures/{rarity}/{figure_id}.png"
 
 
@@ -73,5 +74,58 @@ def create_equipment_embed(equipment: Equipment) -> Embed:
     embed.set_footer(text = f"出售金額：💎{sell_money}")
     
     return embed
+
+
+def _create_equipment_compare_attr_text(equipment: Equipment) -> str:
+    rarity = equipment.get_rarity()
+    scroll_number = equipment.scroll_number
+    sell_money = equipment.get_sell_money()
+    equipment_lines = [
+        f"【稀有度】{RARITY_EMOJI[rarity]} {rarity}",
+        f"VIT： +{equipment.attribute_bonus['VIT']:>3}  WIS： +{equipment.attribute_bonus['WIS']:>3}",
+        f"STR： +{equipment.attribute_bonus['STR']:>3}  INT： +{equipment.attribute_bonus['INT']:>3}",
+        f"DEX： +{equipment.attribute_bonus['DEX']:>3}  AGI： +{equipment.attribute_bonus['AGI']:>3}",
+        f"MND： +{equipment.attribute_bonus['MND']:>3}  LUK： +{equipment.attribute_bonus['LUK']:>3}",
+        "",
+        "【潛能屬性】"
+    ]
+    for i, socket in enumerate(equipment.sockets, start=1):
+        if isinstance(socket, dict):
+            attribute, value = next(iter(socket.items()))
+            equipment_lines.append(f"潛能{i}: {attribute} +{value:>2}")
+        elif isinstance(socket, bool):
+            equipment_lines.append(f"潛能{i}: 未開啟")
+    equipment_lines.append("")
+    equipment_lines.append("【剩餘強化次數】")
+    equipment_lines.append(f"{scroll_number}次")
+    equipment_lines.append(f"出售金額：💎{sell_money}")
+    
+    return "\n".join(equipment_lines)
+    
+
+def create_equipment_compare_embed(select_equipment: Equipment, compare_equipment: Equipment) -> Embed:
+    select_display_name = select_equipment.get_display_name()
+    select_success_level = select_equipment.success_level
+    select_equipment_texts = _create_equipment_compare_attr_text(select_equipment)
+    
+    compare_display_name = compare_equipment.get_display_name()
+    compare_success_level = compare_equipment.success_level
+    compare_equipment_texts = _create_equipment_compare_attr_text(compare_equipment)
+    
+    embed = Embed()
+    embed.add_field(
+        name = f"**{select_display_name (+{select_success_level})}**",
+        value = select_equipment_texts,
+        inline = True
+    )
+    embed.add_field(
+        name = f"**{compare_display_name (+{compare_success_level})}**",
+        value = compare_equipment_texts,
+        inline = True
+    )
+    
+    return embed
+    
+    
     
     

@@ -68,7 +68,7 @@ class Equipment(BaseItem):
         }
         
     @classmethod
-    def from_dict(cls, data) -> "Equipment":
+    def from_dict(cls, data: Dict) -> "Equipment":
         """將字典轉換為裝備物件
 
         Parameters

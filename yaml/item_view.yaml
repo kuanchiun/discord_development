@@ -9,6 +9,18 @@ SLOT_MAPPING:
   bracelet: 手鐲
   ring: 戒指
 
+EQUIP_SLOT_MAPPING:
+  weapon: 武器
+  head: 頭部
+  chest: 身體
+  leggings: 腿部
+  feet: 腳部
+  earring: 耳飾
+  necklace: 項鍊
+  bracelet: 手鐲
+  ring: 戒指1
+  ring2: 戒指2
+
 ITEM_TYPE_MAPPING:
   equipment: 裝備
   scroll: 卷軸

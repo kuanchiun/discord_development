@@ -58,7 +58,7 @@ class Prototype(BaseItem):
         }
         
     @classmethod
-    def from_dict(cls, data) -> "Prototype":
+    def from_dict(cls, data: Dict) -> "Prototype":
         """將字典轉換為原型武器物件
 
         Parameters

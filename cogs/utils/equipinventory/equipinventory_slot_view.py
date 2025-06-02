@@ -9,6 +9,7 @@ import yaml
 from ..player.player import Player
 from ..basebutton import BaseUserRestrictedButton
 from ..item.equipment.equipment_utils import create_equipment_embed
+from ..item.equipment.equipment_panel import EquipmentView
 
 YAML_PATH = Path("yaml")
 with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
@@ -63,9 +64,8 @@ class EquipInventorySlotView(View):
         for i in range(self.equipment_per_page):
             idx = self.index + i
             if idx < len(self.equip_names):
-                button = EquipInventorySelectEquipmentButton(label = self.equip_names[idx],
-                                                             user = self.user,
-                                                             player = self.player,
+                button = EquipInventorySelectEquipmentButton(user = self.user,
+                                                             label = self.equip_names[idx],
                                                              index = idx)
                 self.equip_buttons.append(button)
                 self.add_item(button)
@@ -154,7 +154,7 @@ class EquipInventorySlotNextPageButton(BaseUserRestrictedButton):
 # EquipInventorySelectEquipmentButton
 ######################################
 class EquipInventorySelectEquipmentButton(BaseUserRestrictedButton):
-    def __init__(self, user: Member, label: str, player: Player, index: int):
+    def __init__(self, user: Member, label: str, index: int):
         super().__init__(user = user, label = label, style = ButtonStyle.success)
         self.index = index
     
@@ -163,11 +163,19 @@ class EquipInventorySelectEquipmentButton(BaseUserRestrictedButton):
         if not await self.check_user(interaction):
             return
         
-        embed = create_equipment_embed(view.player.equipinventory.get_equipment(slot_name = view.slot_name,
-                                                                                index = self.index))
+        select_equipment = view.player.equipinventory.get_equipment(slot_name = view.slot_name,
+                                                                    index = self.index)
+        
+        embed = create_equipment_embed(select_equipment)
+        
+        new_view = EquipmentView(user = view.user,
+                                 player = view.player,
+                                 slot_name = view.slot_name,
+                                 index = self.index)
         await interaction.response.edit_message(
             content = "測試",
-            embed = embed
+            embed = embed,
+            view = new_view
         )
         return
 

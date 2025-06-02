@@ -77,7 +77,7 @@ class ItemInventory:
         }
 
     @classmethod
-    def from_dict(cls, data) -> "ItemInventory":
+    def from_dict(cls, data: Dict) -> "ItemInventory":
         """將字典轉換為物品背包物件
 
         Parameters
