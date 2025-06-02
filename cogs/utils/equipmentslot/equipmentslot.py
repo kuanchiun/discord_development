@@ -144,6 +144,6 @@ class EquipmentSlot:
         
         selected_equipment = equipinventory.get_slot(slot_name = slot_name)[index]
         setattr(self, slot_name, selected_equipment)
-        equipinventory.get_slot().pop(index)
+        equipinventory.get_slot(slot_name).pop(index)
     
     

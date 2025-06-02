@@ -10,8 +10,58 @@ baseattribute:
   remind_point: 50
 equipinventory:
   bracelet: []
-  chest: []
-  earring: []
+  chest:
+  - attribute_bonus:
+      AGI: 16
+      DEX: 12
+      INT: 12
+      LUK: 14
+      MND: 12
+      STR: 18
+      VIT: 13
+      WIS: 13
+    display_name: 神域遺物-星宿神鎧
+    figure_id: godfield_chest
+    item_id: godfield_chest
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: UR
+    scroll_number: 7
+    sell_money: 900
+    slot: chest
+    sockets:
+    - true
+    - true
+    - true
+    success_level: 0
+    total_point: 0
+  earring:
+  - attribute_bonus:
+      AGI: 9
+      DEX: 12
+      INT: 9
+      LUK: 8
+      MND: 7
+      STR: 8
+      VIT: 10
+      WIS: 17
+    display_name: 星霜耳墜
+    figure_id: star_earring
+    item_id: star_earring
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: SR
+    scroll_number: 5
+    sell_money: 450
+    slot: earring
+    sockets:
+    - true
+    - true
+    - null
+    success_level: 0
+    total_point: 0
   feet:
   - attribute_bonus:
       AGI: 2
@@ -40,13 +90,88 @@ equipinventory:
     total_point: 0
   head: []
   leggings: []
-  necklace: []
+  necklace:
+  - attribute_bonus:
+      AGI: 2
+      DEX: 1
+      INT: 3
+      LUK: 4
+      MND: 1
+      STR: 3
+      VIT: 4
+      WIS: 2
+    display_name: 粗製項鍊
+    figure_id: curde_necklace
+    item_id: curde_necklace
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: necklace
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
+  - attribute_bonus:
+      AGI: 7
+      DEX: 6
+      INT: 6
+      LUK: 5
+      MND: 7
+      STR: 3
+      VIT: 10
+      WIS: 6
+    display_name: 赤鐵項鍊
+    figure_id: iron_necklace
+    item_id: iron_necklace
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: R
+    scroll_number: 5
+    sell_money: 125
+    slot: necklace
+    sockets:
+    - true
+    - null
+    - null
+    success_level: 0
+    total_point: 0
   ring: []
   weapon: []
 equipmentslot:
   bracelet: null
   chest: null
-  earring: null
+  earring:
+    attribute_bonus:
+      AGI: 5
+      DEX: 6
+      INT: 7
+      LUK: 3
+      MND: 2
+      STR: 5
+      VIT: 7
+      WIS: 15
+    display_name: 赤鐵耳環
+    figure_id: iron_earring
+    item_id: iron_earring
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: R
+    scroll_number: 5
+    sell_money: 125
+    slot: earring
+    sockets:
+    - true
+    - null
+    - null
+    success_level: 0
+    total_point: 0
   feet: null
   head: null
   leggings: null
@@ -56,6 +181,39 @@ equipmentslot:
   weapon: null
 iteminventory:
   inventory:
+    N_scroll_STR_1:
+      item:
+        description: 成功率100％，STR＋1
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 普通STR強化卷軸100％
+        effect:
+          STR: 1
+        figure_id: N_scroll_1
+        item_id: N_scroll_STR_1
+        item_type: scroll
+        probability: 1.0
+        purchase_money: null
+        rarity: N
+        sell_money: 50
+      quantity: 1
+    N_scroll_dominate:
+      item:
+        description: 成功率100％，INT＋1，MND＋1
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 普通狡詐強化卷軸100％
+        effect:
+          INT: 1
+          MND: 1
+        figure_id: N_scroll_2
+        item_id: N_scroll_dominate
+        item_type: scroll
+        probability: 1.0
+        purchase_money: null
+        rarity: N
+        sell_money: 50
+      quantity: 2
     N_scroll_guard:
       item:
         description: 成功率100％，VIT＋1，STR＋1
@@ -72,6 +230,22 @@ iteminventory:
         purchase_money: null
         rarity: N
         sell_money: 50
+      quantity: 2
+    R_scroll_STR_1:
+      item:
+        description: 成功率60％，STR＋2
+        destroy_on_fail: false
+        destroy_rate: null
+        display_name: 高級STR強化卷軸60％
+        effect:
+          STR: 2
+        figure_id: R_scroll_1
+        item_id: R_scroll_STR_1
+        item_type: scroll
+        probability: 0.6
+        purchase_money: null
+        rarity: R
+        sell_money: 125
       quantity: 1
     R_scroll_VIT_1:
       item:
@@ -168,4 +342,4 @@ iteminventory:
         rarity: UR
         sell_money: 900
       quantity: 2
-  money: 9000
+  money: 8000

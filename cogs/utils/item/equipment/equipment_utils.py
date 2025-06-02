@@ -81,13 +81,15 @@ def _create_equipment_compare_attr_text(equipment: Equipment) -> str:
     scroll_number = equipment.scroll_number
     sell_money = equipment.get_sell_money()
     equipment_lines = [
+        "```"
         f"【稀有度】{RARITY_EMOJI[rarity]} {rarity}",
         f"VIT： +{equipment.attribute_bonus['VIT']:>3}  WIS： +{equipment.attribute_bonus['WIS']:>3}",
         f"STR： +{equipment.attribute_bonus['STR']:>3}  INT： +{equipment.attribute_bonus['INT']:>3}",
         f"DEX： +{equipment.attribute_bonus['DEX']:>3}  AGI： +{equipment.attribute_bonus['AGI']:>3}",
         f"MND： +{equipment.attribute_bonus['MND']:>3}  LUK： +{equipment.attribute_bonus['LUK']:>3}",
-        "",
+        "```",
         "【潛能屬性】"
+        "```"
     ]
     for i, socket in enumerate(equipment.sockets, start=1):
         if isinstance(socket, dict):
@@ -95,10 +97,14 @@ def _create_equipment_compare_attr_text(equipment: Equipment) -> str:
             equipment_lines.append(f"潛能{i}: {attribute} +{value:>2}")
         elif isinstance(socket, bool):
             equipment_lines.append(f"潛能{i}: 未開啟")
-    equipment_lines.append("")
+        else:
+            equipment_lines.append(" ")
+    equipment_lines.append("```")
+    equipment_lines.append("```")
     equipment_lines.append("【剩餘強化次數】")
     equipment_lines.append(f"{scroll_number}次")
     equipment_lines.append(f"出售金額：💎{sell_money}")
+    equipment_lines.append("```")
     
     return "\n".join(equipment_lines)
     
@@ -114,12 +120,12 @@ def create_equipment_compare_embed(select_equipment: Equipment, compare_equipmen
     
     embed = Embed()
     embed.add_field(
-        name = f"**{select_display_name (+{select_success_level})}**",
+        name = f"**{select_display_name} (+{select_success_level})**",
         value = select_equipment_texts,
         inline = True
     )
     embed.add_field(
-        name = f"**{compare_display_name (+{compare_success_level})}**",
+        name = f"**{compare_display_name} (+{compare_success_level})**",
         value = compare_equipment_texts,
         inline = True
     )
