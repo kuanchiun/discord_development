@@ -28,8 +28,8 @@ class ConfirmEquipView(View):
         self.embed = embed
         self.message = None
         
-        self.add_item(ConfirmEquipButton(user = user, label = "確定裝備"))
-        self.add_item(CancelEquipButton(user = user, label = "取消裝備"))
+        self.add_item(ConfirmEquipButton(user = user, label = "確定"))
+        self.add_item(CancelEquipButton(user = user, label = "取消"))
     
     async def on_timeout(self):
         if self.message:
@@ -52,6 +52,9 @@ class ConfirmEquipButton(BaseUserRestrictedButton):
             return
         
         view: ConfirmEquipView = self.view
+        equipment = view.player.equipinventory.get_equipment(slot_name = view.slot_name, 
+                                                             index = view.index)
+        equipment_display_name = equipment.get_display_name()
         
         view.player.equipmentslot.equip(slot_name = view.slot_name,
                                         index = view.index,
@@ -59,8 +62,8 @@ class ConfirmEquipButton(BaseUserRestrictedButton):
         view.player.save(view.user.id)
         
         await interaction.response.edit_message(
-            content = "成功",
-            embed = None,
+            content = f"你已經成功裝備{equipment_display_name}",
+            embed = view.embed,
             view = None
         )
 

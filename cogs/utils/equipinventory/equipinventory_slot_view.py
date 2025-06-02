@@ -174,7 +174,7 @@ class EquipInventorySelectEquipmentButton(BaseUserRestrictedButton):
                                  index = self.index,
                                  embed = embed)
         await interaction.response.edit_message(
-            content = "測試",
+            content = "裝備介面",
             embed = embed,
             view = new_view
         )

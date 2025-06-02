@@ -69,9 +69,18 @@ class EquipButton(BaseUserRestrictedButton):
                                     target_slot_name = self.target_slot_name,
                                     index = view.index,
                                     embed = view.embed)
-        await interaction.response.edit_message(
-            content = "測試",
-            embed = embed,
-            view = new_view
-        )
+        
+        if view.player.equipmentslot.is_already_equipped(view.slot_name):
+            await interaction.response.edit_message(
+                content = f"你即將使用**{select_equipment.get_display_name()}**替換**{compare_equipment.get_display_name()}**，是否替換？",
+                embed = embed,
+                view = new_view
+            )
+        else:
+            await interaction.response.edit_message(
+                content = f"你確定要將**{select_equipment.get_display_name()}**裝備到**{EQUIP_SLOT_MAPPING[self.target_slot_name]}**嗎？",
+                embed = embed,
+                view = new_view
+            )
+            
         new_view.message = await interaction.original_response()

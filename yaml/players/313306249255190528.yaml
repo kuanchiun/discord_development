@@ -10,32 +10,7 @@ baseattribute:
   remind_point: 50
 equipinventory:
   bracelet: []
-  chest:
-  - attribute_bonus:
-      AGI: 16
-      DEX: 12
-      INT: 12
-      LUK: 14
-      MND: 12
-      STR: 18
-      VIT: 13
-      WIS: 13
-    display_name: 神域遺物-星宿神鎧
-    figure_id: godfield_chest
-    item_id: godfield_chest
-    item_type: equipment
-    perference_job: null
-    purchase_money: 0
-    rarity: UR
-    scroll_number: 7
-    sell_money: 900
-    slot: chest
-    sockets:
-    - true
-    - true
-    - true
-    success_level: 0
-    total_point: 0
+  chest: []
   earring:
   - attribute_bonus:
       AGI: 9
@@ -62,32 +37,7 @@ equipinventory:
     - null
     success_level: 0
     total_point: 0
-  feet:
-  - attribute_bonus:
-      AGI: 2
-      DEX: 1
-      INT: 3
-      LUK: 2
-      MND: 4
-      STR: 0
-      VIT: 4
-      WIS: 4
-    display_name: 草布輕鞋
-    figure_id: fabric_feet
-    item_id: fabric_feet
-    item_type: equipment
-    perference_job: null
-    purchase_money: 0
-    rarity: N
-    scroll_number: 3
-    sell_money: 50
-    slot: feet
-    sockets:
-    - null
-    - null
-    - null
-    success_level: 0
-    total_point: 0
+  feet: []
   head: []
   leggings: []
   necklace:
@@ -145,7 +95,32 @@ equipinventory:
   weapon: []
 equipmentslot:
   bracelet: null
-  chest: null
+  chest:
+    attribute_bonus:
+      AGI: 16
+      DEX: 12
+      INT: 12
+      LUK: 14
+      MND: 12
+      STR: 18
+      VIT: 13
+      WIS: 13
+    display_name: 神域遺物-星宿神鎧
+    figure_id: godfield_chest
+    item_id: godfield_chest
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: UR
+    scroll_number: 7
+    sell_money: 900
+    slot: chest
+    sockets:
+    - true
+    - true
+    - true
+    success_level: 0
+    total_point: 0
   earring:
     attribute_bonus:
       AGI: 5
@@ -172,7 +147,32 @@ equipmentslot:
     - null
     success_level: 0
     total_point: 0
-  feet: null
+  feet:
+    attribute_bonus:
+      AGI: 2
+      DEX: 1
+      INT: 3
+      LUK: 2
+      MND: 4
+      STR: 0
+      VIT: 4
+      WIS: 4
+    display_name: 草布輕鞋
+    figure_id: fabric_feet
+    item_id: fabric_feet
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: feet
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
   head: null
   leggings: null
   necklace: null
