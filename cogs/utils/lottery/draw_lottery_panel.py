@@ -42,7 +42,7 @@ class DrawLotteryView(View):
     async def on_timeout(self):
         if self.message:
             await self.message.edit(
-                content = "⏰ 操作逾時，關閉抽卡結果。",
+                content = "⏰ 操作逾時，關閉介面",
                 embed = None,
                 view = None
             )

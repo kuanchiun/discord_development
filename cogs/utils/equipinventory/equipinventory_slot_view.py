@@ -89,7 +89,7 @@ class EquipInventorySlotView(View):
     async def on_timeout(self):
         if self.message:
             await self.message.edit(
-                content = "⏰ 操作逾時，關閉裝備背包欄位介面。",
+                content = "⏰ 操作逾時，關閉介面",
                 embed = None,
                 view = None
             )
@@ -174,7 +174,7 @@ class EquipInventorySelectEquipmentButton(BaseUserRestrictedButton):
                                  index = self.index,
                                  embed = embed)
         await interaction.response.edit_message(
-            content = "裝備介面",
+            content = None,
             embed = embed,
             view = new_view
         )

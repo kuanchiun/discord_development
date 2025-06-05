@@ -34,7 +34,7 @@ class EquipmentView(View):
     async def on_timeout(self):
         if self.message:
             await self.message.edit(
-                content = "⏰ 操作逾時，關閉裝備介面。",
+                content = "⏰ 操作逾時，關閉介面",
                 embed = None,
                 view = None
             )
@@ -84,3 +84,6 @@ class EquipButton(BaseUserRestrictedButton):
             )
             
         new_view.message = await interaction.original_response()
+        return
+
+###############

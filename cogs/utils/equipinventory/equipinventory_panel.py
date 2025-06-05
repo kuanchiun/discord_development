@@ -45,7 +45,7 @@ class EquipInventoryView(View):
     async def on_timeout(self):
         if self.message:
             await self.message.edit(
-                content = "⏰ 操作逾時，關閉裝備背包介面",
+                content = "⏰ 操作逾時，關閉介面",
                 embed = None,
                 view = None
             )
@@ -98,7 +98,7 @@ class CloseEquipInventoryButton(BaseUserRestrictedButton):
             return
         
         await interaction.response.edit_message(
-            content = "系統提示：已關閉裝備背包介面",
+            content = "系統提示：已關閉介面",
             view = None
         )
         
