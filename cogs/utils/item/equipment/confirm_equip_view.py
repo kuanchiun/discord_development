@@ -84,12 +84,12 @@ class CancelEquipButton(BaseUserRestrictedButton):
             return
         
         view: ConfirmEquipView = self.view
-        from .equipment_panel import EquipmentView
-        new_view = EquipmentView(user = view.user,
-                                 player = view.player,
-                                 slot_name = view.slot_name,
-                                 index = view.index,
-                                 embed = view.embed)
+        from .equipment_panel import EquipmentFromInventoryView
+        new_view = EquipmentFromInventoryView(user = view.user,
+                                              player = view.player,
+                                              slot_name = view.slot_name,
+                                              index = view.index,
+                                              embed = view.embed)
         await interaction.response.edit_message(
             content = None,
             embed = view.embed,
@@ -140,10 +140,10 @@ class EquipResultBackButton(BaseUserRestrictedButton):
         
         view: EquipResultView = self.view
         new_view = EquipInventoryView(user = view.user)
-        await interaction.response.send_message(
+        await interaction.response.edit_message(
             content = "系統提示：請選擇裝備欄位",
-            view = new_view,
-            ephemeral = True
+            embed = None,
+            view = new_view
         )
         view.message = await interaction.original_response()
         

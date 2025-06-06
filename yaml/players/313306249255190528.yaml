@@ -113,32 +113,7 @@ equipinventory:
     success_level: 0
     total_point: 0
   feet: []
-  head:
-  - attribute_bonus:
-      AGI: 2
-      DEX: 1
-      INT: 3
-      LUK: 2
-      MND: 3
-      STR: 3
-      VIT: 4
-      WIS: 2
-    display_name: 草布兜帽
-    figure_id: fabric_head
-    item_id: fabric_head
-    item_type: equipment
-    perference_job: null
-    purchase_money: 0
-    rarity: N
-    scroll_number: 3
-    sell_money: 50
-    slot: head
-    sockets:
-    - null
-    - null
-    - null
-    success_level: 0
-    total_point: 0
+  head: []
   leggings:
   - attribute_bonus:
       AGI: 3
@@ -423,7 +398,32 @@ equipmentslot:
     - null
     success_level: 0
     total_point: 0
-  head: null
+  head:
+    attribute_bonus:
+      AGI: 2
+      DEX: 1
+      INT: 3
+      LUK: 2
+      MND: 3
+      STR: 3
+      VIT: 4
+      WIS: 2
+    display_name: 草布兜帽
+    figure_id: fabric_head
+    item_id: fabric_head
+    item_type: equipment
+    perference_job: null
+    purchase_money: 0
+    rarity: N
+    scroll_number: 3
+    sell_money: 50
+    slot: head
+    sockets:
+    - null
+    - null
+    - null
+    success_level: 0
+    total_point: 0
   leggings: null
   necklace: null
   ring:

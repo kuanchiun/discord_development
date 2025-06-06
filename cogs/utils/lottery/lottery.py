@@ -8,7 +8,7 @@ import yaml
 from ..player.player import Player
 from ..item.base_item import BaseItem
 from ..item.prototype import Prototype
-from ..item.scroll import Scroll
+from ..item.scroll.scroll import Scroll
 from ..item.equipment.equipment import Equipment
 
 ###########

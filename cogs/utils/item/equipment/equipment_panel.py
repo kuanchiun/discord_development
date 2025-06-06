@@ -1,5 +1,6 @@
 from discord import Member, Interaction, ButtonStyle, Color, Embed
 from discord.ui import View
+from typing import Optional
 
 from ...player.player import Player
 from .equipment import Equipment
@@ -7,11 +8,18 @@ from ...basebutton import BaseUserRestrictedButton
 from .equipment_utils import create_equipment_embed, create_equipment_compare_embed, EQUIP_SLOT_MAPPING
 from .confirm_equip_view import ConfirmEquipView
 
-################
-# EquipmentView
-################
-class EquipmentView(View):
-    def __init__(self, user: Member, player: Player, slot_name: str, index: int, embed: Embed, timeout: int = 60):
+####################
+# BaseEquipmentView
+####################
+class BaseEquipmentView(View):
+    def __init__(self,
+                 user: Member,
+                 player: Player,
+                 slot_name: str,
+                 index: Optional[int],
+                 embed: Embed,
+                 timeout: int = 60):
+        
         super().__init__(timeout = timeout)
         self.user = user
         self.player = player
@@ -20,16 +28,29 @@ class EquipmentView(View):
         self.embed = embed
         self.message = None
         
+        #self.enhance_button = EnhanceButton()
+        #self.potential_button = PotentialButton()
+        #self.dismantle_button = DisMantleButton()
+        #self.sell_button = SellButton()
+        #self.equipment_back_button = EquipmentBackButton()
+        #self.close_equipment_button = CloseEquipmentButton()
+
+################
+# EquipmentView
+################
+class EquipmentFromInventoryView(BaseEquipmentView):
+    def __init__(self, user: Member, player: Player, slot_name: str, index: int, embed: Embed, timeout: int = 60):
+        super().__init__(user = user,
+                         player = player,
+                         slot_name = slot_name,
+                         index = index,
+                         embed = embed,
+                         timeout = timeout)
+        
         self.add_item(EquipButton(user = user, label = f"裝備到{EQUIP_SLOT_MAPPING[slot_name]}", target_slot_name = slot_name))
         if slot_name == "ring":
             target_slot_name = f"{slot_name}2"
             self.add_item(EquipButton(user = user, label = f"裝備到{EQUIP_SLOT_MAPPING[target_slot_name]}", target_slot_name = target_slot_name))
-        #self.add_item(EnhanceButton())
-        #self.add_item(PotentialButton())
-        #self.add_item(DisMantleButton())
-        #self.add_item(SellButton)
-        #self.add_item(EquipmentBackButton())
-        #self.add_item(CloseEquipmentButton())
     
     async def on_timeout(self):
         if self.message:
@@ -52,7 +73,7 @@ class EquipButton(BaseUserRestrictedButton):
         if not await self.check_user(interaction):
             return
         
-        view: EquipmentView = self.view
+        view: EquipmentFromInventoryView = self.view
         select_equipment = view.player.equipinventory.get_equipment(slot_name = view.slot_name,
                                                                     index = view.index)
         

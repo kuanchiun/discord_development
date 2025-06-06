@@ -7,7 +7,7 @@ import yaml
 
 from ..item.base_item import BaseItem
 from ..item.equipment.equipment import Equipment
-from ..item.scroll import Scroll
+from ..item.scroll.scroll import Scroll
 from ..item.prototype import Prototype
 
 

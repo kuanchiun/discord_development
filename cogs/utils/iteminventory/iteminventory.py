@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Optional, Dict
 
 from ..item.base_item import BaseItem
-from ..item.scroll import Scroll, PreventScroll
+from ..item.scroll.scroll import Scroll, PreventScroll
 from ..item.prototype import Prototype
 
 #######################
@@ -215,6 +215,25 @@ class ItemInventory:
         
         return list(self.inventory.values())
     
+    def filter_by_type(self, item_type: str) -> Dict[str, InventoryEntry]:
+        """列出某個類型的物品
+
+        Parameters
+        ----------
+        item_type : str
+            物品類型
+
+        Returns
+        -------
+        Dict[str, InventoryEntry]
+            物品列表
+        """
+        return {
+            item_id: entry
+            for item_id, entry in self.inventory.items()
+            if entry.item.get_item_type() == item_type
+        }
+    
     def add_money(self, amount: int) -> None:
         if amount < 0:
             raise ValueError("⚠️ 系統提示：金錢增加量不能為負數，請使用減少金錢函式。")
@@ -222,7 +241,7 @@ class ItemInventory:
     
     def use_money(self, amount: int) -> None:
         if amount < 0:
-            raise ValueError("⚠️ 系統提示：金錢增加量不能為負數，請使用減少金錢函式。")
+            raise ValueError("⚠️ 系統提示：金錢減少量不能為負數，請使用增加金錢函式。")
         self.money -= amount
         
     def can_afford(self, amounts: int) -> bool:

@@ -9,7 +9,7 @@ import yaml
 from ..player.player import Player
 from ..basebutton import BaseUserRestrictedButton
 from ..item.equipment.equipment_utils import create_equipment_embed
-from ..item.equipment.equipment_panel import EquipmentView
+from ..item.equipment.equipment_panel import EquipmentFromInventoryView
 
 YAML_PATH = Path("yaml")
 with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:
@@ -168,11 +168,12 @@ class EquipInventorySelectEquipmentButton(BaseUserRestrictedButton):
         
         embed = create_equipment_embed(select_equipment)
         
-        new_view = EquipmentView(user = view.user,
-                                 player = view.player,
-                                 slot_name = view.slot_name,
-                                 index = self.index,
-                                 embed = embed)
+        new_view = EquipmentFromInventoryView(user = view.user,
+                                              player = view.player,
+                                              slot_name = view.slot_name,
+                                              index = self.index,
+                                              embed = embed)
+        
         await interaction.response.edit_message(
             content = None,
             embed = embed,

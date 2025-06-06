@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import Optional, Dict
 from random import random
 
-from .base_item import BaseItem
+from ..base_item import BaseItem
 
 ###############
 # Scroll class
