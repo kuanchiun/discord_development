@@ -6,6 +6,8 @@ from ...player.player import Player
 from .equipment import Equipment
 from ...basebutton import BaseUserRestrictedButton
 from .equipment_utils import create_equipment_embed, create_equipment_compare_embed, EQUIP_SLOT_MAPPING
+from ..scroll.scroll_utils import create_scroll_embed
+from ..scroll.scroll_list_view import ScrollListView
 from .confirm_equip_view import ConfirmEquipView
 
 ####################
@@ -28,7 +30,7 @@ class BaseEquipmentView(View):
         self.embed = embed
         self.message = None
         
-        #self.enhance_button = EnhanceButton()
+        self.enhance_button = EnhanceButton(user = user, label = "衝卷！")
         #self.potential_button = PotentialButton()
         #self.dismantle_button = DisMantleButton()
         #self.sell_button = SellButton()
@@ -52,6 +54,8 @@ class EquipmentFromInventoryView(BaseEquipmentView):
             target_slot_name = f"{slot_name}2"
             self.add_item(EquipButton(user = user, label = f"裝備到{EQUIP_SLOT_MAPPING[target_slot_name]}", target_slot_name = target_slot_name))
     
+        self.add_item(self.enhance_button)
+        
     async def on_timeout(self):
         if self.message:
             await self.message.edit(
@@ -107,4 +111,32 @@ class EquipButton(BaseUserRestrictedButton):
         new_view.message = await interaction.original_response()
         return
 
-###############
+################
+# EnhanceButton
+################
+class EnhanceButton(BaseUserRestrictedButton):
+    def __init__(self, user: Member, label: str):
+        super().__init__(user = user, label = label, style = ButtonStyle.primary)
+
+    async def callback(self, interaction: Interaction):
+        if not await self.check_user(interaction):
+            return
+        
+        view: EquipmentFromInventoryView = self.view
+        scrolls = view.player.iteminventory.filter_by_type("scroll")
+        
+        scroll_ids = [key for scroll in scrolls for key, value in scroll.items()]
+        embeds = create_scroll_embed(scrolls)
+        
+        new_view = ScrollListView(user = view.user,
+                                  player = view.player,
+                                  slot_name = view.slot_name,
+                                  index = view.index,
+                                  scroll_ids = scroll_ids,
+                                  embeds = embeds)
+        
+        await interaction.response.edit_message(
+            content = f"測試",
+            embed = embeds[0],
+            view = new_view
+        )

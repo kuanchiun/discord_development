@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Dict
+from typing import Optional, Dict, List
 
 from ..item.base_item import BaseItem
 from ..item.scroll.scroll import Scroll, PreventScroll
@@ -215,7 +215,7 @@ class ItemInventory:
         
         return list(self.inventory.values())
     
-    def filter_by_type(self, item_type: str) -> Dict[str, InventoryEntry]:
+    def filter_by_type(self, item_type: str) -> List[Dict[str, InventoryEntry]]:
         """列出某個類型的物品
 
         Parameters
@@ -228,11 +228,7 @@ class ItemInventory:
         Dict[str, InventoryEntry]
             物品列表
         """
-        return {
-            item_id: entry
-            for item_id, entry in self.inventory.items()
-            if entry.item.get_item_type() == item_type
-        }
+        return [{item_id: entry} for item_id, entry in self.inventory.items() if entry.item.get_item_type() == item_type]
     
     def add_money(self, amount: int) -> None:
         if amount < 0:

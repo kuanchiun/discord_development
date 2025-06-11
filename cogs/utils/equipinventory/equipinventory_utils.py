@@ -5,8 +5,6 @@ from typing import Dict
 
 import yaml
 
-from ..player.player import Player
-from .equipinventory import EquipInventory
 from ..item.equipment.equipment import Equipment
 
 ###########
@@ -37,7 +35,7 @@ def create_equip_inventory_slot_embed(slot: List[Equipment], label: str) -> Embe
             scroll_number = equipment.scroll_number
             
             attr_lines = [
-                f"【稀有度】{rarity}",
+                f"【稀有度 {RARITY_EMOJI[rarity]} {rarity}",
                 f"VIT： +{equipment.attribute_bonus['VIT']:>3}  WIS： +{equipment.attribute_bonus['WIS']:>3}",
                 f"STR： +{equipment.attribute_bonus['STR']:>3}  INT： +{equipment.attribute_bonus['INT']:>3}",
                 f"DEX： +{equipment.attribute_bonus['DEX']:>3}  AGI： +{equipment.attribute_bonus['AGI']:>3}",

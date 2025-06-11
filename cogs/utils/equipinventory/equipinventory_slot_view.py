@@ -69,7 +69,7 @@ class EquipInventorySlotView(View):
                                                              index = idx)
                 self.equip_buttons.append(button)
                 self.add_item(button)
-        #return
+        return
     
     def update_button_state(self):
         self.prev_button.disabled = self.current_page == 0
