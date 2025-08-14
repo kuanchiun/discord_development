@@ -1,15 +1,16 @@
-from discord import Embed, Member, Interaction, ButtonStyle
-from discord.ui import View
+import math
 from pathlib import Path
 from typing import List
 
-import math
+from discord import ButtonStyle, Embed, Interaction, Member
+from discord.ui import View
+
 import yaml
 
-from ..player.player import Player
 from ..basebutton import BaseUserRestrictedButton
-from ..item.equipment.equipment_utils import create_equipment_embed
 from ..item.equipment.equipment_panel import EquipmentFromInventoryView
+from ..item.equipment.equipment_utils import create_equipment_embed
+from ..player.player import Player
 
 YAML_PATH = Path("yaml")
 with open(YAML_PATH / "item_view.yaml", "r", encoding = "utf-8") as f:

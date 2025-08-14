@@ -1,9 +1,10 @@
-from typing import Dict, List, Union
 from collections import defaultdict
-from random import choice, choices
-from pathlib import Path
-from discord import Member
 from dataclasses import dataclass, field
+from pathlib import Path
+from random import choice, choices
+from typing import Dict, List, Union
+
+from discord import Member
 
 import yaml
 

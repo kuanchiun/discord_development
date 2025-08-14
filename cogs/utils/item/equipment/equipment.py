@@ -1,11 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Optional, Dict, List, Tuple
-from random import choice, choices
-from enum import Enum
 from collections import Counter
+from dataclasses import dataclass, field
+from enum import Enum
+from random import choice, choices
+from typing import Dict, List, Optional, Tuple
 
-from ..scroll.scroll import Scroll
 from ..base_item import BaseItem
+from ..scroll.scroll import Scroll
+
 
 ######################
 # EnhanceResult class

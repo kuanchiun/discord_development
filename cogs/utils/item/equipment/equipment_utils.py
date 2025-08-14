@@ -1,12 +1,12 @@
 from pathlib import Path
-from discord import Embed, Color
-from typing import List
-from typing import Dict
+from typing import Dict, List
+
+from discord import Color, Embed
 
 import yaml
 
-from ...player.player import Player
 from ...equipinventory.equipinventory import EquipInventory
+from ...player.player import Player
 from .equipment import Equipment
 
 ###########

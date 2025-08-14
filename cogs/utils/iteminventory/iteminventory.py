@@ -1,9 +1,10 @@
 from dataclasses import dataclass, field
-from typing import Optional, Dict, List
+from typing import Dict, List, Optional
 
 from ..item.base_item import BaseItem
-from ..item.scroll.scroll import Scroll, PreventScroll
 from ..item.prototype import Prototype
+from ..item.scroll.scroll import PreventScroll, Scroll
+
 
 #######################
 # InventoryEntry class

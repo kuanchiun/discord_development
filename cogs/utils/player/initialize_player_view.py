@@ -1,10 +1,10 @@
 import discord
-
-from discord import Member, Interaction
+from discord import Interaction, Member
 from discord.ui import View
 
-from .player import Player
 from ..basebutton import BaseUserRestrictedButton
+from .player import Player
+
 
 #########################
 # ConfirmResetView class

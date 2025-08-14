@@ -1,7 +1,8 @@
-from discord import Member, Interaction, ButtonStyle, Embed
+from pathlib import Path
+
+from discord import ButtonStyle, Embed, Interaction, Member
 
 import yaml
-from pathlib import Path
 
 from ...player.player import Player
 from .equipment import Equipment

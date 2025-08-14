@@ -1,13 +1,14 @@
-import discord
 import asyncio
-import pickle
 import os
+import pickle
 
+import discord
+from discord import Embed, Interaction, Member, app_commands
 from discord.ext import commands
-from discord import app_commands, Interaction, Embed, Member
 
-from .utils.player.player import Player
 from .utils.player.initialize_player_view import ConfirmResetView
+from .utils.player.player import Player
+
 
 ##################
 # PlayerCog class

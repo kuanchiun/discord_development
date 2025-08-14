@@ -1,9 +1,10 @@
-from discord import Member, Interaction, ButtonStyle
+from discord import ButtonStyle, Interaction, Member
 from discord.ui import View
 
+from ...basebutton import BaseUserRestrictedButton
 from ...player.player import Player
 from .equipment import Equipment
-from ...basebutton import BaseUserRestrictedButton
+
 
 #########################
 # ConfirmEquipView class

@@ -1,17 +1,17 @@
-import yaml
 import math
-import discord
-
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Optional, List, Union
 from random import choice
+from typing import List, Optional, Union
 
-from discord import Embed, Member, Interaction
+import discord
+from discord import Embed, Interaction, Member
 from discord.ui import Button, View
 
-from .job_attribute import *
+import yaml
+
 from .job import Job, get_job_list
+from .job_attribute import *
 
 A = 15
 ALPHA = 1.5

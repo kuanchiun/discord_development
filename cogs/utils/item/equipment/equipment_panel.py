@@ -1,14 +1,18 @@
-from discord import Member, Interaction, ButtonStyle, Color, Embed
-from discord.ui import View
 from typing import Optional
 
-from ...player.player import Player
-from .equipment import Equipment
+from discord import ButtonStyle, Color, Embed, Interaction, Member
+from discord.ui import View
+
 from ...basebutton import BaseUserRestrictedButton
-from .equipment_utils import create_equipment_embed, create_equipment_compare_embed, EQUIP_SLOT_MAPPING
-from ..scroll.scroll_utils import create_scroll_embed
+from ...player.player import Player
 from ..scroll.scroll_list_view import ScrollListView
+from ..scroll.scroll_utils import create_scroll_embed
 from .confirm_equip_view import ConfirmEquipView
+from .equipment import Equipment
+from .equipment_utils import (EQUIP_SLOT_MAPPING,
+                              create_equipment_compare_embed,
+                              create_equipment_embed)
+
 
 ####################
 # BaseEquipmentView

@@ -1,15 +1,15 @@
-from typing import Dict, List, Union
 from collections import defaultdict
-from random import choice, choices
 from pathlib import Path
+from random import choice, choices
+from typing import Dict, List, Union
 
 import yaml
 
-from ..player.player import Player
 from ..item.base_item import BaseItem
+from ..item.equipment.equipment import Equipment
 from ..item.prototype import Prototype
 from ..item.scroll.scroll import Scroll
-from ..item.equipment.equipment import Equipment
+from ..player.player import Player
 
 ###########
 # CONSTANT

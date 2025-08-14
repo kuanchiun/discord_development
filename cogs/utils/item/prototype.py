@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
-from typing import Optional, Dict
+from typing import Dict, Optional
+
 import yaml
 
-from .equipment.equipment import Equipment
 from .base_item import BaseItem
-
+from .equipment.equipment import Equipment
 
 WEAPON_MAP: Dict = {
     "劍盾": "sword_shield",

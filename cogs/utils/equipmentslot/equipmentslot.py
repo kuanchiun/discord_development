@@ -1,8 +1,8 @@
 from dataclasses import dataclass
-from typing import Optional, Dict
+from typing import Dict, Optional
 
-from ..item.equipment.equipment import Equipment
 from ..equipinventory.equipinventory import EquipInventory
+from ..item.equipment.equipment import Equipment
 
 SLOTS = [
     "weapon", "head", "chest", "leggings", "feet",

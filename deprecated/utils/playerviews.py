@@ -1,18 +1,19 @@
-import yaml
 import math
-import discord
-
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Optional, List, Union
 from random import choice
+from typing import List, Optional, Union
 
-from discord import Embed, Member, Interaction
+import discord
+from discord import Embed, Interaction, Member
 from discord.ui import Button, View
 
-#from .job import Job, get_job_list
-from .player import PlayerAttribute, ATTRIBUTE
+import yaml
+
 from .job_attribute import *
+#from .job import Job, get_job_list
+from .player import ATTRIBUTE, PlayerAttribute
+
 
 def get_player_embed(user: Member) -> Embed:
     player = PlayerAttribute.load(user.id)

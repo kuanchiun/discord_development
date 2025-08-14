@@ -1,10 +1,12 @@
-from discord import Member, Interaction, ButtonStyle, Color, Embed
+from discord import ButtonStyle, Color, Embed, Interaction, Member
 from discord.ui import View
 
+from ...basebutton import BaseUserRestrictedButton
 from ...player.player import Player
 from .equipment import Equipment
-from ...basebutton import BaseUserRestrictedButton
-from .equipment_utils import create_equipment_embed, create_equipment_compare_embed, EQUIP_SLOT_MAPPING
+from .equipment_utils import (EQUIP_SLOT_MAPPING,
+                              create_equipment_compare_embed,
+                              create_equipment_embed)
 
 
 ###################

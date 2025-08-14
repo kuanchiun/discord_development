@@ -1,11 +1,11 @@
-import yaml
+from dataclasses import asdict, dataclass, field
+from typing import Dict, List, Optional
+
 import discord
-
-from dataclasses import dataclass, asdict, field
-from typing import Optional, List, Dict
-
-from discord import Embed, Member, Interaction
+from discord import Embed, Interaction, Member
 from discord.ui import Button, View
+
+import yaml
 
 FILE_PATH = "yaml/job.yml"
 

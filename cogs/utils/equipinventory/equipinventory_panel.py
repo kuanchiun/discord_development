@@ -1,14 +1,14 @@
-from discord import Member, Interaction, ButtonStyle
-from discord.ui import View
 from pathlib import Path
+
+from discord import ButtonStyle, Interaction, Member
+from discord.ui import View
 
 import yaml
 
-from ..player.player import Player
 from ..basebutton import BaseUserRestrictedButton
-from .equipinventory_utils import create_equip_inventory_slot_embed
+from ..player.player import Player
 from .equipinventory_slot_view import EquipInventorySlotView
-
+from .equipinventory_utils import create_equip_inventory_slot_embed
 
 ###########
 # CONSTANT

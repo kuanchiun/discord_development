@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import List, Optional, Dict
 from dataclasses import dataclass
+from typing import Dict, List, Optional
 
 BASIC_HEALTH = 100
 BASIC_PHYSICAL_ATTACK = (3, 15)

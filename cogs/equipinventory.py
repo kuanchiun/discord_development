@@ -1,8 +1,9 @@
+from discord import Interaction, app_commands
 from discord.ext import commands
-from discord import app_commands, Interaction
 
-from .utils.player.player import Player
 from .utils.equipinventory.equipinventory_panel import EquipInventoryView
+from .utils.player.player import Player
+
 
 ##########################
 # EquipInventoryCog class

@@ -1,7 +1,7 @@
 from pathlib import Path
-from discord import Embed, Color
-from typing import List
-from typing import Dict
+from typing import Dict, List
+
+from discord import Color, Embed
 
 import yaml
 

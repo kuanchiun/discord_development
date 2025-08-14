@@ -1,8 +1,9 @@
 from dataclasses import dataclass
-from typing import Optional, Dict
 from random import random
+from typing import Dict, Optional
 
 from ..base_item import BaseItem
+
 
 ###############
 # Scroll class

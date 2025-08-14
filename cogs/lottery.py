@@ -1,9 +1,9 @@
+from discord import Interaction, app_commands
 from discord.ext import commands
-from discord import app_commands, Interaction
 
+from .utils.lottery import DrawLotteryView, Lottery
 from .utils.player.player import Player
-from .utils.lottery import Lottery
-from .utils.lottery import DrawLotteryView
+
 
 ###################
 # LotteryCog class

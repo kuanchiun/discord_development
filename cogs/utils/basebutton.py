@@ -1,7 +1,8 @@
 from typing import List
 
-from discord import Member, Interaction, ButtonStyle, Embed
+from discord import ButtonStyle, Embed, Interaction, Member
 from discord.ui import Button
+
 
 #################################
 # BaseUserRestrictedButton class

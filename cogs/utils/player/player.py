@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field, asdict
-from typing import Optional, Dict, List, Tuple
-from random import choice, choices
+from dataclasses import asdict, dataclass, field
 from enum import Enum
 from pathlib import Path
+from random import choice, choices
+from typing import Dict, List, Optional, Tuple
 
 import yaml
 
-from .baseattribute import BaseAttribute
 from ..equipinventory.equipinventory import EquipInventory
-from ..iteminventory.iteminventory import ItemInventory
 from ..equipmentslot.equipmentslot import EquipmentSlot
+from ..iteminventory.iteminventory import ItemInventory
+from .baseattribute import BaseAttribute
 
 PLAYER_SAVEPATH = Path("yaml/players")
 

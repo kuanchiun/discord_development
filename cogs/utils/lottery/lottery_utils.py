@@ -1,15 +1,15 @@
 from collections import Counter
-from typing import List, Dict, Tuple
-from discord import Embed, Color
 from pathlib import Path
+from typing import Dict, List, Tuple
+
+from discord import Color, Embed
 
 import yaml
 
 from ..item.base_item import BaseItem
 from ..item.equipment.equipment import Equipment
-from ..item.scroll.scroll import Scroll
 from ..item.prototype import Prototype
-
+from ..item.scroll.scroll import Scroll
 
 ###########
 # CONSTANT

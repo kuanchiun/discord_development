@@ -1,12 +1,13 @@
-from discord import Member, Interaction, ButtonStyle, Color, Embed
-from discord.ui import View
+import math
 from typing import List
 
-import math
+from discord import ButtonStyle, Color, Embed, Interaction, Member
+from discord.ui import View
 
-from ...player.player import Player
 from ...basebutton import BaseUserRestrictedButton
+from ...player.player import Player
 from ..equipment.equipment_utils import create_equipment_embed
+
 
 #################
 # ScrollListView

@@ -1,11 +1,12 @@
-from discord import Member, Interaction, ButtonStyle, Color
+from discord import ButtonStyle, Color, Interaction, Member
 from discord.ui import View
 
-from ...player.player import Player
-from .equipment import Equipment
 from ...basebutton import BaseUserRestrictedButton
+from ...player.player import Player
 from .confirm_equip_view import ConfirmEquipView
+from .equipment import Equipment
 from .equipment_utils import create_equipment_compare_embed
+
 
 #####################
 # EquipmentViewClass

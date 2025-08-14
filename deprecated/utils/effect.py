@@ -1,10 +1,10 @@
-import discord
-
 from abc import ABC, abstractmethod
-from dataclasses import dataclass, field, asdict
-from typing import List, Dict, Optional
-from discord.ui import View, Button
-from discord import Embed, Member, Interaction
+from dataclasses import asdict, dataclass, field
+from typing import Dict, List, Optional
+
+import discord
+from discord import Embed, Interaction, Member
+from discord.ui import Button, View
 
 from .player import PlayerAttribute
 
